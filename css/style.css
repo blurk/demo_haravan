@@ -251,6 +251,98 @@ nav {
   position: relative;
 }
 
+.product__dropdown-menu {
+  min-width: 50vw;
+  transform: translateX(50%);
+}
+
+.product__dropdown-menu > .container > .row > div > ul > li > a {
+  color: #3ab54a !important;
+  font-size: 16px;
+  margin: 10px 0;
+  transition: all 0.4s;
+}
+
+.product__dropdown-menu > .container > .row > div > ul > li > a ~ ul > li {
+  font-size: 14px;
+  transition: all 0.4s;
+}
+
+.product__dropdown-menu
+  > .container
+  > .row
+  > div
+  > ul
+  > li
+  > a
+  ~ ul
+  > li
+  > a:hover {
+  color: #333 !important;
+}
+
+.price-before {
+  text-decoration: line-through;
+}
+
+.best-seller {
+  max-height: 30% !important;
+  padding: 20px 10px;
+}
+.best-seller__container {
+  max-height: 60% !important;
+}
+
+.best-seller__info > * {
+  font-size: 14px;
+}
+
+.best-seller__price {
+  color: #f48549 !important;
+}
+
+.my-dropdown {
+  position: relative;
+}
+
+.my-dropdown > span::after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 25px;
+  bottom: -10px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid #3ab54a;
+  z-index: 9999;
+}
+
+li.my-dropdown:hover > span::after {
+  visibility: visible !important;
+}
+
+.my-dropdown-menu {
+  position: absolute;
+  top: 52px;
+  transform: translateX(-40%);
+  display: none;
+  z-index: 10;
+  background-color: #fff;
+  margin-top: -40px;
+  border-top: 4px solid #3ab54a;
+}
+
+.my-dropdown:hover > .product__dropdown-menu {
+  display: block;
+}
+
+.product__dropdown-menu > .container > .row > div > ul > li > a:hover {
+  color: #3ed355 !important;
+}
+
 .category__list__item:hover > a,
 #footer > .container > .row > div > ul > li:hover > a {
   transform: translate(20px, 0);
