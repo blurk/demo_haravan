@@ -35,7 +35,7 @@
     <!-- TOPBAR -->
     <div class="top-bar bg-dark">
       <div class="container">
-        <div class="row">
+        <div class="row justify-content-start align-item">
           <div
             class="top-bar__contact mr-auto py-2 col-lg-8 d-lg-block d-none small"
             text-left
@@ -62,19 +62,15 @@
               </a>
 
               <div class="account__dropdown-menu">
-                <a class="btn btn-light d-block rounded-0" href="#"
-                  >Đăng nhập</a
-                >
-                <a class="btn btn-light d-block rounded-0" href="#">Đăng ký</a>
+                <a class="btn btn-light d-block" href="#">Đăng nhập</a>
+                <a class="btn btn-light d-block" href="#">Đăng ký</a>
               </div>
             </div>
-            <div class="dropdown d-inline-block top-bar__user__cart py-1">
+
+            <div class="cart-dropdown d-inline-block top-bar__user__cart">
               <a
-                class="btn-sm dropdown-toggle text-light text-decoration-none d-lg-block d-none"
+                class="btn-sm text-light text-decoration-none d-lg-block d-none"
                 href="#"
-                role="button"
-                id="dropdownMenuLink"
-                data-toggle="dropdown"
               >
                 <i class="fa fa-shopping-cart"></i>
                 <span
@@ -83,10 +79,7 @@
                 >
               </a>
 
-              <div
-                class="dropdown-menu text-center"
-                aria-labelledby="dropdownMenuLink"
-              >
+              <div class="cart-dropdown__menu">
                 <span class="text-muted small">Giỏ hàng hiện đang trống</span>
               </div>
             </div>
