@@ -566,7 +566,7 @@ li.my-dropdown:hover > span::after {
   transition: all 0.4s;
   position: absolute;
   padding: 10px 20px;
-  transform: translateY(74%);
+  transform: translateY(73%);
 }
 
 .news:hover > .news__body {
