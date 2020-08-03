@@ -14,6 +14,13 @@ $(window).scroll(function () {
   }
 });
 
+/* HIDE NAV SUBMENU WHEN CLICK */
+
+$("#myDropDownBtn").click((e) => {
+  $(".my-dropdown-menu").hide();
+  $(".my-dropdown > span").hide();
+});
+
 /* LOAD MORE ITEMS */
 function render(child = "", parent = "", number = 0) {
   for (let i = 0; i < number; i++) {
