@@ -39,6 +39,26 @@ a {
   height: 60px;
 }
 
+.account__dropdown {
+  position: relative;
+}
+.account__dropdown-menu {
+  display: none;
+  margin: 0 -20px;
+  position: absolute;
+  transform: translate(10%, 10%);
+  z-index: 20;
+  text-align: left;
+  background-color: #f4f4f4;
+  border-top: 2px solid #3ab54a;
+  padding: 0;
+  border-radius: 4;
+}
+
+.account__dropdown:hover .account__dropdown-menu {
+  display: block;
+}
+
 .fa-search {
   color: #fff;
 }
