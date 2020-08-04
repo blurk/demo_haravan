@@ -115,7 +115,7 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">Trang chủ </a>
+                    <a class="nav-link" href="./index.html">Trang chủ </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Giới thiệu</a>
@@ -292,7 +292,7 @@
                     <a class="nav-link" href="#">Tin Tức</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Liên hệ</a>
+                    <a class="nav-link" href="./contact.html">Liên hệ</a>
                   </li>
                 </ul>
               </div>
@@ -2020,5 +2020,128 @@
     ></script>
     <!-- Optional JavaScript -->
     <script src="./js/app.js"></script>
+    <script>
+      /* SLIDER */
+      let slider1 = tns({
+        container: "#slider1",
+        loop: false,
+        startIndex: 0,
+        nav: false,
+        swipeAngle: false,
+        speed: 400,
+        gutter: 20,
+        controlsContainer: "#slider-controls1",
+        responsive: {
+          "576": {
+            items: 1,
+          },
+          "768": {
+            items: 3,
+          },
+          "992": {
+            items: 4,
+          },
+        },
+      });
+
+      let slider2 = tns({
+        container: "#slider2",
+        loop: false,
+        startIndex: 0,
+        nav: false,
+        swipeAngle: false,
+        speed: 400,
+        gutter: 20,
+        controlsContainer: "#slider-controls2",
+        responsive: {
+          "576": {
+            items: 1,
+          },
+          "768": {
+            items: 3,
+          },
+          "992": {
+            items: 4,
+          },
+        },
+      });
+
+      let slider3 = tns({
+        container: "#slider3",
+        loop: false,
+        startIndex: 0,
+        nav: false,
+        swipeAngle: false,
+        speed: 400,
+        gutter: 20,
+        controlsContainer: "#slider-controls3",
+        responsive: {
+          "576": {
+            items: 1,
+          },
+          "768": {
+            items: 3,
+          },
+          "992": {
+            items: 4,
+          },
+        },
+      });
+
+      let slider4 = tns({
+        container: "#slider4",
+        startIndex: 0,
+        loop: false,
+        nav: false,
+        swipeAngle: false,
+        speed: 400,
+        controlsContainer: "#slider-controls4",
+        responsive: {
+          "576": {
+            items: 1.1,
+          },
+          "768": {
+            items: 4.1,
+          },
+        },
+      });
+
+      let slider5 = tns({
+        container: "#slider5",
+        startIndex: 0,
+        nav: false,
+        swipeAngle: false,
+        gutter: 10,
+        speed: 400,
+        controlsContainer: "#slider-controls5",
+        responsive: {
+          "576": {
+            items: 2,
+          },
+          "768": {
+            items: 4,
+          },
+        },
+      });
+
+      /* LOAD MORE ITEMS */
+      function render(child = "", parent = "", number = 0) {
+        for (let i = 0; i < number; i++) {
+          $(`.${child}`).first().clone().appendTo(`.${parent}`);
+        }
+      }
+
+      $("#btnLoadMore").click(() => {
+        $(".load-more").append("<div class='loader mx-auto'></div>");
+        $("#btnLoadMore").hide();
+        axios
+          .get("https://picsum.photos/v2/list?page=1&limit=8")
+          .then(({ data }) => {
+            $(".loader").remove();
+            render("product", "products", 8);
+            $("#btnLoadMore").show();
+          });
+      });
+    </script>
   </body>
 </html>
