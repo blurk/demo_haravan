@@ -646,6 +646,10 @@ li.my-dropdown:hover > span::after {
   position: relative;
 }
 
+.page__title > {
+  text-transform: uppercase;
+}
+
 .page__title::after {
   content: "";
   position: absolute;
