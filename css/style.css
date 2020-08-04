@@ -659,3 +659,40 @@ li.my-dropdown:hover > span::after {
   bottom: -4px;
   left: 0;
 }
+
+.news__nav__item {
+  transition: all 0.4s;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.news__nav__item:last-child {
+  border-bottom: 0;
+}
+
+.news__nav__item:hover {
+  cursor: pointer;
+  background-color: #fff;
+}
+.news__nav__link {
+  font-size: 14px;
+  transition: all 0.4s;
+}
+
+.news__nav__item:hover > .news__nav__link {
+  color: #3ab54a;
+}
+
+.news__post {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.news__post__info {
+  color: #999;
+}
+
+#postCommentsCount,
+#postAuthor {
+  font-weight: 500;
+}
