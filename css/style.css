@@ -696,3 +696,31 @@ li.my-dropdown:hover > span::after {
 #postAuthor {
   font-weight: 500;
 }
+
+.news__post__img {
+  margin-bottom: 10px;
+}
+
+.post__body {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.post__body > cite,
+.post__body > em {
+  font-size: 0.95em;
+}
+
+.user__comment {
+  font-size: 18px;
+  font-weight: 400;
+  color: #666;
+}
+
+#commentSectionCount {
+  font-size: 14px;
+}
+
+.user {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}

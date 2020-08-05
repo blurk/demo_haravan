@@ -328,50 +328,56 @@
 
     <!-- CONTACT FORM -->
 
-    <div class="container">
-      <div class="row mt-3">
-        <div class="col-12 py-2 text-center">
-          <span class="page__title h3">Liên hệ</span>
+    <section id="contact__main">
+      <div class="container">
+        <div class="row mt-3">
+          <div class="col-12 py-2 text-center">
+            <span class="page__title h3">Liên hệ</span>
+          </div>
+          <div class="col-6 offset-3 mt-2">
+            <form method="get" action="#">
+              <div class="form-group">
+                <label for="name" class="text-success h6">Tên*</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Nhập Tên của bạn..."
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email" class="text-success h6"
+                  >Email của bạn*</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Nhập Email của bạn..."
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message" class="text-success h6">Nội dung*</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="8"
+                  placeholder="Hãy nói gì đó..."
+                  class="p-1 w-100"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-success d-block mx-auto">
+                Gửi liên hệ
+              </button>
+            </form>
+          </div>
         </div>
-        <div class="col-6 offset-3 mt-2">
-          <form method="get" action="#">
-            <div class="form-group">
-              <label for="name" class="text-success h6">Tên*</label>
-              <input
-                type="text"
-                class="form-control"
-                id="name"
-                name="name"
-                placeholder="Nhập Tên của bạn..."
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="email" class="text-success h6">Email của bạn*</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                name="email"
-                placeholder="Nhập Email của bạn..."
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="message" class="text-success h6">Nội dung*</label>
-              <textarea
-                name="message"
-                id="message"
-                rows="8"
-                placeholder="Hãy nói gì đó..."
-                class="p-1 w-100"
-              ></textarea>
-            </div>
-          </form>
-        </div>
-        <div class="col-12 col-sm-6"></div>
       </div>
-    </div>
+    </section>
 
     <!-- ADDRESS -->
 

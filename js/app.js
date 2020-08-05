@@ -16,7 +16,7 @@ $(window).scroll(function () {
 
 /* HIDE NAV SUBMENU WHEN CLICK */
 
-$("#myDropDownBtn").click((e) => {
+$("#myDropDownBtn").click(() => {
   $(".my-dropdown-menu").hide();
   $(".my-dropdown > span").hide();
 });
