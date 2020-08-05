@@ -268,6 +268,16 @@ nav {
   background-color: #3ab54a;
 }
 
+.product__image {
+  height: 50%;
+  text-align: center;
+}
+
+.product__image > img {
+  width: 80%;
+  margin-top: 20px;
+}
+
 .list-group-item {
   border: 0;
 }
@@ -333,6 +343,7 @@ nav {
 }
 
 .price-before {
+  display: block;
   text-decoration: line-through;
 }
 
@@ -407,6 +418,10 @@ li.my-dropdown:hover > span::after {
   margin-bottom: 20px;
 }
 
+.product > .card {
+  height: 100% !important;
+}
+
 .sale {
   overflow: hidden;
 }
@@ -438,7 +453,6 @@ li.my-dropdown:hover > span::after {
 }
 
 .product__price {
-  margin-top: 10px;
   color: #f48549;
 }
 
@@ -455,7 +469,7 @@ li.my-dropdown:hover > span::after {
 .product__button > a {
   color: rgba(0, 0, 0, 0.8);
   transition: all 0.4s;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .product:hover > .card > .product__info > .product__button {
