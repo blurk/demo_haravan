@@ -738,3 +738,112 @@ li.my-dropdown:hover > span::after {
 .user {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+#productView {
+  margin-top: 40px;
+}
+
+#previewImage {
+  width: 100%;
+  height: 300px;
+}
+
+#previewContainer {
+  border: 1px solid #bbb;
+  padding: 5px;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+.product-Preview__name {
+  padding-bottom: 10px;
+  border-bottom: calc(1px / 80) solid #3ab54a;
+}
+
+.btn-add {
+  background: #3ab54a;
+  color: #fff;
+  border-radius: 0;
+  height: 40px;
+  width: calc(100% - 70px);
+  line-height: 14px;
+  padding: 0 30px;
+}
+
+.btn-add__emphasis {
+  font-size: 20px;
+}
+
+#quantity {
+  height: 40px;
+  width: 70px;
+  border-radius: 0;
+  color: #000;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.call {
+  height: 50px;
+  width: 100%;
+  margin: 10px auto;
+  padding: 0 10px;
+}
+
+.callicon {
+  float: left;
+  width: 50px;
+  height: 50px;
+  line-height: 45px;
+  text-align: center;
+  color: #3ab54a;
+  border: 3px solid #3ab54a;
+  border-radius: 100%;
+}
+
+.call > a {
+  display: block;
+  padding-left: 65px;
+  color: #252525;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: left;
+  line-height: 20px;
+  text-transform: Capitalize;
+}
+
+.call > a > span {
+  font-size: 30px;
+  color: #fe4200;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+#myTabContent,
+.card,
+.banner {
+  border-radius: 5px;
+  border: 0px solid;
+  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+#myTabContent,
+#relatedProducts {
+  border-top: 4px solid #3ab54a;
+}
+
+.realatedProducts__title {
+  margin: 0;
+  font-size: 18px;
+}
+
+#relatedProducts {
+  margin-top: -4px;
+}
