@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- FONTAWESOME -->
+    <link
+      rel="stylesheet"
+      href="./fonts/fontawesome-free-5.14.0-web/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+
+    <!-- OPTIIONAL CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Demo - Theme Store Haravan</title>
+  </head>
+  <body>
+    <!-- TOPBAR -->
+    <div class="top-bar bg-dark">
+      <div class="container">
+        <div class="row justify-content-start align-item">
+          <div
+            class="top-bar__contact mr-auto py-2 col-lg-8 d-lg-block d-none small"
+            text-left
+          >
+            <div class="top-bar__hotline d-inline-block">
+              <img src="./img/icondienthoai.png" alt="phone icon" />
+              <b class="text-light">Tư Vấn 24/7:</b
+              ><span class="text-muted"> 0909528368</span>
+            </div>
+            <div class="top-bar__address d-inline-block ml-2">
+              <b class="text-light">Địa chỉ:</b
+              ><span class="text-muted">
+                P214 , Chung cư B3, Ngõ 118 , Nguyễn Khánh Toàn</span
+              >
+            </div>
+          </div>
+          <div
+            class="top-bar__user ml-auto col-lg-4 col-12 text-right top-bar__user__account"
+          >
+            <div class="account__dropdown py-1 d-inline-block">
+              <a class="btn-sm py-5 text-light text-decoration-none" href="#">
+                <i class="fa fa-user"></i>
+                <span>Tài Khoản</span>
+              </a>
+
+              <div class="account__dropdown-menu">
+                <a class="btn btn-light d-block" href="./signIn.html"
+                  >Đăng nhập</a
+                >
+                <a class="btn btn-light d-block" href="./signUp.html"
+                  >Đăng ký</a
+                >
+              </div>
+            </div>
+
+            <div class="cart-dropdown d-inline-block top-bar__user__cart">
+              <a
+                class="btn-sm text-light text-decoration-none d-lg-block d-none"
+                href="#"
+              >
+                <i class="fa fa-shopping-cart"></i>
+                <span
+                  >Giỏ Hàng
+                  <span id="cartAmount" class="badge badge-light">0</span></span
+                >
+              </a>
+
+              <div class="cart-dropdown__menu">
+                <span class="text-muted small">Giỏ hàng hiện đang trống</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header
+      class="container-fluid"
+      id="header"
+      style="background-color: #f4f4f4;"
+    >
+      <div class="row">
+        <!-- NAVIGATION -->
+        <div class="col-lg-8 col-12">
+          <div class="navbar-container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <a class="navbar-brand" href="#">
+                <img src="./img/logo.png" alt="logo" />
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Trang chủ </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Giới thiệu</a>
+                  </li>
+                  <li class="nav-item my-dropdown">
+                    <span></span>
+                    <a class="nav-link" href="/index.html" id="myDropDownBtn">
+                      Sản phẩm
+                      <i class="fa fa-angle-down"></i>
+                    </a>
+                    <div
+                      class="my-dropdown-menu product__dropdown-menu rounded mt-2"
+                    >
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-12 col-md-8">
+                            <ul class="row">
+                              <li class="col-sm-6 col-12 py-2">
+                                <a href="#" class="h6">Phòng khách</a>
+                                <ul class="list-group-flush">
+                                  <li class="list-group-item py-1">
+                                    <a href="#" class="text-muted">Ghế bành</a>
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="#" class="text-muted"
+                                      >Bàn tiếp khách</a
+                                    >
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="#" class="text-muted">Tủ cao</a>
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="#" class="text-muted">Ghế tựa</a>
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="#" class="text-muted">Ghế vuông</a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="col-sm-6 col-12 py-2">
+                                <a href="#" class="h6">Phòng ngủ</a>
+                                <ul class="list-group-flush">
+                                  <li class="list-group-item py-1">
+                                    <a href="#" class="text-muted"
+                                      >Bàn trang điểm</a
+                                    >
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="#" class="text-muted"
+                                      >Giường ngủ</a
+                                    >
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="#" class="text-muted">Rèm</a>
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="#" class="text-muted">Tủ</a>
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="#" class="text-muted">Ghế</a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="col-sm-6 col-12 py-2">
+                                <a href="#" class="h6">Nhà bếp</a>
+                                <ul class="list-group-flush">
+                                  <li class="list-group-item py-1">
+                                    <a href="#" class="text-muted">Bồn rửa</a>
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="#" class="text-muted">Tủ bếp</a>
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="#" class="text-muted">Nội thất</a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="col-sm-6 col-12 py-2">
+                                <a href="#" class="h6">Thiết bị vệ sinh</a>
+                              </li>
+                              <li class="col-sm-6 col-12 py-2">
+                                <a href="#" class="h6">Đồ trang trí</a>
+                              </li>
+                              <li class="col-sm-6 col-12 py-2">
+                                <a href="#" class="h6">Nhà thông minh</a>
+                              </li>
+                              <li class="col-sm-6 col-12 py-2">
+                                <a href="#" class="h6">Sofa</a>
+                              </li>
+                              <li class="col-sm-6 col-12 py-2">
+                                <a href="#" class="h6">Phòng tắm</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-12 col-md-4">
+                            <h6 class="text-success py-2">Sản phẩm nổi bật</h6>
+                            <div class="d-block best-seller__container">
+                              <div class="best-seller">
+                                <div class="row">
+                                  <a href="#" class="col-sm-6 col-12">
+                                    <img
+                                      class="w-100 h-100"
+                                      src="./img/ban_go.jpg"
+                                  /></a>
+                                  <div
+                                    class="col-sm-6 col-12 best-seller__info"
+                                  >
+                                    <div class="h6">
+                                      Lorem, ipsum
+                                    </div>
+                                    <div class="best-seller__price">
+                                      <span class="price-before text-muted">
+                                        26,000,000₫
+                                      </span>
+                                      19,000,000₫
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="best-seller">
+                                <div class="row">
+                                  <a href="#" class="col-sm-6 col-12">
+                                    <img
+                                      class="w-100 h-100"
+                                      src="./img/ban_go.jpg"
+                                  /></a>
+                                  <div
+                                    class="col-sm-6 col-12 best-seller__info"
+                                  >
+                                    <div class="h6">
+                                      Lorem, ipsum
+                                    </div>
+                                    <div class="best-seller__price">
+                                      <span class="price-before text-muted">
+                                        26,000,000₫
+                                      </span>
+                                      19,000,000₫
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="best-seller">
+                                <div class="row">
+                                  <a href="#" class="col-sm-6 col-12">
+                                    <img
+                                      class="w-100 h-100"
+                                      src="./img/ban_go.jpg"
+                                  /></a>
+                                  <div
+                                    class="col-sm-6 col-12 best-seller__info"
+                                  >
+                                    <div class="h6">
+                                      Lorem, ipsum
+                                    </div>
+                                    <div class="best-seller__price">
+                                      <span class="price-before text-muted">
+                                        26,000,000₫
+                                      </span>
+                                      19,000,000₫
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Thiết kế nội thất</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./news.html">Tin Tức</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./contact.html">Liên hệ</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <!--    SEARCH FORM -->
+        <form
+          class="form-inline justify-content-lg-end col-lg-4 col-md-12 my-2 my-lg-0"
+        >
+          <input
+            class="form-control w-50 rounded-0"
+            type="search"
+            id="searchBar"
+            name="q"
+            placeholder="Bạn muốn tìm gì?"
+            maxlength="128"
+            aria-label="Search"
+          />
+          <button
+            class="btn btn-success ml-2 my-2 my-sm-0 rounded-0"
+            type="submit"
+          >
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+    </header>
+
+    <!-- PRODUCTS GALLERY -->
+    <section id="productsGallery">
+      <div class="container">
+        <div class="row">
+          <div class="products__header px-3">
+            <h3>Danh mục <span style="color: #888;">sản phẩm</span></h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-3 p-0">
+            <!--    SEARCH FORM -->
+            <form
+              id="formSearchProduct"
+              class="d-flex form-inline mb-2"
+              action="./searchResult.html"
+            >
+              <input
+                class="form-control col-10"
+                type="search"
+                id="inputSearchProduct"
+                name="qProduct"
+                placeholder="Bạn muốn tìm gì?"
+                aria-label="Search"
+              />
+              <button
+                class="btn btn-success col-2"
+                id="btnSearchProduct"
+                type="submit"
+              >
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+            <div class="category card">
+              <ul class="category__list list-group">
+                <li class="category__list__item list-group-item">
+                  <a href="#" class="card-title">
+                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    Phòng khách
+                  </a>
+                  <ul style="display: none;"></ul>
+                </li>
+
+                <li class="category__list__item list-group-item">
+                  <a href="" class="card-title">
+                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    Phòng ngủ
+                  </a>
+                  <ul style="display: none;"></ul>
+                </li>
+
+                <li class="category__list__item list-group-item">
+                  <a href="" class="card-title"
+                    ><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    Sofa</a
+                  >
+                </li>
+
+                <li class="category__list__item list-group-item">
+                  <a href="" class="card-title"
+                    ><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    Phòng bếp</a
+                  >
+                </li>
+
+                <li class="category__list__item list-group-item">
+                  <a href="" class="card-title"
+                    ><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    Phòng trẻ em</a
+                  >
+                </li>
+
+                <li class="category__list__item list-group-item">
+                  <a href="" class="card-title"
+                    ><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    Thiết bị bếp</a
+                  >
+                </li>
+
+                <li class="category__list__item list-group-item">
+                  <a href="" class="card-title"
+                    ><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    Thiết bị vệ sinh</a
+                  >
+                </li>
+
+                <li class="category__list__item list-group-item">
+                  <a href="" class="card-title"
+                    ><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    Đồ trang trí</a
+                  >
+                </li>
+
+                <li class="category__list__item list-group-item">
+                  <a href="" class="card-title"
+                    ><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    Phụ kiện bếp</a
+                  >
+                </li>
+
+                <li class="category__list__item list-group-item">
+                  <a href="" class="card-title"
+                    ><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    Nhà thông minh</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="banner my-3 text-center">
+              <a href="#" class="banner"
+                ><img src="./img/c1.jpg" class="w-100" alt="banner image"
+              /></a>
+            </div>
+          </div>
+          <div class="col-12 col-md-9">
+            <div class="productsGallery__banner mb-4">
+              <img
+                src="./img/banner_01.jpg"
+                alt="banner image"
+                class="img-fluid"
+              />
+            </div>
+            <!-- SORT -->
+            <div class="card mb-4 p-3" id="sortTool">
+              <div class="d-flex align-items-center">
+                <div class="col-6 p-0" id="changeView">
+                  <a
+                    href="./products.html"
+                    class="btn btn-view"
+                    name="changeView"
+                  >
+                    <i class="fa fa-th-large"></i>
+                  </a>
+                  <a
+                    href="./productsList.html"
+                    class="btn btn-view-active"
+                    name="changeView"
+                  >
+                    <i class="fa fa-list"></i>
+                  </a>
+                </div>
+                <div class="col-6 p-0">
+                  <form class="form text-right" id="sortProductsContainer">
+                    <label for="sortProducts" class="d-none d-lg-block"
+                      >Sắp xếp:
+                    </label>
+                    <select class="ml-2 form-control-sm" id="sortProducts">
+                      <option value="null">Mặc định</option>
+                      <option value="hot">Sản phẩm nổi bật</option>
+                      <option value="priceASC">Giá: Tăng dần</option>
+                      <option value="priceDESC">Giá: Giảm dần</option>
+                      <option value="az">Tên A-Z</option>
+                      <option value="za">Tên Z-A</option>
+                      <option value="oldest">Cũ Nhất</option>
+                      <option value="latest">Mới Nhất</option>
+                      <option value="bestSeller">Bán Chạy Nhất</option>
+                    </select>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="products ml-1" id="productsList">
+              <div class="products__item row mx-1 align-items-center" id="1">
+                <div class="col-lg-4 col-12 p-0 m-0">
+                  <a href="#" class="products__item__image">
+                    <img
+                      src="./img/bon_cau.jpg"
+                      id="1"
+                      alt="product"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="col-lg-8 col-12 p-0 m-0">
+                  <a class="product__name" href="#">Bồn cầu</a>
+                  <p class="lead">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nihil sequi eum nobis, vitae eveniet ipsa quas fugit vel
+                    tenetur at!
+                  </p>
+                  <div class="product__price">
+                    36,000,000₫
+                  </div>
+                  <button
+                    type="button"
+                    class="btn btn-success products__item__button"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Mua hàng"
+                  >
+                    <i class="fa fa-shopping-cart text-light"></i>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="products__item row mx-1 products__item-sale align-items-center"
+                id="2"
+              >
+                <div class="col-lg-4 col-12 p-0 m-0">
+                  <a href="#" class="products__item__image">
+                    <img
+                      src="./img/bo_dieu_khien.jpg"
+                      id="1"
+                      alt="product"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="col-lg-8 col-12 p-0 m-0">
+                  <a class="product__name" href="#">Bộ điều khiển</a>
+                  <p class="lead">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nihil sequi eum nobis, vitae eveniet ipsa quas fugit vel
+                    tenetur at!
+                  </p>
+                  <span class="price-before text-muted">
+                    30,000,000₫
+                  </span>
+                  <div class="product__price">
+                    10,000,000₫
+                  </div>
+                  <button
+                    type="button"
+                    class="btn btn-success products__item__button"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Mua hàng"
+                  >
+                    <i class="fa fa-shopping-cart text-light"></i>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="products__item row mx-1 products__item-sale align-items-center"
+                id="3"
+              >
+                <div class="col-lg-4 col-12 p-0 m-0">
+                  <a href="#" class="products__item__image">
+                    <img
+                      src="./img/den.jpg"
+                      id="1"
+                      alt="product"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="col-lg-8 col-12 p-0 m-0">
+                  <a class="product__name" href="#">Đèn</a>
+                  <p class="lead">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nihil sequi eum nobis, vitae eveniet ipsa quas fugit vel
+                    tenetur at!
+                  </p>
+                  <span class="price-before text-muted">
+                    6,000,000₫
+                  </span>
+                  <div class="product__price">
+                    3,000,000₫
+                  </div>
+                  <button
+                    type="button"
+                    class="btn btn-success products__item__button"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Mua hàng"
+                  >
+                    <i class="fa fa-shopping-cart text-light"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="products__item align-items-center row mx-1" id="4">
+                <div class="col-lg-4 col-12 p-0 m-0">
+                  <a href="#" class="products__item__image">
+                    <img
+                      src="./img/bon_cau.jpg"
+                      id="1"
+                      alt="product"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="col-lg-8 col-12 p-0 m-0">
+                  <a class="product__name" href="#">Bồn cầu</a>
+                  <p class="lead">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nihil sequi eum nobis, vitae eveniet ipsa quas fugit vel
+                    tenetur at!
+                  </p>
+                  <div class="product__price">
+                    36,000,000₫
+                  </div>
+                  <button
+                    type="button"
+                    class="btn btn-success products__item__button"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Mua hàng"
+                  >
+                    <i class="fa fa-shopping-cart text-light"></i>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="products__item products__item-sale row mx-1 align-items-center"
+                id="5"
+              >
+                <div class="col-lg-4 col-12 p-0 m-0">
+                  <a href="#" class="products__item__image">
+                    <img
+                      src="./img/bep.jpg"
+                      id="1"
+                      alt="product"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="col-lg-8 col-12 p-0 m-0">
+                  <a class="product__name" href="#">Bếp</a>
+                  <p class="lead">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nihil sequi eum nobis, vitae eveniet ipsa quas fugit vel
+                    tenetur at!
+                  </p>
+                  <span class="price-before text-muted">
+                    26,000,000₫
+                  </span>
+                  <div class="product__price">
+                    13,000,000₫
+                  </div>
+                  <button
+                    type="button"
+                    class="btn btn-success products__item__button"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Mua hàng"
+                  >
+                    <i class="fa fa-shopping-cart text-light"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="products__item row mx-1 align-items-center" id="6">
+                <div class="col-lg-4 col-12 p-0 m-0">
+                  <a href="#" class="products__item__image">
+                    <img
+                      src="./img/ghe.jpg"
+                      id="1"
+                      alt="product"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="col-lg-8 col-12 p-0 m-0">
+                  <a class="product__name" href="#">Ghế</a>
+                  <p class="lead">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nihil sequi eum nobis, vitae eveniet ipsa quas fugit vel
+                    tenetur at!
+                  </p>
+                  <div class="product__price">
+                    1,000,000₫
+                  </div>
+                  <button
+                    type="button"
+                    class="btn btn-success products__item__button"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Mua hàng"
+                  >
+                    <i class="fa fa-shopping-cart text-light"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="products__item row mx-1 align-items-center" id="7">
+                <div class="col-lg-4 col-12 p-0 m-0">
+                  <a href="#" class="products__item__image">
+                    <img
+                      src="./img/ban_go.jpg"
+                      id="1"
+                      alt="product"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="col-lg-8 col-12 p-0 m-0">
+                  <a class="product__name" href="#">Bàn gỗ</a>
+                  <p class="lead">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nihil sequi eum nobis, vitae eveniet ipsa quas fugit vel
+                    tenetur at!
+                  </p>
+                  <div class="product__price">
+                    30,000,000₫
+                  </div>
+                  <button
+                    type="button"
+                    class="btn btn-success products__item__button"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Mua hàng"
+                  >
+                    <i class="fa fa-shopping-cart text-light"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="products__item row mx-1 align-items-center" id="8">
+                <div class="col-lg-4 col-12 p-0 m-0">
+                  <a href="#" class="products__item__image">
+                    <img
+                      src="./img/ban_go.jpg"
+                      id="1"
+                      alt="product"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="col-lg-8 col-12 p-0 m-0">
+                  <a class="product__name" href="#">Bàn gỗ</a>
+                  <p class="lead">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nihil sequi eum nobis, vitae eveniet ipsa quas fugit vel
+                    tenetur at!
+                  </p>
+                  <div class="product__price">
+                    30,000,000₫
+                  </div>
+                  <button
+                    type="button"
+                    class="btn btn-success products__item__button"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Mua hàng"
+                  >
+                    <i class="fa fa-shopping-cart text-light"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="load-more text-center my-3">
+              <button class="btn btn-success" id="btnLoadMore">
+                Xem thêm
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ADDRESS -->
+
+    <section id="address" class="container">
+      <div class="row mt-5">
+        <div class="col-lg-6 col-12 card bg-success rounded-0 text-light">
+          <div
+            class="card-header d-flex justify-content-start align-items-center"
+          >
+            <div class="p-1">
+              <img src="./img/icon_shop.png" alt="" />
+            </div>
+            <div class="p-1">
+              <div class="card-title text-uppercase font-italic h4">
+                FLEXSHOP
+              </div>
+              <p class="card-subtitle text-uppercase">
+                Nội thất hiện đại
+              </p>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-text">
+              <i class="fa fa-map-marker-alt mr-3"></i>
+              <span class="lead"
+                >P214 , Chung cư B3, Ngõ 118 , Nguyễn Khánh Toàn</span
+              >
+            </div>
+            <div class="card-text">
+              <i class="fa fa-envelope mr-3"></i>
+              <span
+                >Email:
+                <a href="mailto:songvangvietnam@gmail.com" class="text-light"
+                  >songvangvietnam@gmail.com</a
+                ></span
+              >
+            </div>
+            <div class="card-text">
+              <i class="fa fa-phone mr-3"></i>
+              <span
+                >Phone:
+                <a href="tel:+84902.068.068" class="text-light"
+                  >0902.068.068</a
+                ></span
+              >
+            </div>
+          </div>
+          <div class="card-footer">
+            <span>FOLLOW US: </span>
+            <a href="#" class="d-inline-block p-1 rounded-circle"
+              ><i class="fab fa-facebook text-light"></i
+            ></a>
+            <a href="#" class="d-inline-block p-1 rounded-circle"
+              ><i class="fab fa-twitter text-light"></i
+            ></a>
+            <a href="#" class="d-inline-block p-1 rounded-circle"
+              ><i class="fa fa-rss text-light"></i
+            ></a>
+            <a href="#" class="d-inline-block p-1 rounded-circle"
+              ><i class="fab fa-google-plus text-light"></i
+            ></a>
+            <a href="#" class="d-inline-block p-1 rounded-circle"
+              ><i class="fab fa-pinterest text-light"></i
+            ></a>
+          </div>
+        </div>
+        <div id="mapid" class="col-md-6 col-12"></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer id="footer" class="footer bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
+            <h5 class="text-light mb-2">Hỗ trợ</h5>
+            <ul>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> TÌm kiếm</a
+                >
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> Tư vấn thiết kế</a
+                >
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> Chăm sóc khách hàng</a
+                >
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> Kiểm tra đơn hàng</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
+            <h5 class="text-light mb-2">Hướng dẫn</h5>
+            <ul>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> Hướng dẫn thanh
+                  toán</a
+                >
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> giao nhận và thanh
+                  toán</a
+                >
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> đổi trả và bảo hành</a
+                >
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> Đăng ký thành viên</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
+            <h5 class="text-light mb-2">Chính sách</h5>
+            <ul>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> Chính sách thanh
+                  toán</a
+                >
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> chính sách vận
+                  chuyển</a
+                >
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> chính sách đổi trả
+                </a>
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> chính sách bảo hành</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
+            <h5 class="text-light mb-2">Tại sao chọn chúng tôi</h5>
+            <ul>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> Đội ngũ chuyên
+                  nghiệp</a
+                >
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> giá cả hợp lý</a
+                >
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> kinh nghiệm trên 20
+                  năm</a
+                >
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> đảm bảo tiến độ</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button id="toTop" class="btn rounded-0">
+      <i class="fa fa-angle-up"></i>
+    </button>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./js/jquery-3.5.1.slim.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
+    <!-- Optional JavaScript -->
+    <script src="./js/app.js"></script>
+    <script>
+      let page = 1;
+
+      /*       LOAD MORE ITEM */
+
+      $("#btnLoadMore").click(() => {
+        $(".load-more").append("<div class='loader mx-auto'></div>");
+        $("#btnLoadMore").hide();
+        axios
+          .get(`https://picsum.photos/v2/list?page=${page}&limit=8`)
+          .then(({ data }) => {
+            page++;
+            $(".loader").remove();
+            render("products__item", "products", 8, data);
+            $("#btnLoadMore").show();
+          })
+          .then(() => {
+            sortProducts.dispatchEvent(new Event("change"));
+          });
+      });
+
+      /* SORT */
+
+      /*Get products container and its children*/
+      const sortProducts = document.getElementById("sortProducts");
+      /*Function to get name, id and price of product*/
+      function extractProductInfo(product) {
+        const id = product.id;
+        const name = product.children[1].children[0].innerText;
+        const price = product.classList.contains("products__item-sale")
+          ? product.children[1].children[3].innerText
+          : product.children[1].children[2].innerText;
+        return {
+          id: id,
+          name: name,
+          price: +price.replace(/[,|₫]/gi, ""),
+        };
+      }
+      /*Sort by option function*/
+      function sortByOption({ target: { value } }) {
+        /*Current product*/
+        const currentProductsContainer = document.getElementById(
+          "productsList"
+        );
+        /*Using spread to turn object to array*/
+        const products = [...currentProductsContainer.children];
+
+        /* Initial sorted product array */
+        let sortedProducts = [];
+
+        /*  Empty the container then fill it with sorted products */
+        currentProductsContainer.innerHTML = "";
+
+        /*Sorted product by option*/
+        switch (value) {
+          case "az":
+            sortAZ(products);
+            break;
+          case "za":
+            sortZA(products);
+            break;
+          case "priceASC":
+            sortPriceASC(products);
+            break;
+          case "priceDESC":
+            sortPriceDESC(products);
+            break;
+          case "oldest":
+            sortOldest(products);
+            break;
+          case "latest":
+            sortLatest(products);
+            break;
+          default:
+            sortedProducts = products;
+        }
+
+        /* A to Z */
+        function sortAZ(products) {
+          sortedProducts = products.slice().sort((product1, product2) => {
+            const name1 = extractProductInfo(product1).name;
+            const name2 = extractProductInfo(product2).name;
+            return name1.localeCompare(name2);
+          });
+        }
+        /*Z to A*/
+        function sortZA(products) {
+          sortedProducts = products.slice().sort((product1, product2) => {
+            const name1 = extractProductInfo(product1).name;
+            const name2 = extractProductInfo(product2).name;
+            return name2.localeCompare(name1);
+          });
+        }
+        /*BY PRICE ASC*/
+        function sortPriceASC(products) {
+          sortedProducts = products.slice().sort((product1, product2) => {
+            const price1 = extractProductInfo(product1).price;
+            const price2 = extractProductInfo(product2).price;
+            return price1 - price2;
+          });
+        }
+        /*BY PRICE DESC*/
+        function sortPriceDESC(products) {
+          sortedProducts = products.slice().sort((product1, product2) => {
+            const price1 = extractProductInfo(product1).price;
+            const price2 = extractProductInfo(product2).price;
+            return price2 - price1;
+          });
+        }
+        /*BY DATE ASC*/
+        function sortOldest(products) {
+          sortedProducts = products.slice().sort((product1, product2) => {
+            const id1 = extractProductInfo(product1).id;
+            const id2 = extractProductInfo(product2).id;
+            return id1.localeCompare(id2);
+          });
+        }
+        /* BY DATE DESC */
+        function sortLatest(products) {
+          sortedProducts = products.slice().sort((product1, product2) => {
+            const id1 = extractProductInfo(product1).id;
+            const id2 = extractProductInfo(product2).id;
+            return id2.localeCompare(id1);
+          });
+        }
+
+        /*Fill the container with sorted products*/
+        sortedProducts.forEach((product) =>
+          currentProductsContainer.append(product)
+        );
+      }
+
+      sortProducts.addEventListener("change", sortByOption);
+    </script>
+  </body>
+</html>

@@ -65,3 +65,19 @@ navigator.geolocation.getCurrentPosition(success, error, options);
 $("#toTop").click(() => {
   $(window).scrollTop(0);
 });
+
+/* LOAD MORE ITEMS */
+function render(child = "", parent = "", number = 0, data) {
+  for (let i = 0; i < number; i++) {
+    const $arr = $(`.${child}`).first().clone();
+    const { download_url } = data[i];
+    $arr[0].children[0].children[0].children[0].src = download_url;
+    $arr.appendTo(`.${parent}`);
+  }
+}
+
+/* TOOLTIP */
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
