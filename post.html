@@ -1,836 +1,600 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <!-- FONTAWESOME -->
-    <link
-      rel="stylesheet"
-      href="./fonts/fontawesome-free-5.14.0-web/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-      crossorigin=""
-    />
-
+    <link rel="stylesheet" href="./fonts/fontawesome-free-5.14.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
     <!-- OPTIIONAL CSS -->
     <link rel="stylesheet" href="./css/style.css" />
-
     <title>Demo - Theme Store Haravan</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- TOPBAR -->
     <div class="top-bar bg-dark">
-      <div class="container">
-        <div class="row justify-content-start align-item">
-          <div
-            class="top-bar__contact mr-auto py-2 col-lg-8 d-lg-block d-none small"
-            text-left
-          >
-            <div class="top-bar__hotline d-inline-block">
-              <img src="./img/icondienthoai.png" alt="phone icon" />
-              <b class="text-light">Tư Vấn 24/7:</b
-              ><span class="text-muted"> 0909528368</span>
-            </div>
-            <div class="top-bar__address d-inline-block ml-2">
-              <b class="text-light">Địa chỉ:</b
-              ><span class="text-muted">
-                P214 , Chung cư B3, Ngõ 118 , Nguyễn Khánh Toàn</span
-              >
-            </div>
-          </div>
-          <div
-            class="top-bar__user ml-auto col-lg-4 col-12 text-right top-bar__user__account"
-          >
-            <div class="account__dropdown py-1 d-inline-block">
-              <a class="btn-sm py-5 text-light text-decoration-none" href="#">
-                <i class="fa fa-user"></i>
-                <span>Tài Khoản</span>
-              </a>
-
-              <div class="account__dropdown-menu">
-                <a class="btn btn-light d-block" href="./signIn.html"
-                  >Đăng nhập</a
-                >
-                <a class="btn btn-light d-block" href="./signUp.html"
-                  >Đăng ký</a
-                >
-              </div>
-            </div>
-
-            <div class="cart-dropdown d-inline-block top-bar__user__cart">
-              <a
-                class="btn-sm text-light text-decoration-none d-lg-block d-none"
-                href="#"
-              >
-                <i class="fa fa-shopping-cart"></i>
-                <span
-                  >Giỏ Hàng
-                  <span id="cartAmount" class="badge badge-light">0</span></span
-                >
-              </a>
-
-              <div class="cart-dropdown__menu">
-                <span class="text-muted small">Giỏ hàng hiện đang trống</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <header
-      class="container-fluid"
-      id="header"
-      style="background-color: #f4f4f4;"
-    >
-      <div class="row">
-        <!-- NAVIGATION -->
-        <div class="col-lg-8 col-12">
-          <div class="navbar-container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-              <a class="navbar-brand" href="#">
-                <img src="./img/logo.png" alt="logo" />
-              </a>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="./index.html">Trang chủ </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./about.html">Giới thiệu</a>
-                  </li>
-                  <li class="nav-item my-dropdown">
-                    <span></span>
-                    <a class="nav-link" href="/index.html" id="myDropDownBtn">
-                      Sản phẩm
-                      <i class="fa fa-angle-down"></i>
-                    </a>
-                    <div
-                      class="my-dropdown-menu product__dropdown-menu rounded mt-2"
-                    >
-                      <div class="container">
-                        <div class="row">
-                          <div class="col-12 col-md-8">
-                            <ul class="row">
-                              <li class="col-sm-6 col-12 py-2">
-                                <a href="#" class="h6">Phòng khách</a>
-                                <ul class="list-group-flush">
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted">Ghế bành</a>
-                                  </li>
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted"
-                                      >Bàn tiếp khách</a
-                                    >
-                                  </li>
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted">Tủ cao</a>
-                                  </li>
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted">Ghế tựa</a>
-                                  </li>
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted">Ghế vuông</a>
-                                  </li>
-                                </ul>
-                              </li>
-                              <li class="col-sm-6 col-12 py-2">
-                                <a href="#" class="h6">Phòng ngủ</a>
-                                <ul class="list-group-flush">
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted"
-                                      >Bàn trang điểm</a
-                                    >
-                                  </li>
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted"
-                                      >Giường ngủ</a
-                                    >
-                                  </li>
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted">Rèm</a>
-                                  </li>
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted">Tủ</a>
-                                  </li>
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted">Ghế</a>
-                                  </li>
-                                </ul>
-                              </li>
-                              <li class="col-sm-6 col-12 py-2">
-                                <a href="#" class="h6">Nhà bếp</a>
-                                <ul class="list-group-flush">
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted">Bồn rửa</a>
-                                  </li>
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted">Tủ bếp</a>
-                                  </li>
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted">Nội thất</a>
-                                  </li>
-                                </ul>
-                              </li>
-                              <li class="col-sm-6 col-12 py-2">
-                                <a href="#" class="h6">Thiết bị vệ sinh</a>
-                              </li>
-                              <li class="col-sm-6 col-12 py-2">
-                                <a href="#" class="h6">Đồ trang trí</a>
-                              </li>
-                              <li class="col-sm-6 col-12 py-2">
-                                <a href="#" class="h6">Nhà thông minh</a>
-                              </li>
-                              <li class="col-sm-6 col-12 py-2">
-                                <a href="#" class="h6">Sofa</a>
-                              </li>
-                              <li class="col-sm-6 col-12 py-2">
-                                <a href="#" class="h6">Phòng tắm</a>
-                              </li>
-                            </ul>
-                          </div>
-                          <div class="col-12 col-md-4">
-                            <h6 class="text-success py-2">Sản phẩm nổi bật</h6>
-                            <div class="d-block best-seller__container">
-                              <div class="best-seller">
-                                <div class="row">
-                                  <a href="#" class="col-sm-6 col-12">
-                                    <img
-                                      class="w-100 h-100"
-                                      src="./img/ban_go.jpg"
-                                  /></a>
-                                  <div
-                                    class="col-sm-6 col-12 best-seller__info"
-                                  >
-                                    <div class="h6">
-                                      Lorem, ipsum
-                                    </div>
-                                    <div class="best-seller__price">
-                                      <span class="price-before text-muted">
-                                        26,000,000₫
-                                      </span>
-                                      19,000,000₫
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="best-seller">
-                                <div class="row">
-                                  <a href="#" class="col-sm-6 col-12">
-                                    <img
-                                      class="w-100 h-100"
-                                      src="./img/ban_go.jpg"
-                                  /></a>
-                                  <div
-                                    class="col-sm-6 col-12 best-seller__info"
-                                  >
-                                    <div class="h6">
-                                      Lorem, ipsum
-                                    </div>
-                                    <div class="best-seller__price">
-                                      <span class="price-before text-muted">
-                                        26,000,000₫
-                                      </span>
-                                      19,000,000₫
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="best-seller">
-                                <div class="row">
-                                  <a href="#" class="col-sm-6 col-12">
-                                    <img
-                                      class="w-100 h-100"
-                                      src="./img/ban_go.jpg"
-                                  /></a>
-                                  <div
-                                    class="col-sm-6 col-12 best-seller__info"
-                                  >
-                                    <div class="h6">
-                                      Lorem, ipsum
-                                    </div>
-                                    <div class="best-seller__price">
-                                      <span class="price-before text-muted">
-                                        26,000,000₫
-                                      </span>
-                                      19,000,000₫
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+        <div class="container">
+            <div class="row justify-content-start align-item">
+                <div class="top-bar__contact mr-auto py-2 col-lg-8 d-lg-block d-none small" text-left>
+                    <div class="top-bar__hotline d-inline-block">
+                        <img src="./img/icondienthoai.png" alt="phone icon" />
+                        <b class="text-light">Tư Vấn 24/7:</b><span class="text-muted"> 0909528368</span>
                     </div>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Thiết kế nội thất</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./news.html">Tin Tức</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./contact.html">Liên hệ</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          </div>
+                    <div class="top-bar__address d-inline-block ml-2">
+                        <b class="text-light">Địa chỉ:</b><span class="text-muted">
+                            P214 , Chung cư B3, Ngõ 118 , Nguyễn Khánh Toàn</span>
+                    </div>
+                </div>
+                <div class="top-bar__user ml-auto col-lg-4 col-12 text-right top-bar__user__account">
+                    <div class="account__dropdown py-1 d-inline-block">
+                        <a class="btn-sm py-5 text-light text-decoration-none" href="#">
+                            <i class="fa fa-user"></i>
+                            <span>Tài Khoản</span>
+                        </a>
+                        <div class="account__dropdown-menu">
+                            <a class="btn btn-light d-block" href="./signIn.html">Đăng nhập</a>
+                            <a class="btn btn-light d-block" href="./signUp.html">Đăng ký</a>
+                        </div>
+                    </div>
+                    <div class="cart-dropdown py-2 d-lg-inline-block d-none top-bar__user__cart" id="cart">
+                        <a class="btn-sm text-light text-decoration-none" id="cartBtn" href="#">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span>Giỏ Hàng
+                                <span id="cartAmount" class="badge badge-light"></span></span>
+                        </a>
+                        <div class="cart-dropdown__menu">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!--    SEARCH FORM -->
-        <form
-          class="form-inline justify-content-lg-end col-lg-4 col-md-12 my-2 my-lg-0"
-        >
-          <input
-            class="form-control w-50 rounded-0"
-            type="search"
-            id="searchBar"
-            name="q"
-            placeholder="Bạn muốn tìm gì?"
-            maxlength="128"
-            aria-label="Search"
-          />
-          <button
-            class="btn btn-success ml-2 my-2 my-sm-0 rounded-0"
-            type="submit"
-          >
-            <i class="fa fa-search" aria-hidden="true"></i>
-          </button>
-        </form>
-      </div>
+    </div>
+    <!-- HEADER -->
+    <header class="container-fluid" id="header" style="background-color: #f4f4f4;">
+        <div class="row">
+            <!-- NAVIGATION -->
+            <div class="col-lg-8 col-12">
+                <div class="navbar-container">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="#">
+                            <img src="./img/logo.png" alt="logo" />
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="./index.html">Trang chủ </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./about.html">Giới thiệu</a>
+                                </li>
+                                <li class="nav-item my-dropdown">
+                                    <span></span>
+                                    <a class="nav-link" href="/index.html" id="myDropDownBtn">
+                                        Sản phẩm
+                                        <i class="fa fa-angle-down d-lg-inline-block d-none"></i>
+                                    </a>
+                                    <div class="my-dropdown-menu product__dropdown-menu rounded mt-2">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-12 col-md-8">
+                                                    <ul class="row">
+                                                        <li class="col-sm-6 col-12 py-2">
+                                                            <a href="./products.html" class="h6">Phòng khách</a>
+                                                            <ul class="list-group-flush">
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Ghế bành</a>
+                                                                </li>
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Bàn tiếp khách</a>
+                                                                </li>
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Tủ cao</a>
+                                                                </li>
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Ghế tựa</a>
+                                                                </li>
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Ghế vuông</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="col-sm-6 col-12 py-2">
+                                                            <a href="./products.html" class="h6">Phòng ngủ</a>
+                                                            <ul class="list-group-flush">
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Bàn trang điểm</a>
+                                                                </li>
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Giường ngủ</a>
+                                                                </li>
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Rèm</a>
+                                                                </li>
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Tủ</a>
+                                                                </li>
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Ghế</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="col-sm-6 col-12 py-2">
+                                                            <a href="./products.html" class="h6">Nhà bếp</a>
+                                                            <ul class="list-group-flush">
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Bồn rửa</a>
+                                                                </li>
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Tủ bếp</a>
+                                                                </li>
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Nội thất</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="col-sm-6 col-12 py-2">
+                                                            <a href="./products.html" class="h6">Thiết bị vệ sinh</a>
+                                                        </li>
+                                                        <li class="col-sm-6 col-12 py-2">
+                                                            <a href="./products.html" class="h6">Đồ trang trí</a>
+                                                        </li>
+                                                        <li class="col-sm-6 col-12 py-2">
+                                                            <a href="./products.html" class="h6">Nhà thông minh</a>
+                                                        </li>
+                                                        <li class="col-sm-6 col-12 py-2">
+                                                            <a href="./products.html" class="h6">Sofa</a>
+                                                        </li>
+                                                        <li class="col-sm-6 col-12 py-2">
+                                                            <a href="./products.html" class="h6">Phòng tắm</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-12 col-md-4">
+                                                    <h6 class="text-success py-2">Sản phẩm nổi bật</h6>
+                                                    <div class="d-block best-seller__container">
+                                                        <div class="best-seller">
+                                                            <div class="row">
+                                                                <a href="./productDetail.html" class="col-sm-6 col-12">
+                                                                    <img class="w-100 h-100" src="./img/ban_go.jpg" /></a>
+                                                                <div class="col-sm-6 col-12 best-seller__info">
+                                                                    <div class="h6">
+                                                                        Lorem, ipsum
+                                                                    </div>
+                                                                    <div class="best-seller__price">
+                                                                        <span class="price-before text-muted">
+                                                                            26,000,000₫
+                                                                        </span>
+                                                                        19,000,000₫
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="best-seller">
+                                                            <div class="row">
+                                                                <a href="./productDetail.html" class="col-sm-6 col-12">
+                                                                    <img class="w-100 h-100" src="./img/ban_go.jpg" /></a>
+                                                                <div class="col-sm-6 col-12 best-seller__info">
+                                                                    <div class="h6">
+                                                                        Lorem, ipsum
+                                                                    </div>
+                                                                    <div class="best-seller__price">
+                                                                        <span class="price-before text-muted">
+                                                                            26,000,000₫
+                                                                        </span>
+                                                                        19,000,000₫
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="best-seller">
+                                                            <div class="row">
+                                                                <a href="./productDetail.html" class="col-sm-6 col-12">
+                                                                    <img class="w-100 h-100" src="./img/ban_go.jpg" /></a>
+                                                                <div class="col-sm-6 col-12 best-seller__info">
+                                                                    <div class="h6">
+                                                                        Lorem, ipsum
+                                                                    </div>
+                                                                    <div class="best-seller__price">
+                                                                        <span class="price-before text-muted">
+                                                                            26,000,000₫
+                                                                        </span>
+                                                                        19,000,000₫
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Thiết kế nội thất</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./news.html">Tin Tức</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./contact.html">Liên hệ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!--    SEARCH FORM -->
+            <form class="form-inline justify-content-lg-end col-lg-4 col-md-12 my-2 my-lg-0">
+                <input class="form-control w-50 rounded-0" type="search" id="searchBar" name="q" placeholder="Bạn muốn tìm gì?" maxlength="128" aria-label="Search" />
+                <button class="btn btn-success ml-2 my-2 my-sm-0 rounded-0" type="submit">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </form>
+        </div>
     </header>
-
     <!-- POST -->
     <section id="post">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-3">
-            <div class="products__header">
-              <h3>Danh mục <span style="color: #888;">tin tức</span></h3>
-            </div>
-            <div class="card px-2 py-1">
-              <ul class="list-group">
-                <li class="news__nav__item">
-                  <a href="#" class="news__nav__link">Lorem, ipsum.</a>
-                </li>
-                <li class="news__nav__item">
-                  <a href="#" class="news__nav__link">Lorem, ipsum.</a>
-                </li>
-                <li class="news__nav__item">
-                  <a href="#" class="news__nav__link">Lorem, ipsum.</a>
-                </li>
-                <li class="news__nav__item">
-                  <a href="#" class="news__nav__link">Lorem, ipsum.</a>
-                </li>
-                <li class="news__nav__item">
-                  <a href="#" class="news__nav__link">Lorem, ipsum.</a>
-                </li>
-                <li class="news__nav__item">
-                  <a href="#" class="news__nav__link">Lorem, ipsum.</a>
-                </li>
-              </ul>
-            </div>
-            <h4 class="mt-2" style="font-size: 25px;">
-              Bài viết mới
-            </h4>
-            <div class="card px-2 py-1">
-              <ul class="list-group">
-                <li class="news__nav__item">
-                  <a href="#" class="news__nav__link"
-                    >Hiệu quả không gian: đẳng cấp thiết kế nhà phố Camellia
-                    Garden</a
-                  >
-                </li>
-                <li class="news__nav__item">
-                  <a href="#" class="news__nav__link"
-                    >Không gian sống xanh giữa lòng thủ đô
-                  </a>
-                </li>
-                <li class="news__nav__item">
-                  <a href="#" class="news__nav__link"
-                    >Phong cách hiện đại trong thiết kế nội thất là gì?</a
-                  >
-                </li>
-                <li class="news__nav__item">
-                  <a href="#" class="news__nav__link"
-                    >Người dùng chuộng nội thất sạch, chuẩn châu Âu</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="banner card mt-2">
-              <a href="#" class="card-img-top banner"
-                ><img src="./img/blog-img.jpg" alt="banner"
-              /></a>
-            </div>
-          </div>
-          <div class="col-12 col-md-9 mt-4">
-            <div class="post my-3 pt-4 pb-2">
-              <div class="container post__content">
-                <div class="row">
-                  <div class="col-12 post__header">
-                    <h2>
-                      <a
-                        href="#"
-                        class="text-success news__post__title mb-3"
-                        id="postTitle"
-                      >
-                        Hiệu Quả Không Gian: Đẳng Cấp Thiết Kế Nhà Phố Camellia
-                        Garden
-                      </a>
-                    </h2>
-                    <small class="post__info"
-                      ><a href="#" class="text-success" id="postAuthor"
-                        >Flexshop Flexshop</a
-                      >
-                      - <span id="postDate">05/10/2016</span> -
-                      <span id="postCommentsCount" class="text-success">1</span>
-                      bình luận
-                    </small>
-                  </div>
-                  <div class="post__body">
-                    <div class="my-2">
-                      <img
-                        src="./img/news_01.jpg"
-                        alt="news image"
-                        id="1"
-                        class="w-100 post__img"
-                      />
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    <div class="products__header">
+                        <h3>Danh mục <span style="color: #888;">tin tức</span></h3>
                     </div>
-                    <p>
-                      Phong cách hiện đại là một thuật ngữ đã xuất hiện từ những
-                      thập niên 50 của thế kỉ 19 và ngày càng trở nên quen thuộc
-                      trong cuộc sống của chúng ta. Vậy phong cách hiện đại là
-                      gì? Làm thế nào để phân biệt phong cách hiện đại với các
-                      phong cách khác?
-                    </p>
-                    <h3>Sự ra đời của phong cách hiện đại</h3>
-                    <p>
-                      Trào lưu kiến trúc Hiện đại (Modernism) là một khái niệm
-                      rất rộng được sử dụng để miêu tả các công trình khác nhau
-                      có các đặc điểm tương đồng về sự đơn giản trong bố cục
-                      hình khối không gian, tổ chức mặt bằng tự do, phi đối
-                      xứng, mặt đứng loại bỏ việc sử dụng các họa tiết trang trí
-                      của trường phái cổ điển cũng như việc sử dụng vật liệu mới
-                      như kính, thép, bê tông. Kiến trúc hiện đại là một sự đoạn
-                      tuyệt mạnh mẽ với kiến trúc cổ điển, thể hiện một lối tư
-                      duy mới của sự phát triển bùng nổ của các xã hội Châu Âu
-                      cuối thế kỉ 19, đầu thế kỉ 20. Kiến trúc hiện đại được
-                      đánh dấu bằng sự ra đời của công trình Cung thủy Tinh
-                      (Crystal Palace) ở Hyde Park (Luân Đôn – Anh) năm 1851, do
-                      kiến trúc sư Joseph Paxton thiết kế.
-                    </p>
-                    <img
-                      src="./img/post_img_01.jpg"
-                      alt="post image"
-                      class="post__img w-75"
-                      id="2"
-                    />
-                    <cite class="d-block my-2"
-                      >Cung thủy tinh (Crystal Palace) - kiến trúc sư Joseph
-                      Paxton
-                    </cite>
-                    <p>
-                      Sự ra đời của kiến trúc hiện đại đã mang đến sự hình thành
-                      phong cách hiện đại trong thiết kế nội thất vào những năm
-                      20 của thế kỉ 20. Việc tạo ra phong cách thiết kế nội thất
-                      hiện đại được cho là của một nhóm các nhà thiết kế châu Âu
-                      ở Trường Bauhaus ( Đức ) vào năm 1919. Phong cách thiết kế
-                      hiện đại, sạch sẽ, tập trung chủ yếu vào tính công năng và
-                      tránh các phụ kiện rườm rà, các trang trí quá mức thường
-                      thấy trong nhiều phong cách khác. Một số người cảm thấy
-                      việc thiết kế hiện đại là quá đơn giản, thô hoặc lạnh, tuy
-                      nhiên khi được lên kế hoạch chặt chẽ, hợp lý, nó sẽ tạo
-                      nên cảm giác yên bình và đơn giản cho ngôi nhà của bạn.
-                    </p>
-                    <p>
-                      Dưới đây là ví dụ về ngôi nhà Châu Á mang phong cách hiện
-                      đại:
-                    </p>
-                    <img
-                      src="./img/post_img_02.jpg"
-                      alt="post image"
-                      class="post__img w-75"
-                      id="3"
-                    />
-                    <em class="d-block my-2"
-                      >Phòng khách đơn giản với gam màu trắng - be và những
-                      đường song song trên trần, tường, sàn tạo cảm giác yên
-                      tĩnh kết hợp với cửa kính lớn, đem ánh sáng tư nhiên tràn
-                      ngập trong căn phòng
-                    </em>
-                    <img
-                      src="./img/post_img_03.jpg"
-                      alt="post image"
-                      class="post__img w-75"
-                      id="4"
-                    />
-                    <em class="d-block my-2"
-                      >Cây xanh đươc đưa vào không gian mang đến sự gần gũi và
-                      thoải mái
-                    </em>
-                    <img
-                      src="./img/post_img_04.jpg"
-                      alt="post image"
-                      class="post__img w-75"
-                      id="5"
-                    />
-                    <em class="d-block my-2">
-                      Phòng sinh hoạt chung ấm cúng với những chiếc sofa màu
-                      trắng kết hợp với mảng tường giả gỗ và thảm trải sàn
-                    </em>
-                    <p>
-                      Phong cách hiện đại là lựa chọn lý tưởng cho các căn hộ và
-                      các không gian nhỏ, bởi nó giúp tối đa hóa không gian và
-                      tạo nên ấn tượng về một căn phòng lớn hơn nó sẵn có. Kết
-                      cấu tối thiểu và các dạng hình học táo bạo, màu sắc trung
-                      tính nổi bật với một màu đậm, đồ đạc được đánh bóng và
-                      không cân bằng đối xứng là đặc điểm nhận dạng chính của
-                      nội thất theo phong cách hiện đại. Điều dễ hiểu khi phong
-                      cách nội thất hiện đại ngày càng thịnh hành và khiến con
-                      người cảm thấy thích thú, hài lòng chính là sự tiện nghi,
-                      hài hòa giữa các không gian, thanh lịch, mềm mại, không
-                      cầu kỳ nhiều chi tiết hay thiên về kiểu dáng hình khối.
-                      Màu sắc sử dụng một cách trung lập, thường thì màu trắng
-                      sẽ làm nền chủ đạo sau đó thêm một mảng màu nổi bật cho
-                      mảng tường đã được lựa chọn để làm điểm nhấn.
-                    </p>
-                    <p>
-                      Ngôi nhà hiện đại dưới đây với màu trắng là chủ đạo, kết
-                      hợp sự nhấn nhá độc đáo của những gam màu tươi sáng như:
-                      xanh dương, vàng, be...
-                    </p>
-                    <img
-                      src="./img/post_img_05.jpg"
-                      alt="post image"
-                      class="post__img w-75"
-                      id="6"
-                    />
-                    <em class="d-block my-2">
-                      Phòng khách và bếp liên thông với nhau
-                    </em>
-                    <p class="text-right">
-                      <strong>Nguồn: Sưu tầm </strong>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="comments">
-              <div class="container" id="commentSection">
-                <div class="row">
-                  <div class="col-12 py-2">
-                    <span class="page__title h3"
-                      >Bình luận
-                      <span id="commentSectionCount" class="badge badge-success"
-                        >1</span
-                      ></span
-                    >
-                  </div>
-                </div>
-                <div class="container mt-3 comment">
-                  <div class="row">
-                    <div class="user d-flex p-2 align-items-center">
-                      <div class="user__avatar w-25 mr-3">
-                        <img
-                          src="./img/avatar_01.jpg"
-                          class="rounded w-100 h-100"
-                          id="userAvatar"
-                        />
-                      </div>
-                      <div class="user__comment w-75" id="userComment">
-                        <a
-                          href="#"
-                          class="user__name text-success h2"
-                          id="username"
-                          >Lorem</a
-                        >
-                        <p
-                          class="user__comment__content"
-                          id="userCommentContent"
-                        >
-                          Lorem, ipsum dolor sit amet consectetur adipisicing
-                          elit. At, eligendi. Lorem ipsum dolor sit amet
-                          consectetur adipisicing elit.
-                        </p>
-                      </div>
+                    <div class="card px-2 py-1">
+                        <ul class="list-group">
+                            <li class="news__nav__item">
+                                <a href="#" class="news__nav__link">Lorem, ipsum.</a>
+                            </li>
+                            <li class="news__nav__item">
+                                <a href="#" class="news__nav__link">Lorem, ipsum.</a>
+                            </li>
+                            <li class="news__nav__item">
+                                <a href="#" class="news__nav__link">Lorem, ipsum.</a>
+                            </li>
+                            <li class="news__nav__item">
+                                <a href="#" class="news__nav__link">Lorem, ipsum.</a>
+                            </li>
+                            <li class="news__nav__item">
+                                <a href="#" class="news__nav__link">Lorem, ipsum.</a>
+                            </li>
+                            <li class="news__nav__item">
+                                <a href="#" class="news__nav__link">Lorem, ipsum.</a>
+                            </li>
+                        </ul>
                     </div>
-                  </div>
+                    <h4 class="mt-2" style="font-size: 25px;">
+                        Bài viết mới
+                    </h4>
+                    <div class="card px-2 py-1">
+                        <ul class="list-group">
+                            <li class="news__nav__item">
+                                <a href="#" class="news__nav__link">Hiệu quả không gian: đẳng cấp thiết kế nhà phố Camellia
+                                    Garden</a>
+                            </li>
+                            <li class="news__nav__item">
+                                <a href="#" class="news__nav__link">Không gian sống xanh giữa lòng thủ đô
+                                </a>
+                            </li>
+                            <li class="news__nav__item">
+                                <a href="#" class="news__nav__link">Phong cách hiện đại trong thiết kế nội thất là gì?</a>
+                            </li>
+                            <li class="news__nav__item">
+                                <a href="#" class="news__nav__link">Người dùng chuộng nội thất sạch, chuẩn châu Âu</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="banner card mt-2">
+                        <a href="#" class="card-img-top banner"><img src="./img/blog-img.jpg" alt="banner" /></a>
+                    </div>
                 </div>
-              </div>
-              <div class="container" id="commentForm">
-                <div class="row mt-3">
-                  <div class="col-12 py-2">
-                    <span class="page__title h3">Viết bình luận của bạn</span>
-                  </div>
-                  <div class="col-12 mt-2">
-                    <form method="get" action="#">
-                      <div class="form-group">
-                        <label for="name" class="text-success h6">Tên*</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="name"
-                          name="name"
-                          placeholder="Nhập Tên của bạn..."
-                          required
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="email" class="text-success h6"
-                          >Email của bạn*</label
-                        >
-                        <input
-                          type="email"
-                          class="form-control"
-                          id="email"
-                          name="email"
-                          placeholder="Nhập Email của bạn..."
-                          required
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="comment" class="text-success h6"
-                          >Bình luận*</label
-                        >
-                        <textarea
-                          name="comment"
-                          id="comment"
-                          rows="4"
-                          placeholder="Hãy nói gì đó..."
-                          class="p-1 w-100"
-                        ></textarea>
-                      </div>
-                      <button
-                        type="submit"
-                        class="btn btn-success d-block mx-auto"
-                      >
-                        Gửi bình luận
-                      </button>
-                    </form>
-                  </div>
+                <div class="col-12 col-md-9 mt-4">
+                    <div class="post my-3 pt-4 pb-2">
+                        <div class="container post__content">
+                            <div class="row">
+                                <div class="col-12 post__header">
+                                    <h2>
+                                        <a href="#" class="text-success news__post__title mb-3" id="postTitle">
+                                            Hiệu Quả Không Gian: Đẳng Cấp Thiết Kế Nhà Phố Camellia
+                                            Garden
+                                        </a>
+                                    </h2>
+                                    <small class="post__info"><a href="#" class="text-success" id="postAuthor">Flexshop Flexshop</a>
+                                        - <span id="postDate">05/10/2016</span> -
+                                        <span id="postCommentsCount" class="text-success">1</span>
+                                        bình luận
+                                    </small>
+                                </div>
+                                <div class="post__body">
+                                    <div class="my-2">
+                                        <img src="./img/news_01.jpg" alt="news image" id="1" class="w-100 post__img" />
+                                    </div>
+                                    <p>
+                                        Phong cách hiện đại là một thuật ngữ đã xuất hiện từ những
+                                        thập niên 50 của thế kỉ 19 và ngày càng trở nên quen thuộc
+                                        trong cuộc sống của chúng ta. Vậy phong cách hiện đại là
+                                        gì? Làm thế nào để phân biệt phong cách hiện đại với các
+                                        phong cách khác?
+                                    </p>
+                                    <h3>Sự ra đời của phong cách hiện đại</h3>
+                                    <p>
+                                        Trào lưu kiến trúc Hiện đại (Modernism) là một khái niệm
+                                        rất rộng được sử dụng để miêu tả các công trình khác nhau
+                                        có các đặc điểm tương đồng về sự đơn giản trong bố cục
+                                        hình khối không gian, tổ chức mặt bằng tự do, phi đối
+                                        xứng, mặt đứng loại bỏ việc sử dụng các họa tiết trang trí
+                                        của trường phái cổ điển cũng như việc sử dụng vật liệu mới
+                                        như kính, thép, bê tông. Kiến trúc hiện đại là một sự đoạn
+                                        tuyệt mạnh mẽ với kiến trúc cổ điển, thể hiện một lối tư
+                                        duy mới của sự phát triển bùng nổ của các xã hội Châu Âu
+                                        cuối thế kỉ 19, đầu thế kỉ 20. Kiến trúc hiện đại được
+                                        đánh dấu bằng sự ra đời của công trình Cung thủy Tinh
+                                        (Crystal Palace) ở Hyde Park (Luân Đôn – Anh) năm 1851, do
+                                        kiến trúc sư Joseph Paxton thiết kế.
+                                    </p>
+                                    <img src="./img/post_img_01.jpg" alt="post image" class="post__img w-75" id="2" />
+                                    <cite class="d-block my-2">Cung thủy tinh (Crystal Palace) - kiến trúc sư Joseph
+                                        Paxton
+                                    </cite>
+                                    <p>
+                                        Sự ra đời của kiến trúc hiện đại đã mang đến sự hình thành
+                                        phong cách hiện đại trong thiết kế nội thất vào những năm
+                                        20 của thế kỉ 20. Việc tạo ra phong cách thiết kế nội thất
+                                        hiện đại được cho là của một nhóm các nhà thiết kế châu Âu
+                                        ở Trường Bauhaus ( Đức ) vào năm 1919. Phong cách thiết kế
+                                        hiện đại, sạch sẽ, tập trung chủ yếu vào tính công năng và
+                                        tránh các phụ kiện rườm rà, các trang trí quá mức thường
+                                        thấy trong nhiều phong cách khác. Một số người cảm thấy
+                                        việc thiết kế hiện đại là quá đơn giản, thô hoặc lạnh, tuy
+                                        nhiên khi được lên kế hoạch chặt chẽ, hợp lý, nó sẽ tạo
+                                        nên cảm giác yên bình và đơn giản cho ngôi nhà của bạn.
+                                    </p>
+                                    <p>
+                                        Dưới đây là ví dụ về ngôi nhà Châu Á mang phong cách hiện
+                                        đại:
+                                    </p>
+                                    <img src="./img/post_img_02.jpg" alt="post image" class="post__img w-75" id="3" />
+                                    <em class="d-block my-2">Phòng khách đơn giản với gam màu trắng - be và những
+                                        đường song song trên trần, tường, sàn tạo cảm giác yên
+                                        tĩnh kết hợp với cửa kính lớn, đem ánh sáng tư nhiên tràn
+                                        ngập trong căn phòng
+                                    </em>
+                                    <img src="./img/post_img_03.jpg" alt="post image" class="post__img w-75" id="4" />
+                                    <em class="d-block my-2">Cây xanh đươc đưa vào không gian mang đến sự gần gũi và
+                                        thoải mái
+                                    </em>
+                                    <img src="./img/post_img_04.jpg" alt="post image" class="post__img w-75" id="5" />
+                                    <em class="d-block my-2">
+                                        Phòng sinh hoạt chung ấm cúng với những chiếc sofa màu
+                                        trắng kết hợp với mảng tường giả gỗ và thảm trải sàn
+                                    </em>
+                                    <p>
+                                        Phong cách hiện đại là lựa chọn lý tưởng cho các căn hộ và
+                                        các không gian nhỏ, bởi nó giúp tối đa hóa không gian và
+                                        tạo nên ấn tượng về một căn phòng lớn hơn nó sẵn có. Kết
+                                        cấu tối thiểu và các dạng hình học táo bạo, màu sắc trung
+                                        tính nổi bật với một màu đậm, đồ đạc được đánh bóng và
+                                        không cân bằng đối xứng là đặc điểm nhận dạng chính của
+                                        nội thất theo phong cách hiện đại. Điều dễ hiểu khi phong
+                                        cách nội thất hiện đại ngày càng thịnh hành và khiến con
+                                        người cảm thấy thích thú, hài lòng chính là sự tiện nghi,
+                                        hài hòa giữa các không gian, thanh lịch, mềm mại, không
+                                        cầu kỳ nhiều chi tiết hay thiên về kiểu dáng hình khối.
+                                        Màu sắc sử dụng một cách trung lập, thường thì màu trắng
+                                        sẽ làm nền chủ đạo sau đó thêm một mảng màu nổi bật cho
+                                        mảng tường đã được lựa chọn để làm điểm nhấn.
+                                    </p>
+                                    <p>
+                                        Ngôi nhà hiện đại dưới đây với màu trắng là chủ đạo, kết
+                                        hợp sự nhấn nhá độc đáo của những gam màu tươi sáng như:
+                                        xanh dương, vàng, be...
+                                    </p>
+                                    <img src="./img/post_img_05.jpg" alt="post image" class="post__img w-75" id="6" />
+                                    <em class="d-block my-2">
+                                        Phòng khách và bếp liên thông với nhau
+                                    </em>
+                                    <p class="text-right">
+                                        <strong>Nguồn: Sưu tầm </strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="comments">
+                        <div class="container" id="commentSection">
+                            <div class="row">
+                                <div class="col-12 py-2">
+                                    <span class="page__title h3">Bình luận
+                                        <span id="commentSectionCount" class="badge badge-success">1</span></span>
+                                </div>
+                            </div>
+                            <div class="container mt-3 comment">
+                                <div class="row">
+                                    <div class="user d-flex p-2 align-items-center">
+                                        <div class="user__avatar w-25 mr-3">
+                                            <img src="./img/avatar_01.jpg" class="rounded w-100 h-100" id="userAvatar" />
+                                        </div>
+                                        <div class="user__comment w-75" id="userComment">
+                                            <a href="#" class="user__name text-success h2" id="username">Lorem</a>
+                                            <p class="user__comment__content" id="userCommentContent">
+                                                Lorem, ipsum dolor sit amet consectetur adipisicing
+                                                elit. At, eligendi. Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container" id="commentForm">
+                            <div class="row mt-3">
+                                <div class="col-12 py-2">
+                                    <span class="page__title h3">Viết bình luận của bạn</span>
+                                </div>
+                                <div class="col-12 mt-2">
+                                    <form method="get" action="#">
+                                        <div class="form-group">
+                                            <label for="name" class="text-success h6">Tên*</label>
+                                            <input type="text" class="form-control" id="name" name="name" placeholder="Nhập Tên của bạn..." required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email" class="text-success h6">Email của bạn*</label>
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Nhập Email của bạn..." required />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="comment" class="text-success h6">Bình luận*</label>
+                                            <textarea name="comment" id="comment" rows="4" placeholder="Hãy nói gì đó..." class="p-1 w-100"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-success d-block mx-auto">
+                                            Gửi bình luận
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
-
     <!-- COMMENT -->
-
     <!-- ADDRESS -->
-
     <section id="address" class="container">
-      <div class="row mt-5">
-        <div class="col-md-6 col-12 card bg-success rounded-0 text-light">
-          <div
-            class="card-header d-flex justify-content-start align-items-center"
-          >
-            <div class="p-1">
-              <img src="./img/icon_shop.png" alt="" />
+        <div class="row mt-5">
+            <div class="col-md-6 col-12 card bg-success rounded-0 text-light">
+                <div class="card-header d-flex justify-content-start align-items-center">
+                    <div class="p-1">
+                        <img src="./img/icon_shop.png" alt="" />
+                    </div>
+                    <div class="p-1">
+                        <div class="card-title text-uppercase font-italic h4">
+                            FLEXSHOP
+                        </div>
+                        <p class="card-subtitle text-uppercase">
+                            Nội thất hiện đại
+                        </p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-text">
+                        <i class="fa fa-map-marker-alt mr-3"></i>
+                        <span class="lead">P214 , Chung cư B3, Ngõ 118 , Nguyễn Khánh Toàn</span>
+                    </div>
+                    <div class="card-text">
+                        <i class="fa fa-envelope mr-3"></i>
+                        <span>Email:
+                            <a href="mailto:songvangvietnam@gmail.com" class="text-light">songvangvietnam@gmail.com</a></span>
+                    </div>
+                    <div class="card-text">
+                        <i class="fa fa-phone mr-3"></i>
+                        <span>Phone:
+                            <a href="tel:+84902.068.068" class="text-light">0902.068.068</a></span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>FOLLOW US: </span>
+                    <a href="#" class="d-inline-block p-1 rounded-circle"><i class="fab fa-facebook text-light"></i></a>
+                    <a href="#" class="d-inline-block p-1 rounded-circle"><i class="fab fa-twitter text-light"></i></a>
+                    <a href="#" class="d-inline-block p-1 rounded-circle"><i class="fa fa-rss text-light"></i></a>
+                    <a href="#" class="d-inline-block p-1 rounded-circle"><i class="fab fa-google-plus text-light"></i></a>
+                    <a href="#" class="d-inline-block p-1 rounded-circle"><i class="fab fa-pinterest text-light"></i></a>
+                </div>
             </div>
-            <div class="p-1">
-              <div class="card-title text-uppercase font-italic h4">
-                FLEXSHOP
-              </div>
-              <p class="card-subtitle text-uppercase">
-                Nội thất hiện đại
-              </p>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="card-text">
-              <i class="fa fa-map-marker-alt mr-3"></i>
-              <span class="lead"
-                >P214 , Chung cư B3, Ngõ 118 , Nguyễn Khánh Toàn</span
-              >
-            </div>
-            <div class="card-text">
-              <i class="fa fa-envelope mr-3"></i>
-              <span
-                >Email:
-                <a href="mailto:songvangvietnam@gmail.com" class="text-light"
-                  >songvangvietnam@gmail.com</a
-                ></span
-              >
-            </div>
-            <div class="card-text">
-              <i class="fa fa-phone mr-3"></i>
-              <span
-                >Phone:
-                <a href="tel:+84902.068.068" class="text-light"
-                  >0902.068.068</a
-                ></span
-              >
-            </div>
-          </div>
-          <div class="card-footer">
-            <span>FOLLOW US: </span>
-            <a href="#" class="d-inline-block p-1 rounded-circle"
-              ><i class="fab fa-facebook text-light"></i
-            ></a>
-            <a href="#" class="d-inline-block p-1 rounded-circle"
-              ><i class="fab fa-twitter text-light"></i
-            ></a>
-            <a href="#" class="d-inline-block p-1 rounded-circle"
-              ><i class="fa fa-rss text-light"></i
-            ></a>
-            <a href="#" class="d-inline-block p-1 rounded-circle"
-              ><i class="fab fa-google-plus text-light"></i
-            ></a>
-            <a href="#" class="d-inline-block p-1 rounded-circle"
-              ><i class="fab fa-pinterest text-light"></i
-            ></a>
-          </div>
+            <div id="mapid" class="col-md-6 col-12"></div>
         </div>
-        <div id="mapid" class="col-md-6 col-12"></div>
-      </div>
     </section>
-
     <!-- FOOTER -->
-
     <footer id="footer" class="footer bg-dark">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
-            <h5 class="text-light mb-2">Hỗ trợ</h5>
-            <ul>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> TÌm kiếm</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> Tư vấn thiết kế</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> Chăm sóc khách hàng</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> Kiểm tra đơn hàng</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
-            <h5 class="text-light mb-2">Hướng dẫn</h5>
-            <ul>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> Hướng dẫn thanh
-                  toán</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> giao nhận và thanh
-                  toán</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> đổi trả và bảo hành</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> Đăng ký thành viên</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
-            <h5 class="text-light mb-2">Chính sách</h5>
-            <ul>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> Chính sách thanh
-                  toán</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> chính sách vận
-                  chuyển</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> chính sách đổi trả
-                </a>
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> chính sách bảo hành</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
-            <h5 class="text-light mb-2">Tại sao chọn chúng tôi</h5>
-            <ul>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> Đội ngũ chuyên
-                  nghiệp</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> giá cả hợp lý</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> kinh nghiệm trên 20
-                  năm</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> đảm bảo tiến độ</a
-                >
-              </li>
-            </ul>
-          </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
+                    <h5 class="text-light mb-2">Hỗ trợ</h5>
+                    <ul>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> TÌm kiếm</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Tư vấn thiết kế</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Chăm sóc khách hàng</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Kiểm tra đơn hàng</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
+                    <h5 class="text-light mb-2">Hướng dẫn</h5>
+                    <ul>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Hướng dẫn thanh
+                                toán</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> giao nhận và thanh
+                                toán</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> đổi trả và bảo hành</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Đăng ký thành viên</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
+                    <h5 class="text-light mb-2">Chính sách</h5>
+                    <ul>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Chính sách thanh
+                                toán</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> chính sách vận
+                                chuyển</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> chính sách đổi trả
+                            </a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> chính sách bảo hành</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
+                    <h5 class="text-light mb-2">Tại sao chọn chúng tôi</h5>
+                    <ul>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Đội ngũ chuyên
+                                nghiệp</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> giá cả hợp lý</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> kinh nghiệm trên 20
+                                năm</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> đảm bảo tiến độ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
     </footer>
-
     <button id="toTop" class="btn rounded-0">
-      <i class="fa fa-angle-up"></i>
+        <i class="fa fa-angle-up"></i>
     </button>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="./js/jquery-3.5.1.slim.min.js"></script>
@@ -838,12 +602,9 @@
     <script src="./js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-    <script
-      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-      crossorigin=""
-    ></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
     <!-- Optional JavaScript -->
     <script src="./js/app.js"></script>
-  </body>
+</body>
+
 </html>

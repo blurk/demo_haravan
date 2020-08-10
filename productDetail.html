@@ -1,1084 +1,787 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <!-- FONTAWESOME -->
-    <link
-      rel="stylesheet"
-      href="./fonts/fontawesome-free-5.14.0-web/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-      crossorigin=""
-    />
-
+    <link rel="stylesheet" href="./fonts/fontawesome-free-5.14.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
     <!-- OPTIIONAL CSS -->
     <link rel="stylesheet" href="./css/style.css" />
-
     <title>Demo - Theme Store Haravan</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- TOPBAR -->
     <div class="top-bar bg-dark">
-      <div class="container">
-        <div class="row justify-content-start align-item">
-          <div
-            class="top-bar__contact mr-auto py-2 col-lg-8 d-lg-block d-none small"
-            text-left
-          >
-            <div class="top-bar__hotline d-inline-block">
-              <img src="./img/icondienthoai.png" alt="phone icon" />
-              <b class="text-light">Tư Vấn 24/7:</b
-              ><span class="text-muted"> 0909528368</span>
-            </div>
-            <div class="top-bar__address d-inline-block ml-2">
-              <b class="text-light">Địa chỉ:</b
-              ><span class="text-muted">
-                P214 , Chung cư B3, Ngõ 118 , Nguyễn Khánh Toàn</span
-              >
-            </div>
-          </div>
-          <div
-            class="top-bar__user ml-auto col-lg-4 col-12 text-right top-bar__user__account"
-          >
-            <div class="account__dropdown py-1 d-inline-block">
-              <a class="btn-sm py-5 text-light text-decoration-none" href="#">
-                <i class="fa fa-user"></i>
-                <span>Tài Khoản</span>
-              </a>
-
-              <div class="account__dropdown-menu">
-                <a class="btn btn-light d-block" href="./signIn.html"
-                  >Đăng nhập</a
-                >
-                <a class="btn btn-light d-block" href="./signUp.html"
-                  >Đăng ký</a
-                >
-              </div>
-            </div>
-
-            <div class="cart-dropdown d-inline-block top-bar__user__cart">
-              <a
-                class="btn-sm text-light text-decoration-none d-lg-block d-none"
-                href="#"
-              >
-                <i class="fa fa-shopping-cart"></i>
-                <span
-                  >Giỏ Hàng
-                  <span id="cartAmount" class="badge badge-light">0</span></span
-                >
-              </a>
-
-              <div class="cart-dropdown__menu">
-                <span class="text-muted small">Giỏ hàng hiện đang trống</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <header
-      class="container-fluid"
-      id="header"
-      style="background-color: #f4f4f4;"
-    >
-      <div class="row">
-        <!-- NAVIGATION -->
-        <div class="col-lg-8 col-12">
-          <div class="navbar-container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-              <a class="navbar-brand" href="#">
-                <img src="./img/logo.png" alt="logo" />
-              </a>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="./index.html">Trang chủ </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Giới thiệu</a>
-                  </li>
-                  <li class="nav-item my-dropdown">
-                    <span></span>
-                    <a class="nav-link" href="/index.html" id="myDropDownBtn">
-                      Sản phẩm
-                      <i class="fa fa-angle-down"></i>
-                    </a>
-                    <div
-                      class="my-dropdown-menu product__dropdown-menu rounded mt-2"
-                    >
-                      <div class="container">
-                        <div class="row">
-                          <div class="col-12 col-md-8">
-                            <ul class="row">
-                              <li class="col-sm-6 col-12 py-2">
-                                <a href="#" class="h6">Phòng khách</a>
-                                <ul class="list-group-flush">
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted">Ghế bành</a>
-                                  </li>
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted"
-                                      >Bàn tiếp khách</a
-                                    >
-                                  </li>
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted">Tủ cao</a>
-                                  </li>
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted">Ghế tựa</a>
-                                  </li>
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted">Ghế vuông</a>
-                                  </li>
-                                </ul>
-                              </li>
-                              <li class="col-sm-6 col-12 py-2">
-                                <a href="#" class="h6">Phòng ngủ</a>
-                                <ul class="list-group-flush">
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted"
-                                      >Bàn trang điểm</a
-                                    >
-                                  </li>
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted"
-                                      >Giường ngủ</a
-                                    >
-                                  </li>
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted">Rèm</a>
-                                  </li>
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted">Tủ</a>
-                                  </li>
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted">Ghế</a>
-                                  </li>
-                                </ul>
-                              </li>
-                              <li class="col-sm-6 col-12 py-2">
-                                <a href="#" class="h6">Nhà bếp</a>
-                                <ul class="list-group-flush">
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted">Bồn rửa</a>
-                                  </li>
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted">Tủ bếp</a>
-                                  </li>
-                                  <li class="list-group-item py-1">
-                                    <a href="#" class="text-muted">Nội thất</a>
-                                  </li>
-                                </ul>
-                              </li>
-                              <li class="col-sm-6 col-12 py-2">
-                                <a href="#" class="h6">Thiết bị vệ sinh</a>
-                              </li>
-                              <li class="col-sm-6 col-12 py-2">
-                                <a href="#" class="h6">Đồ trang trí</a>
-                              </li>
-                              <li class="col-sm-6 col-12 py-2">
-                                <a href="#" class="h6">Nhà thông minh</a>
-                              </li>
-                              <li class="col-sm-6 col-12 py-2">
-                                <a href="#" class="h6">Sofa</a>
-                              </li>
-                              <li class="col-sm-6 col-12 py-2">
-                                <a href="#" class="h6">Phòng tắm</a>
-                              </li>
-                            </ul>
-                          </div>
-                          <div class="col-12 col-md-4">
-                            <h6 class="text-success py-2">Sản phẩm nổi bật</h6>
-                            <div class="d-block best-seller__container">
-                              <div class="best-seller">
-                                <div class="row">
-                                  <a href="#" class="col-sm-6 col-12">
-                                    <img
-                                      class="w-100 h-100"
-                                      src="./img/ban_go.jpg"
-                                  /></a>
-                                  <div
-                                    class="col-sm-6 col-12 best-seller__info"
-                                  >
-                                    <div class="h6">
-                                      Lorem, ipsum
-                                    </div>
-                                    <div class="best-seller__price">
-                                      <span class="price-before text-muted">
-                                        26,000,000₫
-                                      </span>
-                                      19,000,000₫
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="best-seller">
-                                <div class="row">
-                                  <a href="#" class="col-sm-6 col-12">
-                                    <img
-                                      class="w-100 h-100"
-                                      src="./img/ban_go.jpg"
-                                  /></a>
-                                  <div
-                                    class="col-sm-6 col-12 best-seller__info"
-                                  >
-                                    <div class="h6">
-                                      Lorem, ipsum
-                                    </div>
-                                    <div class="best-seller__price">
-                                      <span class="price-before text-muted">
-                                        26,000,000₫
-                                      </span>
-                                      19,000,000₫
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="best-seller">
-                                <div class="row">
-                                  <a href="#" class="col-sm-6 col-12">
-                                    <img
-                                      class="w-100 h-100"
-                                      src="./img/ban_go.jpg"
-                                  /></a>
-                                  <div
-                                    class="col-sm-6 col-12 best-seller__info"
-                                  >
-                                    <div class="h6">
-                                      Lorem, ipsum
-                                    </div>
-                                    <div class="best-seller__price">
-                                      <span class="price-before text-muted">
-                                        26,000,000₫
-                                      </span>
-                                      19,000,000₫
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+        <div class="container">
+            <div class="row justify-content-start align-item">
+                <div class="top-bar__contact mr-auto py-2 col-lg-8 d-lg-block d-none small" text-left>
+                    <div class="top-bar__hotline d-inline-block">
+                        <img src="./img/icondienthoai.png" alt="phone icon" />
+                        <b class="text-light">Tư Vấn 24/7:</b><span class="text-muted"> 0909528368</span>
+                    </div>
+                    <div class="top-bar__address d-inline-block ml-2">
+                        <b class="text-light">Địa chỉ:</b><span class="text-muted">
+                            P214 , Chung cư B3, Ngõ 118 , Nguyễn Khánh Toàn</span>
+                    </div>
+                </div>
+                <div class="top-bar__user ml-auto col-lg-4 col-12 text-right top-bar__user__account">
+                    <div class="account__dropdown py-1 d-inline-block">
+                        <a class="btn-sm py-5 text-light text-decoration-none" href="#">
+                            <i class="fa fa-user"></i>
+                            <span>Tài Khoản</span>
+                        </a>
+                        <div class="account__dropdown-menu">
+                            <a class="btn btn-light d-block" href="./signIn.html">Đăng nhập</a>
+                            <a class="btn btn-light d-block" href="./signUp.html">Đăng ký</a>
                         </div>
-                      </div>
                     </div>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Thiết kế nội thất</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./news.html">Tin Tức</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./contact.html">Liên hệ</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          </div>
+                    <div class="cart-dropdown py-2 d-lg-inline-block d-none top-bar__user__cart" id="cart">
+                        <a class="btn-sm text-light text-decoration-none" id="cartBtn" href="#">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span>Giỏ Hàng
+                                <span id="cartAmount" class="badge badge-light"></span></span>
+                        </a>
+                        <div class="cart-dropdown__menu">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!--    SEARCH FORM -->
-        <form
-          class="form-inline justify-content-lg-end col-lg-4 col-md-12 my-2 my-lg-0"
-        >
-          <input
-            class="form-control w-50 rounded-0"
-            type="search"
-            id="searchBar"
-            name="q"
-            placeholder="Bạn muốn tìm gì?"
-            maxlength="128"
-            aria-label="Search"
-          />
-          <button
-            class="btn btn-success ml-2 my-2 my-sm-0 rounded-0"
-            type="submit"
-          >
-            <i class="fa fa-search" aria-hidden="true"></i>
-          </button>
-        </form>
-      </div>
-    </header>
-
-    <!-- PRODUCT VIEW -->
-
-    <section id="productView">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6 col-12">
-            <div
-              class="preview__container"
-              id="previewContainer"
-              class="w-100 h-100"
-            >
-              <img
-                src="./img/ban_go.jpg"
-                alt="preview image"
-                id="previewImage"
-              />
-            </div>
-            <div class="preview__control" id="previewControl">
-              <ul class="d-flex">
-                <li class="d-inline-block w-25 h-25">
-                  <img
-                    src="./img/ban_xin.jpg"
-                    alt="thumbnail"
-                    class="img-thumbnail w-100 h-100"
-                  />
-                </li>
-                <li class="d-inline-block w-25 h-25">
-                  <img
-                    src="./img/ban_xin2.jpg"
-                    alt="thumbnail"
-                    class="img-thumbnail w-100 h-100"
-                  />
-                </li>
-                <li class="d-inline-block w-25 h-25">
-                  <img
-                    src="./img/ban_xin.jpg"
-                    alt="thumbnail"
-                    class="img-thumbnail w-100 h-100"
-                  />
-                </li>
-                <li class="d-inline-block w-25 h-25">
-                  <img
-                    src="./img/ban_xin2.jpg"
-                    alt="thumbnail"
-                    class="img-thumbnail w-100 h-100"
-                  />
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-6 col-12">
-            <h1 class="font-weight-light product-Preview__name">
-              Lorem, ipsum dolor.
-            </h1>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="d-flex justify-content-center align-items-center">
-                <span class="price-before text-muted d-block mr-2">
-                  26,000,000₫
-                </span>
-                <div class="card-text product__price h3">
-                  13,000,000₫
+    </div>
+    <!-- HEADER -->
+    <header class="container-fluid" id="header" style="background-color: #f4f4f4;">
+        <div class="row">
+            <!-- NAVIGATION -->
+            <div class="col-lg-8 col-12">
+                <div class="navbar-container">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="#">
+                            <img src="./img/logo.png" alt="logo" />
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="./index.html">Trang chủ </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./about.html">Giới thiệu</a>
+                                </li>
+                                <li class="nav-item my-dropdown">
+                                    <span></span>
+                                    <a class="nav-link" href="/index.html" id="myDropDownBtn">
+                                        Sản phẩm
+                                        <i class="fa fa-angle-down d-lg-inline-block d-none"></i>
+                                    </a>
+                                    <div class="my-dropdown-menu product__dropdown-menu rounded mt-2">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-12 col-md-8">
+                                                    <ul class="row">
+                                                        <li class="col-sm-6 col-12 py-2">
+                                                            <a href="./products.html" class="h6">Phòng khách</a>
+                                                            <ul class="list-group-flush">
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Ghế bành</a>
+                                                                </li>
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Bàn tiếp khách</a>
+                                                                </li>
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Tủ cao</a>
+                                                                </li>
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Ghế tựa</a>
+                                                                </li>
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Ghế vuông</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="col-sm-6 col-12 py-2">
+                                                            <a href="./products.html" class="h6">Phòng ngủ</a>
+                                                            <ul class="list-group-flush">
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Bàn trang điểm</a>
+                                                                </li>
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Giường ngủ</a>
+                                                                </li>
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Rèm</a>
+                                                                </li>
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Tủ</a>
+                                                                </li>
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Ghế</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="col-sm-6 col-12 py-2">
+                                                            <a href="./products.html" class="h6">Nhà bếp</a>
+                                                            <ul class="list-group-flush">
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Bồn rửa</a>
+                                                                </li>
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Tủ bếp</a>
+                                                                </li>
+                                                                <li class="list-group-item py-1">
+                                                                    <a href="./products.html" class="text-muted">Nội thất</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="col-sm-6 col-12 py-2">
+                                                            <a href="./products.html" class="h6">Thiết bị vệ sinh</a>
+                                                        </li>
+                                                        <li class="col-sm-6 col-12 py-2">
+                                                            <a href="./products.html" class="h6">Đồ trang trí</a>
+                                                        </li>
+                                                        <li class="col-sm-6 col-12 py-2">
+                                                            <a href="./products.html" class="h6">Nhà thông minh</a>
+                                                        </li>
+                                                        <li class="col-sm-6 col-12 py-2">
+                                                            <a href="./products.html" class="h6">Sofa</a>
+                                                        </li>
+                                                        <li class="col-sm-6 col-12 py-2">
+                                                            <a href="./products.html" class="h6">Phòng tắm</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-12 col-md-4">
+                                                    <h6 class="text-success py-2">Sản phẩm nổi bật</h6>
+                                                    <div class="d-block best-seller__container">
+                                                        <div class="best-seller">
+                                                            <div class="row">
+                                                                <a href="./productDetail.html" class="col-sm-6 col-12">
+                                                                    <img class="w-100 h-100" src="./img/ban_go.jpg" /></a>
+                                                                <div class="col-sm-6 col-12 best-seller__info">
+                                                                    <div class="h6">
+                                                                        Lorem, ipsum
+                                                                    </div>
+                                                                    <div class="best-seller__price">
+                                                                        <span class="price-before text-muted">
+                                                                            26,000,000₫
+                                                                        </span>
+                                                                        19,000,000₫
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="best-seller">
+                                                            <div class="row">
+                                                                <a href="./productDetail.html" class="col-sm-6 col-12">
+                                                                    <img class="w-100 h-100" src="./img/ban_go.jpg" /></a>
+                                                                <div class="col-sm-6 col-12 best-seller__info">
+                                                                    <div class="h6">
+                                                                        Lorem, ipsum
+                                                                    </div>
+                                                                    <div class="best-seller__price">
+                                                                        <span class="price-before text-muted">
+                                                                            26,000,000₫
+                                                                        </span>
+                                                                        19,000,000₫
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="best-seller">
+                                                            <div class="row">
+                                                                <a href="./productDetail.html" class="col-sm-6 col-12">
+                                                                    <img class="w-100 h-100" src="./img/ban_go.jpg" /></a>
+                                                                <div class="col-sm-6 col-12 best-seller__info">
+                                                                    <div class="h6">
+                                                                        Lorem, ipsum
+                                                                    </div>
+                                                                    <div class="best-seller__price">
+                                                                        <span class="price-before text-muted">
+                                                                            26,000,000₫
+                                                                        </span>
+                                                                        19,000,000₫
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Thiết kế nội thất</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./news.html">Tin Tức</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./contact.html">Liên hệ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
-              </div>
-              <div class="product-Preview__status">
-                <span>
-                  Tình trạng
-                  <span id="productPreviewStatus" class="badge badge-success"
-                    >Còn hàng</span
-                  >
-                </span>
-              </div>
             </div>
-            <div class="product-Preview__description mt-2">
-              <p>
-                Nhà sản xuất <a href="#" class="text-success">Family</a><br />
-                Mã SKU: Lv1_1
-              </p>
-              <h6>MÔ TẢ:</h6>
-              <p class="text-muted small">
-                Bàn làm việc cao cấp (bàn đơn) - Chân bàn dùng hệ khung chân
-                sắt, tiết diện 40x40mm, dày 1.2mm, sơn tĩnh điện màu ghi sáng và
-                có độ bóng mờ - Mặt trước bàn sử dụng yếm để tạo sự riêng tư và
-                tăng tính thẩm mỹ. - Sử dụng giá đỡ...
-              </p>
-            </div>
-            <!-- FORM -->
-            <form action="#" method="get" class="px-4" id="productPreviewForm">
-              <div class="form-group row">
-                <label
-                  for="sizeSelect"
-                  class="font-weight-bold col-md-4 col-12 px-0"
-                  >Kích thước</label
-                >
-                <select
-                  class="form-control-sm col-md-8 col-12"
-                  id="sizeSelect"
-                  name="size"
-                >
-                  <option value="1000x1400">1000x1400</option>
-                  <option value="1000x1600">1000x1600</option>
-                </select>
-              </div>
-              <div class="form-group row">
-                <label
-                  for="colorsSelect"
-                  class="font-weight-bold col-md-4 col-12 px-0"
-                  >Màu sắc</label
-                >
-                <select
-                  class="form-control-sm col-md-8 col-12"
-                  id="colorsSelect"
-                  name="color"
-                >
-                  <option value="đen tuyền">Đen tuyền</option>
-                  <option value="trắng sơn">Trắng sơn</option>
-                  <option value="vân gỗ">Vân gỗ</option>
-                </select>
-              </div>
-              <div class="form-group row">
-                <label
-                  for="material"
-                  class="font-weight-bold col-md-4 col-12 px-0"
-                  >Chất liệu</label
-                >
-                <select
-                  class="form-control-sm col-md-8 col-12"
-                  id="material"
-                  name="material"
-                >
-                  <option value="gỗ ép">Gỗ ép</option>
-                  <option value="gỗ malaysia">Gỗ Malaysia</option>
-                  <option value="gỗ tự nhiên">Gỗ tự nhiên</option>
-                </select>
-              </div>
-              <div class="row">
-                <div class="form-group">
-                  <input
-                    type="number"
-                    class="form-control"
-                    name="quantity"
-                    value="1"
-                    maxlength="12"
-                    id="quantity"
-                    min="0"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  name="add"
-                  value="Mua hàng"
-                  class="btn btn-add text-light"
-                >
-                  <span
-                    class="text-uppercase font-weight-bold btn-add__emphasis"
-                    >Mua hàng ngay</span
-                  >
-                  <br /><span class="small"
-                    >Giao tận nơi, nhận hàng nhận tiền</span
-                  >
+            <!--    SEARCH FORM -->
+            <form class="form-inline justify-content-lg-end col-lg-4 col-md-12 my-2 my-lg-0">
+                <input class="form-control w-50 rounded-0" type="search" id="searchBar" name="q" placeholder="Bạn muốn tìm gì?" maxlength="128" aria-label="Search" />
+                <button class="btn btn-success ml-2 my-2 my-sm-0 rounded-0" type="submit">
+                    <i class="fa fa-search" aria-hidden="true"></i>
                 </button>
-              </div>
             </form>
-            <!-- CONTACT -->
-            <div class="call">
-              <div class="callicon">
-                <i class="fa fa-phone"></i>
-              </div>
-              <a href="tel:0433653666">
-                đặt mua qua điện thoại (8h00 - 20h00) <br />
-                <span>(04) 33 653 666</span>
-              </a>
-            </div>
-          </div>
         </div>
-      </div>
+    </header>
+    <!-- PRODUCT VIEW -->
+    <section id="productView">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 col-12">
+                    <div class="preview__container" id="previewContainer" class="w-100 h-100">
+                        <img src="./img/ban_go.jpg" alt="preview image" id="previewImage" />
+                    </div>
+                    <div class="preview__control" id="previewControl">
+                        <ul class="d-flex">
+                            <li class="d-inline-block w-25 h-25">
+                                <img src="./img/ban_xin.jpg" alt="thumbnail" class="img-thumbnail w-100 h-100" />
+                            </li>
+                            <li class="d-inline-block w-25 h-25">
+                                <img src="./img/ban_xin2.jpg" alt="thumbnail" class="img-thumbnail w-100 h-100" />
+                            </li>
+                            <li class="d-inline-block w-25 h-25">
+                                <img src="./img/ban_xin.jpg" alt="thumbnail" class="img-thumbnail w-100 h-100" />
+                            </li>
+                            <li class="d-inline-block w-25 h-25">
+                                <img src="./img/ban_xin2.jpg" alt="thumbnail" class="img-thumbnail w-100 h-100" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <h1 class="font-weight-light product-Preview__name">
+                        Lorem, ipsum dolor.
+                    </h1>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span class="price-before text-muted d-block mr-2">
+                                26,000,000₫
+                            </span>
+                            <div class="card-text product__price h3">
+                                13,000,000₫
+                            </div>
+                        </div>
+                        <div class="product-Preview__status">
+                            <span>
+                                Tình trạng
+                                <span id="productPreviewStatus" class="badge badge-success">Còn hàng</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="product-Preview__description mt-2">
+                        <p>
+                            Nhà sản xuất <a href="#" class="text-success">Family</a><br />
+                            Mã SKU: Lv1_1
+                        </p>
+                        <h6>MÔ TẢ:</h6>
+                        <p class="text-muted small">
+                            Bàn làm việc cao cấp (bàn đơn) - Chân bàn dùng hệ khung chân
+                            sắt, tiết diện 40x40mm, dày 1.2mm, sơn tĩnh điện màu ghi sáng và
+                            có độ bóng mờ - Mặt trước bàn sử dụng yếm để tạo sự riêng tư và
+                            tăng tính thẩm mỹ. - Sử dụng giá đỡ...
+                        </p>
+                    </div>
+                    <!-- FORM -->
+                    <form action="./cart.html" method="get" class="px-4" id="productPreviewForm">
+                        <div class="form-group row">
+                            <label for="sizeSelect" class="font-weight-bold col-md-4 col-12 px-0">Kích thước</label>
+                            <select class="form-control-sm col-md-8 col-12" id="sizeSelect" name="size">
+                                <option value="1000x1400">1000x1400</option>
+                                <option value="1000x1600">1000x1600</option>
+                            </select>
+                        </div>
+                        <div class="form-group row">
+                            <label for="colorsSelect" class="font-weight-bold col-md-4 col-12 px-0">Màu sắc</label>
+                            <select class="form-control-sm col-md-8 col-12" id="colorsSelect" name="color">
+                                <option value="đen tuyền">Đen tuyền</option>
+                                <option value="trắng sơn">Trắng sơn</option>
+                                <option value="vân gỗ">Vân gỗ</option>
+                            </select>
+                        </div>
+                        <div class="form-group row">
+                            <label for="material" class="font-weight-bold col-md-4 col-12 px-0">Chất liệu</label>
+                            <select class="form-control-sm col-md-8 col-12" id="material" name="material">
+                                <option value="gỗ ép">Gỗ ép</option>
+                                <option value="gỗ malaysia">Gỗ Malaysia</option>
+                                <option value="gỗ tự nhiên">Gỗ tự nhiên</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <input type="number" class="form-control" name="quantity" value="1" maxlength="12" id="quantity" min="0" />
+                            </div>
+                            <button type="submit" name="addToCart" value="Mua hàng" class="btn btn-add text-light">
+                                <span class="text-uppercase font-weight-bold btn-add__emphasis">Mua hàng ngay</span>
+                                <br /><span class="small">Giao tận nơi, nhận hàng nhận tiền</span>
+                            </button>
+                        </div>
+                    </form>
+                    <!-- CONTACT -->
+                    <div class="call">
+                        <div class="callicon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <a href="tel:0433653666">
+                            đặt mua qua điện thoại (8h00 - 20h00) <br />
+                            <span>(04) 33 653 666</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-
     <section id="productDetail" class="mt-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-9">
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item">
-                <a
-                  class="nav-link active text-success text-uppercase"
-                  id="home-tab"
-                  data-toggle="tab"
-                  href="#productInfo"
-                  role="tab"
-                  aria-controls="home"
-                  aria-selected="true"
-                  >Thông tin sản phẩm</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-success text-uppercase"
-                  id="profile-tab"
-                  data-toggle="tab"
-                  href="#transport"
-                  role="tab"
-                  aria-controls="profile"
-                  aria-selected="false"
-                  >Vận chuyển</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-success text-uppercase"
-                  id="contact-tab"
-                  data-toggle="tab"
-                  href="#guide"
-                  role="tab"
-                  aria-controls="contact"
-                  aria-selected="false"
-                  >Hướng dẫn mua hàng</a
-                >
-              </li>
-            </ul>
-            <div class="tab-content py-5 px-4" id="myTabContent">
-              <div
-                class="tab-pane fade show active"
-                id="productInfo"
-                role="tabpanel"
-                aria-labelledby="home-tab"
-              >
-                <h4>Bàn làm việc cao cấp (bàn đơn)</h4>
-                <ul>
-                  <li>
-                    - Chân bàn dùng hệ khung chân sắt, tiết diện 40x40mm, dày
-                    1.2mm, sơn tĩnh điện màu ghi sáng và có độ bóng mờ
-                  </li>
-                  <li>
-                    - Mặt trước bàn sử dụng yếm để tạo sự riêng tư và tăng tính
-                    thẩm mỹ.
-                  </li>
-                  <li>
-                    - Sử dụng giá đỡ mặt bàn tạo sự thông thoáng và sang trọng
-                    cho sản phẩm.
-                  </li>
-                  <li>- Mặt bàn dày 25mm, cạnh bàn được làm tròn (Forming).</li>
-                  <li>
-                    - Mặt bàn phủ Laminate HP Hàn Quốc chống cháy, chống trầy
-                    xước, chống thấm nước.
-                  </li>
-                  <li>
-                    Kích thước: W1200 x D600 x H750mm
-                  </li>
-                </ul>
-                <img
-                  src="./img/ban_xin.jpg"
-                  alt="product image"
-                  class="img-fluid my-3"
-                />
-                <img
-                  src="./img/ban_xin2.jpg"
-                  alt="product image"
-                  class="img-fluid my-3"
-                />
-                <img
-                  src="./img/ban_xin.jpg"
-                  alt="product image"
-                  class="img-fluid my-3"
-                />
-              </div>
-              <div
-                class="tab-pane fade"
-                id="transport"
-                role="tabpanel"
-                aria-labelledby="profile-tab"
-              >
-                <p>
-                  <span class="text-success font-weight-bold">Bước 1:</span>
-                  Việc đầu tiên nên lấy hết tất cả những thực phẩm trong tủ lạnh
-                  ra Bạn cần chắc chắn rằng tất cả những thực phẩm trong tủ phải
-                  được lấy ra ngoài hết nếu không trong quá trình di chuyển
-                  những thực phẩm đó có thể rơi, đỗ vỡ và có thể làm cho tủ lạnh
-                  của bạn bị hỏng hóc.
-                </p>
-                <p>
-                  <span class="text-success font-weight-bold">Bước 2:</span> Lấy
-                  hết khay kệ bên trong tủ ra ngoài Việc làm này vô cùng cần
-                  thiết bởi vì khi bạn tháo khay kệ ra ngoài giúp cho tủ lạnh
-                  giảm được trọng lượng mà còn giúp cho khay kệ không bị xáo
-                  trộn trong quá trình vận chuyển. Lưu ý: Bạn phải chắc chắn
-                  rằng khi tháo khay ra khỏi tủ thì việc lắp vào cũng sẽ đơn
-                  giản như lúc bạn tháo chúng ta.
-                </p>
-                <p>
-                  <span class="text-success font-weight-bold">Bước 3:</span> Rút
-                  phích cắm tủ lạnh Bạn phải chắc chắn rằng phích cắm điện của
-                  tủ phải được rút ra khỏi ổ cắm nếu không sẽ gây nguy hiểm. Lưu
-                  ý: Sau khi rút phích cắm ra bạn nên quắn nó lại thật gọn để
-                  tránh hiện tượng nó sẽ cản trở bạn khi bạn di chuyển tủ lạnh.
-                </p>
-                <p>
-                  <span class="text-success font-weight-bold">Bước 4:</span> Xả
-                  tuyết và làm khô tủ trước khi di chuyển Công việc này khá tốn
-                  nhiều thời gian nên bạn cần phải thực hiện trước khi dọn nhà
-                  ít nhất là 6 đến 8 tiếng. Việc di chuyển tủ trong khi còn băng
-                  hay đọng nước sẽ vô cùng nguy hiểm bởi vì trong quá trình di
-                  chuyển tủ sẽ bị rung lắc khá mạnh và nước có thể vô tình vào
-                  được những phần hỡ trong thiết bị.
-                </p>
-                <p>
-                  <span class="text-success font-weight-bold">Bước 5:</span> Cột
-                  chặt cố định cửa tủ lạnh lại Bạn nên sử dụng một sợi dây lớn
-                  để tránh chúng có thể vô tình bung ra ngoài và gây hại cho
-                  chính chiếc tủ lạnh của bạn. Tuy nhiên hãy cẩn thận không nên
-                  buộc các cánh cửa tủ quá chặt vì có thể bạn sẽ khó mở chúng ra
-                  sau khi quá trình vận chuyển kết thúc. Lưu ý: Trước khi thực
-                  hiện bước cố định cửa tủ bạn cần phải lưu ý thực hiện tốt bước
-                  4 bởi vì nếu bạn không lau thật khô tủ thì trong điều kiện
-                  đóng chật tủ sẽ tạo điều kiện thuận lợi cho vi khuẩn và nấm
-                  mốc phát triển bên trong của tủ lạnh.
-                </p>
-                <p>
-                  <span class="text-success font-weight-bold">Bước 6:</span> Di
-                  chuyển tủ nhẹ nhàng và an toàn Bạn cần chú ý di chuyển tủ thật
-                  nhẹ nhàng tránh tình trạng va chạm gây trầy xước hay hỏng hóc
-                  cho tủ.Sử dụng xe đẩy có độ lớn tương đương tủ để di chuyển
-                  <br />
-                  <span class="text-warning font-weight-bold"> Lưu ý:</span>
-                  Trong quá trình di chuyển nếu có đi lên hoặc xuống cầu thang
-                  bạn cần chú ý nên có sự hỗ trợ từ ít nhất 2 người.
-                </p>
-                <p>
-                  <span class="text-success font-weight-bold">Bước 7:</span> Đặt
-                  tủ lạnh vào vị trí mới và cắm nguồn tiếp tục sử dụng Sau khi
-                  quá trình di chuyển tủ lạnh của bạn kết thúc, bạn có thể đặt
-                  chiếc tủ lạnh vào vị trí mà bạn đã chọn từ trước và có thể sử
-                  dụng lại như củ. <br />
-                  <span class="text-warning font-weight-bold">Lưu ý:</span> Bạn
-                  không nên cắm điện vào và sử dụng tủ ngay, tốt nhất hãy để tủ
-                  tại vị trí mới khoảng 2 đến 3 giờ rồi hãy cắm điện vào như vậy
-                  sẽ đảm bảo hơn về yếu tố an toàn cũng như đề phòng trường hợp
-                  bạn muốn thay đổi vị trí đặt tủ.
-                </p>
-                <p>
-                  <span class="text-danger font-weight-bold"> Chú ý:</span>
-                  Không nên tự một mình di chuyển tủ vì tủ lạnh thường khá nặng
-                  nếu nó rơi có thể gây tổn thương cho bạn và hãy đọc kỹ hướng
-                  dẫn sử dụng của tủ trước khi di chuyển tủ lạnh.
-                </p>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="guide"
-                role="tabpanel"
-                aria-labelledby="contact-tab"
-              >
-                <h3 class="text-success">
-                  Bạn có thể tìm kiếm sản phẩm theo nhiều cách:
-                </h3>
-                <ul class="list-group">
-                  <li class="list-group-item">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    At, officiis.
-                  </li>
-                  <li class="list-group-item">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    At, officiis.
-                  </li>
-                  <li class="list-group-item">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    At, officiis.
-                  </li>
-                  <li class="list-group-item">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    At, officiis.
-                  </li>
-                  <li class="list-group-item">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    At, officiis.
-                  </li>
-                  <li class="list-group-item">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    At, officiis.
-                  </li>
-                  <li class="list-group-item">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    At, officiis.
-                  </li>
-                  <li class="list-group-item">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    At, officiis.
-                  </li>
-                </ul>
-              </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-9">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active text-success text-uppercase" id="home-tab" data-toggle="tab" href="#productInfo" role="tab" aria-controls="home" aria-selected="true">Thông tin sản phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-success text-uppercase" id="profile-tab" data-toggle="tab" href="#transport" role="tab" aria-controls="profile" aria-selected="false">Vận chuyển</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-success text-uppercase" id="contact-tab" data-toggle="tab" href="#guide" role="tab" aria-controls="contact" aria-selected="false">Hướng dẫn mua hàng</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content py-5 px-4" id="myTabContent">
+                        <div class="tab-pane fade show active" id="productInfo" role="tabpanel" aria-labelledby="home-tab">
+                            <h4>Bàn làm việc cao cấp (bàn đơn)</h4>
+                            <ul>
+                                <li>
+                                    - Chân bàn dùng hệ khung chân sắt, tiết diện 40x40mm, dày
+                                    1.2mm, sơn tĩnh điện màu ghi sáng và có độ bóng mờ
+                                </li>
+                                <li>
+                                    - Mặt trước bàn sử dụng yếm để tạo sự riêng tư và tăng tính
+                                    thẩm mỹ.
+                                </li>
+                                <li>
+                                    - Sử dụng giá đỡ mặt bàn tạo sự thông thoáng và sang trọng
+                                    cho sản phẩm.
+                                </li>
+                                <li>- Mặt bàn dày 25mm, cạnh bàn được làm tròn (Forming).</li>
+                                <li>
+                                    - Mặt bàn phủ Laminate HP Hàn Quốc chống cháy, chống trầy
+                                    xước, chống thấm nước.
+                                </li>
+                                <li>
+                                    Kích thước: W1200 x D600 x H750mm
+                                </li>
+                            </ul>
+                            <img src="./img/ban_xin.jpg" alt="product image" class="img-fluid my-3" />
+                            <img src="./img/ban_xin2.jpg" alt="product image" class="img-fluid my-3" />
+                            <img src="./img/ban_xin.jpg" alt="product image" class="img-fluid my-3" />
+                        </div>
+                        <div class="tab-pane fade" id="transport" role="tabpanel" aria-labelledby="profile-tab">
+                            <p>
+                                <span class="text-success font-weight-bold">Bước 1:</span>
+                                Việc đầu tiên nên lấy hết tất cả những thực phẩm trong tủ lạnh
+                                ra Bạn cần chắc chắn rằng tất cả những thực phẩm trong tủ phải
+                                được lấy ra ngoài hết nếu không trong quá trình di chuyển
+                                những thực phẩm đó có thể rơi, đỗ vỡ và có thể làm cho tủ lạnh
+                                của bạn bị hỏng hóc.
+                            </p>
+                            <p>
+                                <span class="text-success font-weight-bold">Bước 2:</span> Lấy
+                                hết khay kệ bên trong tủ ra ngoài Việc làm này vô cùng cần
+                                thiết bởi vì khi bạn tháo khay kệ ra ngoài giúp cho tủ lạnh
+                                giảm được trọng lượng mà còn giúp cho khay kệ không bị xáo
+                                trộn trong quá trình vận chuyển. Lưu ý: Bạn phải chắc chắn
+                                rằng khi tháo khay ra khỏi tủ thì việc lắp vào cũng sẽ đơn
+                                giản như lúc bạn tháo chúng ta.
+                            </p>
+                            <p>
+                                <span class="text-success font-weight-bold">Bước 3:</span> Rút
+                                phích cắm tủ lạnh Bạn phải chắc chắn rằng phích cắm điện của
+                                tủ phải được rút ra khỏi ổ cắm nếu không sẽ gây nguy hiểm. Lưu
+                                ý: Sau khi rút phích cắm ra bạn nên quắn nó lại thật gọn để
+                                tránh hiện tượng nó sẽ cản trở bạn khi bạn di chuyển tủ lạnh.
+                            </p>
+                            <p>
+                                <span class="text-success font-weight-bold">Bước 4:</span> Xả
+                                tuyết và làm khô tủ trước khi di chuyển Công việc này khá tốn
+                                nhiều thời gian nên bạn cần phải thực hiện trước khi dọn nhà
+                                ít nhất là 6 đến 8 tiếng. Việc di chuyển tủ trong khi còn băng
+                                hay đọng nước sẽ vô cùng nguy hiểm bởi vì trong quá trình di
+                                chuyển tủ sẽ bị rung lắc khá mạnh và nước có thể vô tình vào
+                                được những phần hỡ trong thiết bị.
+                            </p>
+                            <p>
+                                <span class="text-success font-weight-bold">Bước 5:</span> Cột
+                                chặt cố định cửa tủ lạnh lại Bạn nên sử dụng một sợi dây lớn
+                                để tránh chúng có thể vô tình bung ra ngoài và gây hại cho
+                                chính chiếc tủ lạnh của bạn. Tuy nhiên hãy cẩn thận không nên
+                                buộc các cánh cửa tủ quá chặt vì có thể bạn sẽ khó mở chúng ra
+                                sau khi quá trình vận chuyển kết thúc. Lưu ý: Trước khi thực
+                                hiện bước cố định cửa tủ bạn cần phải lưu ý thực hiện tốt bước
+                                4 bởi vì nếu bạn không lau thật khô tủ thì trong điều kiện
+                                đóng chật tủ sẽ tạo điều kiện thuận lợi cho vi khuẩn và nấm
+                                mốc phát triển bên trong của tủ lạnh.
+                            </p>
+                            <p>
+                                <span class="text-success font-weight-bold">Bước 6:</span> Di
+                                chuyển tủ nhẹ nhàng và an toàn Bạn cần chú ý di chuyển tủ thật
+                                nhẹ nhàng tránh tình trạng va chạm gây trầy xước hay hỏng hóc
+                                cho tủ.Sử dụng xe đẩy có độ lớn tương đương tủ để di chuyển
+                                <br />
+                                <span class="text-warning font-weight-bold"> Lưu ý:</span>
+                                Trong quá trình di chuyển nếu có đi lên hoặc xuống cầu thang
+                                bạn cần chú ý nên có sự hỗ trợ từ ít nhất 2 người.
+                            </p>
+                            <p>
+                                <span class="text-success font-weight-bold">Bước 7:</span> Đặt
+                                tủ lạnh vào vị trí mới và cắm nguồn tiếp tục sử dụng Sau khi
+                                quá trình di chuyển tủ lạnh của bạn kết thúc, bạn có thể đặt
+                                chiếc tủ lạnh vào vị trí mà bạn đã chọn từ trước và có thể sử
+                                dụng lại như củ. <br />
+                                <span class="text-warning font-weight-bold">Lưu ý:</span> Bạn
+                                không nên cắm điện vào và sử dụng tủ ngay, tốt nhất hãy để tủ
+                                tại vị trí mới khoảng 2 đến 3 giờ rồi hãy cắm điện vào như vậy
+                                sẽ đảm bảo hơn về yếu tố an toàn cũng như đề phòng trường hợp
+                                bạn muốn thay đổi vị trí đặt tủ.
+                            </p>
+                            <p>
+                                <span class="text-danger font-weight-bold"> Chú ý:</span>
+                                Không nên tự một mình di chuyển tủ vì tủ lạnh thường khá nặng
+                                nếu nó rơi có thể gây tổn thương cho bạn và hãy đọc kỹ hướng
+                                dẫn sử dụng của tủ trước khi di chuyển tủ lạnh.
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="guide" role="tabpanel" aria-labelledby="contact-tab">
+                            <h3 class="text-success">
+                                Bạn có thể tìm kiếm sản phẩm theo nhiều cách:
+                            </h3>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    At, officiis.
+                                </li>
+                                <li class="list-group-item">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    At, officiis.
+                                </li>
+                                <li class="list-group-item">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    At, officiis.
+                                </li>
+                                <li class="list-group-item">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    At, officiis.
+                                </li>
+                                <li class="list-group-item">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    At, officiis.
+                                </li>
+                                <li class="list-group-item">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    At, officiis.
+                                </li>
+                                <li class="list-group-item">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    At, officiis.
+                                </li>
+                                <li class="list-group-item">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    At, officiis.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 realatedProducts">
+                    <p class="text-success realatedProducts__title nav-link">
+                        Sản phẩm liên quan
+                    </p>
+                    <aside id="relatedProducts" class="py-2">
+                        <div class="col-12 product" id="1">
+                            <div class="card">
+                                <a href="#" class="product__image">
+                                    <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
+                                </a>
+                                <div class="card-body text-center product__info pt-5">
+                                    <a class="card-title product__name" href="#">Sản phẩm</a>
+                                    <div class="card-text product__price">
+                                        13,000,000₫
+                                    </div>
+                                    <div href="" class="product__button">
+                                        <a href="#" class="mx-1">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                        <a href="#" class="mx-1">
+                                            <i class="fa fa-search-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 product" id="2">
+                            <div class="card sale">
+                                <a href="#" class="product__image">
+                                    <img src="./img/bo_dieu_khien.jpg" id="1" alt="product" class="card-img-top img-fluid" />
+                                </a>
+                                <div class="card-body text-center product__info pt-5">
+                                    <a class="card-title product__name" href="#">Sản phẩm</a>
+                                    <span class="price-before text-muted">
+                                        26,000,000₫
+                                    </span>
+                                    <div class="card-text product__price">
+                                        13,000,000₫
+                                    </div>
+                                    <div href="" class="product__button">
+                                        <a href="#" class="mx-1">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                        <a href="#" class="mx-1">
+                                            <i class="fa fa-search-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 product" id="3">
+                            <div class="card sale">
+                                <a href="#" class="product__image">
+                                    <img src="./img/den.jpg" id="1" alt="product" class="card-img-top img-fluid" />
+                                </a>
+                                <div class="card-body text-center product__info pt-5">
+                                    <a class="card-title product__name" href="#">Sản phẩm</a>
+                                    <span class="price-before text-muted">
+                                        26,000,000₫
+                                    </span>
+                                    <div class="card-text product__price">
+                                        13,000,000₫
+                                    </div>
+                                    <div href="" class="product__button">
+                                        <a href="#" class="mx-1">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                        <a href="#" class="mx-1">
+                                            <i class="fa fa-search-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 product" id="4">
+                            <div class="card">
+                                <a href="#" class="product__image">
+                                    <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
+                                </a>
+                                <div class="card-body text-center product__info pt-5">
+                                    <a class="card-title product__name" href="#">Sản phẩm</a>
+                                    <div class="card-text product__price">
+                                        13,000,000₫
+                                    </div>
+                                    <div href="" class="product__button">
+                                        <a href="#" class="mx-1">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                        <a href="#" class="mx-1">
+                                            <i class="fa fa-search-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 product" id="5">
+                            <div class="card sale">
+                                <a href="#" class="product__image">
+                                    <img src="./img/bep.jpg" id="1" alt="product" class="card-img-top img-fluid" />
+                                </a>
+                                <div class="card-body text-center product__info pt-5">
+                                    <a class="card-title product__name" href="#">Sản phẩm</a>
+                                    <span class="price-before text-muted">
+                                        26,000,000₫
+                                    </span>
+                                    <div class="card-text product__price">
+                                        13,000,000₫
+                                    </div>
+                                    <div href="" class="product__button">
+                                        <a href="#" class="mx-1">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                        <a href="#" class="mx-1">
+                                            <i class="fa fa-search-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 product" id="6">
+                            <div class="card">
+                                <a href="#" class="product__image">
+                                    <img src="./img/ghe.jpg" id="1" alt="product" class="card-img-top img-fluid" />
+                                </a>
+                                <div class="card-body text-center product__info pt-5">
+                                    <a class="card-title product__name" href="#">Sản phẩm</a>
+                                    <div class="card-text product__price">
+                                        13,000,000₫
+                                    </div>
+                                    <div href="" class="product__button">
+                                        <a href="#" class="mx-1">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                        <a href="#" class="mx-1">
+                                            <i class="fa fa-search-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
             </div>
-          </div>
-          <div class="col-12 col-md-3 realatedProducts">
-            <p class="text-success realatedProducts__title nav-link">
-              Sản phẩm liên quan
-            </p>
-            <aside id="relatedProducts" class="py-2">
-              <div class="col-12 product" id="1">
-                <div class="card">
-                  <a href="#" class="product__image">
-                    <img
-                      src="./img/bon_cau.jpg"
-                      id="1"
-                      alt="product"
-                      class="card-img-top img-fluid"
-                    />
-                  </a>
-                  <div class="card-body text-center product__info pt-5">
-                    <a class="card-title product__name" href="#">Sản phẩm</a>
-                    <div class="card-text product__price">
-                      13,000,000₫
-                    </div>
-                    <div href="" class="product__button">
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-shopping-cart"></i>
-                      </a>
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-search-plus"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 product" id="2">
-                <div class="card sale">
-                  <a href="#" class="product__image">
-                    <img
-                      src="./img/bo_dieu_khien.jpg"
-                      id="1"
-                      alt="product"
-                      class="card-img-top img-fluid"
-                    />
-                  </a>
-                  <div class="card-body text-center product__info pt-5">
-                    <a class="card-title product__name" href="#">Sản phẩm</a>
-                    <span class="price-before text-muted">
-                      26,000,000₫
-                    </span>
-                    <div class="card-text product__price">
-                      13,000,000₫
-                    </div>
-                    <div href="" class="product__button">
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-shopping-cart"></i>
-                      </a>
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-search-plus"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 product" id="3">
-                <div class="card sale">
-                  <a href="#" class="product__image">
-                    <img
-                      src="./img/den.jpg"
-                      id="1"
-                      alt="product"
-                      class="card-img-top img-fluid"
-                    />
-                  </a>
-                  <div class="card-body text-center product__info pt-5">
-                    <a class="card-title product__name" href="#">Sản phẩm</a>
-                    <span class="price-before text-muted">
-                      26,000,000₫
-                    </span>
-                    <div class="card-text product__price">
-                      13,000,000₫
-                    </div>
-                    <div href="" class="product__button">
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-shopping-cart"></i>
-                      </a>
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-search-plus"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 product" id="4">
-                <div class="card">
-                  <a href="#" class="product__image">
-                    <img
-                      src="./img/bon_cau.jpg"
-                      id="1"
-                      alt="product"
-                      class="card-img-top img-fluid"
-                    />
-                  </a>
-                  <div class="card-body text-center product__info pt-5">
-                    <a class="card-title product__name" href="#">Sản phẩm</a>
-                    <div class="card-text product__price">
-                      13,000,000₫
-                    </div>
-                    <div href="" class="product__button">
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-shopping-cart"></i>
-                      </a>
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-search-plus"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 product" id="5">
-                <div class="card sale">
-                  <a href="#" class="product__image">
-                    <img
-                      src="./img/bep.jpg"
-                      id="1"
-                      alt="product"
-                      class="card-img-top img-fluid"
-                    />
-                  </a>
-                  <div class="card-body text-center product__info pt-5">
-                    <a class="card-title product__name" href="#">Sản phẩm</a>
-                    <span class="price-before text-muted">
-                      26,000,000₫
-                    </span>
-                    <div class="card-text product__price">
-                      13,000,000₫
-                    </div>
-                    <div href="" class="product__button">
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-shopping-cart"></i>
-                      </a>
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-search-plus"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 product" id="6">
-                <div class="card">
-                  <a href="#" class="product__image">
-                    <img
-                      src="./img/ghe.jpg"
-                      id="1"
-                      alt="product"
-                      class="card-img-top img-fluid"
-                    />
-                  </a>
-                  <div class="card-body text-center product__info pt-5">
-                    <a class="card-title product__name" href="#">Sản phẩm</a>
-                    <div class="card-text product__price">
-                      13,000,000₫
-                    </div>
-                    <div href="" class="product__button">
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-shopping-cart"></i>
-                      </a>
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-search-plus"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </aside>
-          </div>
         </div>
-      </div>
     </section>
-
     <!-- ADDRESS -->
-
     <section id="address" class="container">
-      <div class="row mt-5">
-        <div class="col-md-6 col-12 card bg-success rounded-0 text-light">
-          <div
-            class="card-header d-flex justify-content-start align-items-center"
-          >
-            <div class="p-1">
-              <img src="./img/icon_shop.png" alt="" />
+        <div class="row mt-5">
+            <div class="col-md-6 col-12 card bg-success rounded-0 text-light">
+                <div class="card-header d-flex justify-content-start align-items-center">
+                    <div class="p-1">
+                        <img src="./img/icon_shop.png" alt="" />
+                    </div>
+                    <div class="p-1">
+                        <div class="card-title text-uppercase font-italic h4">
+                            FLEXSHOP
+                        </div>
+                        <p class="card-subtitle text-uppercase">
+                            Nội thất hiện đại
+                        </p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-text">
+                        <i class="fa fa-map-marker-alt mr-3"></i>
+                        <span class="lead">P214 , Chung cư B3, Ngõ 118 , Nguyễn Khánh Toàn</span>
+                    </div>
+                    <div class="card-text">
+                        <i class="fa fa-envelope mr-3"></i>
+                        <span>Email:
+                            <a href="mailto:songvangvietnam@gmail.com" class="text-light">songvangvietnam@gmail.com</a></span>
+                    </div>
+                    <div class="card-text">
+                        <i class="fa fa-phone mr-3"></i>
+                        <span>Phone:
+                            <a href="tel:+84902.068.068" class="text-light">0902.068.068</a></span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>FOLLOW US: </span>
+                    <a href="#" class="d-inline-block p-1 rounded-circle"><i class="fab fa-facebook text-light"></i></a>
+                    <a href="#" class="d-inline-block p-1 rounded-circle"><i class="fab fa-twitter text-light"></i></a>
+                    <a href="#" class="d-inline-block p-1 rounded-circle"><i class="fa fa-rss text-light"></i></a>
+                    <a href="#" class="d-inline-block p-1 rounded-circle"><i class="fab fa-google-plus text-light"></i></a>
+                    <a href="#" class="d-inline-block p-1 rounded-circle"><i class="fab fa-pinterest text-light"></i></a>
+                </div>
             </div>
-            <div class="p-1">
-              <div class="card-title text-uppercase font-italic h4">
-                FLEXSHOP
-              </div>
-              <p class="card-subtitle text-uppercase">
-                Nội thất hiện đại
-              </p>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="card-text">
-              <i class="fa fa-map-marker-alt mr-3"></i>
-              <span class="lead"
-                >P214 , Chung cư B3, Ngõ 118 , Nguyễn Khánh Toàn</span
-              >
-            </div>
-            <div class="card-text">
-              <i class="fa fa-envelope mr-3"></i>
-              <span
-                >Email:
-                <a href="mailto:songvangvietnam@gmail.com" class="text-light"
-                  >songvangvietnam@gmail.com</a
-                ></span
-              >
-            </div>
-            <div class="card-text">
-              <i class="fa fa-phone mr-3"></i>
-              <span
-                >Phone:
-                <a href="tel:+84902.068.068" class="text-light"
-                  >0902.068.068</a
-                ></span
-              >
-            </div>
-          </div>
-          <div class="card-footer">
-            <span>FOLLOW US: </span>
-            <a href="#" class="d-inline-block p-1 rounded-circle"
-              ><i class="fab fa-facebook text-light"></i
-            ></a>
-            <a href="#" class="d-inline-block p-1 rounded-circle"
-              ><i class="fab fa-twitter text-light"></i
-            ></a>
-            <a href="#" class="d-inline-block p-1 rounded-circle"
-              ><i class="fa fa-rss text-light"></i
-            ></a>
-            <a href="#" class="d-inline-block p-1 rounded-circle"
-              ><i class="fab fa-google-plus text-light"></i
-            ></a>
-            <a href="#" class="d-inline-block p-1 rounded-circle"
-              ><i class="fab fa-pinterest text-light"></i
-            ></a>
-          </div>
+            <div id="mapid" class="col-md-6 col-12"></div>
         </div>
-        <div id="mapid" class="col-md-6 col-12"></div>
-      </div>
     </section>
-
     <!-- FOOTER -->
-
     <footer id="footer" class="footer bg-dark">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
-            <h5 class="text-light mb-2">Hỗ trợ</h5>
-            <ul>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> TÌm kiếm</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> Tư vấn thiết kế</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> Chăm sóc khách hàng</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> Kiểm tra đơn hàng</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
-            <h5 class="text-light mb-2">Hướng dẫn</h5>
-            <ul>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> Hướng dẫn thanh
-                  toán</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> giao nhận và thanh
-                  toán</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> đổi trả và bảo hành</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> Đăng ký thành viên</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
-            <h5 class="text-light mb-2">Chính sách</h5>
-            <ul>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> Chính sách thanh
-                  toán</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> chính sách vận
-                  chuyển</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> chính sách đổi trả
-                </a>
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> chính sách bảo hành</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
-            <h5 class="text-light mb-2">Tại sao chọn chúng tôi</h5>
-            <ul>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> Đội ngũ chuyên
-                  nghiệp</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> giá cả hợp lý</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> kinh nghiệm trên 20
-                  năm</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> đảm bảo tiến độ</a
-                >
-              </li>
-            </ul>
-          </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
+                    <h5 class="text-light mb-2">Hỗ trợ</h5>
+                    <ul>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> TÌm kiếm</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Tư vấn thiết kế</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Chăm sóc khách hàng</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Kiểm tra đơn hàng</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
+                    <h5 class="text-light mb-2">Hướng dẫn</h5>
+                    <ul>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Hướng dẫn thanh
+                                toán</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> giao nhận và thanh
+                                toán</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> đổi trả và bảo hành</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Đăng ký thành viên</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
+                    <h5 class="text-light mb-2">Chính sách</h5>
+                    <ul>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Chính sách thanh
+                                toán</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> chính sách vận
+                                chuyển</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> chính sách đổi trả
+                            </a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> chính sách bảo hành</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
+                    <h5 class="text-light mb-2">Tại sao chọn chúng tôi</h5>
+                    <ul>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Đội ngũ chuyên
+                                nghiệp</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> giá cả hợp lý</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> kinh nghiệm trên 20
+                                năm</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> đảm bảo tiến độ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
     </footer>
-
     <button id="toTop" class="btn rounded-0">
-      <i class="fa fa-angle-up"></i>
+        <i class="fa fa-angle-up"></i>
     </button>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="./js/jquery-3.5.1.slim.min.js"></script>
@@ -1086,30 +789,28 @@
     <script src="./js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-    <script
-      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-      crossorigin=""
-    ></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
     <!-- Optional JavaScript -->
     <script src="./js/app.js"></script>
+    <script src="./js/cart.js"></script>
     <script>
-      const preview = document.getElementById("previewImage");
-      const thumbnails = document.getElementsByClassName("img-thumbnail");
-      [...thumbnails].forEach((thumbnail) =>
+    const preview = document.getElementById("previewImage");
+    const thumbnails = document.getElementsByClassName("img-thumbnail");
+    [...thumbnails].forEach((thumbnail) =>
         thumbnail.addEventListener("mouseover", (e) => {
-          preview.src = e.target.src;
+            preview.src = e.target.src;
         })
-      );
+    );
 
-      window.addEventListener("resize", () => {
+    window.addEventListener("resize", () => {
         const myTabs = document.getElementById("myTab");
         [...myTabs.children].forEach((tab) => {
-          innerWidth <= 992
-            ? tab.classList.add("w-100")
-            : tab.classList.remove("w-100");
+            innerWidth <= 992 ?
+                tab.classList.add("w-100") :
+                tab.classList.remove("w-100");
         });
-      });
+    });
     </script>
-  </body>
+</body>
+
 </html>
