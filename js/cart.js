@@ -15,7 +15,15 @@ if (!sessionStorage.cart) {
 updateCartView(); //CONTENT INSDIE CART
 updateQuantity(getAmount(cart)); //CART AMOUNT
 
-//UPDATE AMOUNT
+function traverseToParent(target) {
+    while (1) {
+        if (target.classList.contains('product') || target.classList.contains('products__item'))
+            return target;
+        else
+            target = target.parentNode;
+    }
+}
+
 
 //GET INFO EACH CLICK
 
@@ -53,12 +61,13 @@ function extractProductInfo(product) {
 
 function getProductInfo(event) {
     const { target } = event;
-    const extractedProduct = extractProductInfo(target.parentElement.parentElement.parentElement.parentElement.parentElement);
+    const extractedProduct = extractProductInfo(traverseToParent(target));
     return extractedProduct;
 }
 
 //UPDATE CART 
 function updateItem(event) {
+    debugger;
     const { name, price, img } = getProductInfo(event) || getProductInfo(event);
 
     if (cart.has(name)) {
@@ -73,6 +82,7 @@ function updateItem(event) {
     } else {
         cart.set(name, { img: img, price: price, totalPrice: price, quantity: 1, description: '' });
     }
+
     console.log(cart);
     setCart(cart);
 }

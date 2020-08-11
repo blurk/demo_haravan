@@ -968,8 +968,8 @@ th {
     border-radius: 0;
 }
 
-.table__updateQuantity> button > span,
-button[name='remove'] > span {
+.table__updateQuantity>button>span,
+button[name='remove']>span,
+.product__button>a>i {
     pointer-events: none;
 }
-
