@@ -1,18 +1,23 @@
 /* STICKY HEADER */
 $(window).scroll(function () {
   const sticky = $("#header"),
-    scroll = $(window).scrollTop();
+  scroll = $(window).scrollTop();
 
   if (scroll >= 100) {
-    sticky.addClass("sticky");
+    sticky.addClass("mySticky");
     $("#toTop").removeClass("fadeOut");
     $("#toTop").addClass("fadeIn");
   } else {
-    sticky.removeClass("sticky");
+    sticky.removeClass("mySticky");
     $("#toTop").removeClass("fadeIn");
     $("#toTop").addClass("fadeOut");
   }
 });
+
+
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ document.querySelectorAll('.navbar-nav > .nav-item:nth-child(3)')[0].classList.remove('my-dropdown')
+}
 
 /* HIDE NAV SUBMENU WHEN CLICK */
 
@@ -81,3 +86,9 @@ function render(child = "", parent = "", number = 0, data) {
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
+
+/*FORMAT CURRENCY*/
+
+function formatCurrency(amount) {
+  return new Intl.NumberFormat('vn-VN', { style: 'currency', currency: 'VND' }).format(amount).slice(1) + '₫';
+}

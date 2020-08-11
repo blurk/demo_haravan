@@ -241,294 +241,41 @@
             </form>
         </div>
     </header>
-    <!-- PRODUCTS GALLERY -->
-    <section id="productsGallery">
+    <!-- CART -->
+    <section id="customerCart">
         <div class="container">
             <div class="row">
-                <div class="products__header px-3">
-                    <h3>Danh mục <span style="color: #888;">sản phẩm</span></h3>
+                <div class="products__header">
+                    <h3>Giỏ <span style="color: #888;">hàng</span></h3>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-md-3 p-0">
-                    <!--    SEARCH FORM -->
-                    <form id="formSearchProduct" class="d-flex form-inline mb-2" action="./searchResult.html">
-                        <input class="form-control col-10" type="search" id="inputSearchProduct" name="qProduct" placeholder="Bạn muốn tìm gì?" aria-label="Search" />
-                        <button class="btn btn-success col-2" id="btnSearchProduct" type="submit">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                    </form>
-                    <div class="category card">
-                        <ul class="category__list list-group">
-                            <li class="category__list__item list-group-item">
-                                <a href="#" class="card-title">
-                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                    Phòng khách
-                                </a>
-                                <ul style="display: none;"></ul>
-                            </li>
-                            <li class="category__list__item list-group-item">
-                                <a href="" class="card-title">
-                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                    Phòng ngủ
-                                </a>
-                                <ul style="display: none;"></ul>
-                            </li>
-                            <li class="category__list__item list-group-item">
-                                <a href="" class="card-title"><i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                    Sofa</a>
-                            </li>
-                            <li class="category__list__item list-group-item">
-                                <a href="" class="card-title"><i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                    Phòng bếp</a>
-                            </li>
-                            <li class="category__list__item list-group-item">
-                                <a href="" class="card-title"><i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                    Phòng trẻ em</a>
-                            </li>
-                            <li class="category__list__item list-group-item">
-                                <a href="" class="card-title"><i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                    Thiết bị bếp</a>
-                            </li>
-                            <li class="category__list__item list-group-item">
-                                <a href="" class="card-title"><i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                    Thiết bị vệ sinh</a>
-                            </li>
-                            <li class="category__list__item list-group-item">
-                                <a href="" class="card-title"><i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                    Đồ trang trí</a>
-                            </li>
-                            <li class="category__list__item list-group-item">
-                                <a href="" class="card-title"><i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                    Phụ kiện bếp</a>
-                            </li>
-                            <li class="category__list__item list-group-item">
-                                <a href="" class="card-title"><i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                    Nhà thông minh</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="banner my-3 text-center">
-                        <a href="#" class="banner"><img src="./img/c1.jpg" class="w-100" alt="banner image" /></a>
-                    </div>
+                <div class="customerCart__view col-12">
+                    <form id="customerCartView" class="form table-responsive" action="/checkout.html" method="get"></form>
                 </div>
-                <div class="col-12 col-md-9">
-                    <div class="productsGallery__banner mb-4">
-                        <img src="./img/banner_01.jpg" alt="banner image" class="img-fluid" />
-                    </div>
-                    <!-- SORT -->
-                    <div class="card mb-5 p-3" id="sortTool">
-                        <div class="d-flex align-items-center">
-                            <div class="col-6 p-0" id="changeView">
-                                <a href="./products.html" class="btn btn-view-active" name="changeView">
-                                    <i class="fa fa-th-large"></i>
-                                </a>
-                                <a href="./productsList.html" class="btn btn-view" name="changeView">
-                                    <i class="fa fa-list"></i>
-                                </a>
-                            </div>
-                            <div class="col-6 p-0">
-                                <form class="form text-right" id="sortProductsContainer">
-                                    <label for="sortProducts">Sắp xếp: </label>
-                                    <select class="ml-2 form-control-sm" id="sortProducts">
-                                        <option value="null">Mặc định</option>
-                                        <option value="hot">Sản phẩm nổi bật</option>
-                                        <option value="priceASC">Giá: Tăng dần</option>
-                                        <option value="priceDESC">Giá: Giảm dần</option>
-                                        <option value="az">Tên A-Z</option>
-                                        <option value="za">Tên Z-A</option>
-                                        <option value="oldest">Cũ Nhất</option>
-                                        <option value="latest">Mới Nhất</option>
-                                        <option value="bestSeller">Bán Chạy Nhất</option>
-                                    </select>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row products" id="products">
-                        <div class="col-lg-3 col-sm-6 col-12 product" id="product1">
-                            <div class="card">
-                                <a href="#" class="product__image">
-                                    <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Bồn cầu</a>
-                                    <div class="card-text product__price">
-                                        36,000,000₫
-                                    </div>
-                                    <div href="#" class="product__button">
-                                        <a name="addToCart" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-12 product" id="product2">
-                            <div class="card sale">
-                                <a href="#" class="product__image">
-                                    <img src="./img/bo_dieu_khien.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Bộ điều khiển</a>
-                                    <span class="price-before text-muted">
-                                        30,000,000₫
-                                    </span>
-                                    <div class="card-text product__price">
-                                        10,000,000₫
-                                    </div>
-                                    <div href="" class="product__button">
-                                        <a name="addToCart" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-12 product" id="product3">
-                            <div class="card sale">
-                                <a href="#" class="product__image">
-                                    <img src="./img/den.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Đèn</a>
-                                    <span class="price-before text-muted">
-                                        6,000,000₫
-                                    </span>
-                                    <div class="card-text product__price">
-                                        3,000,000₫
-                                    </div>
-                                    <div href="" class="product__button">
-                                        <a name="addToCart" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-12 product" id="product4">
-                            <div class="card">
-                                <a href="#" class="product__image">
-                                    <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Bồn cầu</a>
-                                    <div class="card-text product__price">
-                                        36,000,000₫
-                                    </div>
-                                    <div href="" class="product__button">
-                                        <a name="addToCart" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-12 product" id="product5">
-                            <div class="card sale">
-                                <a href="#" class="product__image">
-                                    <img src="./img/bep.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Bếp</a>
-                                    <span class="price-before text-muted">
-                                        26,000,000₫
-                                    </span>
-                                    <div class="card-text product__price">
-                                        13,000,000₫
-                                    </div>
-                                    <div href="" class="product__button">
-                                        <a name="addToCart" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-12 product" id="product6">
-                            <div class="card">
-                                <a href="#" class="product__image">
-                                    <img src="./img/ghe.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Ghế</a>
-                                    <div class="card-text product__price">
-                                        1,000,000₫
-                                    </div>
-                                    <div href="" class="product__button">
-                                        <a name="addToCart" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-12 product" id="product7">
-                            <div class="card">
-                                <a href="#" class="product__image">
-                                    <img src="./img/ban_go.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Bàn gỗ</a>
-                                    <div class="card-text product__price">
-                                        30,000,000₫
-                                    </div>
-                                    <div href="" class="product__button">
-                                        <a name="addToCart" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-12 product" id="product8">
-                            <div class="card">
-                                <a href="#" class="product__image">
-                                    <img src="./img/ban_go.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Bàn gỗ</a>
-                                    <div class="card-text product__price">
-                                        30,000,000₫
-                                    </div>
-                                    <div href="" class="product__button">
-                                        <a name="addToCart" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="load-more text-center my-3">
-                        <button class="btn btn-success" id="btnLoadMore">
-                            Xem thêm
-                        </button>
-                    </div>
+            </div>
+            <div class="row" id="cartView__sumTable">
+                <div class="col-12 cartView__sumTable">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="text-success text-uppercase">Giá</th>
+                                <td name="sum" class="text-muted"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-success text-uppercase">Phí vận chuyển </th>
+                                <td class="text-muted">Tính phí khi thanh toán</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-success text-uppercase">Tổng đơn hàng</th>
+                                <td name="sum" class="h2 text-info"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-12 text-center cartView__btn mt-2 d-flex justify-content-center">
+                    <a href="./index.html" class="btn btn-success mx-1">Tiếp tục mua hàng</a>
+                    <a href="./checkout.html" class="btn btn-success mx-1">Thanh toán</a>
                 </div>
             </div>
         </div>
@@ -670,123 +417,116 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <!-- Optional JavaScript -->
     <script src="./js/app.js"></script>
     <script src="./js/cart.js"></script>
-    <script>
-    /*       LOAD MORE ITEM */
-    $("#btnLoadMore").click(() => {
-        $(".load-more").append("<div class='loader mx-auto'></div>");
-        $("#btnLoadMore").hide();
-        axios
-            .get("https://picsum.photos/v2/list?page=1&limit=8")
-            .then(({ data }) => {
-                $(".loader").remove();
-                render("product", "products", 8, data);
-                $("#btnLoadMore").show();
-            })
-            .then(() => {
-                sortProducts.dispatchEvent(new Event("change"));
-            });
-    });
-
-    /* SORT */
-    /*Get products container and its children*/
-    const sortProducts = document.getElementById("sortProducts");
-    /*Sort by option function*/
-
-    function sortByOption({ target: { value } }) {
-        /*Current product*/
-        const currentProductsContainer = document.getElementById("products");
-        /*Using spread to turn object to array*/
-        const products = [...currentProductsContainer.children];
-        /* Initial sorted product array */
-        let sortedProducts = [];
-
-        /*  Empty the container then fill it with sorted products */
-        currentProductsContainer.innerHTML = "";
-
-        /*Sorted product by option*/
-        switch (value) {
-            case "az":
-                sortAZ(products);
-                break;
-            case "za":
-                sortZA(products);
-                break;
-            case "priceASC":
-                sortPriceASC(products);
-                break;
-            case "priceDESC":
-                sortPriceDESC(products);
-                break;
-            case "oldest":
-                sortOldest(products);
-                break;
-            case "latest":
-                sortLatest(products);
-                break;
-            default:
-                sortedProducts = products;
+    <script type="text/javascript">
+    function showCart() {
+        let content = `<table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col" class="text-uppercase text-muted">Ảnh</th>
+                <th scope="col" class="text-uppercase text-muted">Tên sản phẩm</th>
+                <th scope="col" class="text-uppercase text-muted">Đơn giá</th>
+                <th scope="col" class="text-uppercase text-muted">Số lượng</th>
+                <th scope="col" class="text-uppercase text-muted">Thành tiền</th>
+                <th scope="col" class="text-uppercase text-muted">Xóa</th>
+            </tr>
+        </thead>
+        <tbody>`;
+        if (!getAmount(cart)) {
+            document.getElementById('cartView__sumTable').style.display = 'none';
+            content = "<h1 class='col-12'>Giỏ hàng của bạn hiện đang trống</h1><h1 class='col-12'>Bấm vào<a href='/index.html' class='text-success'> đây </a>để mua hàng</h1>"
+        } else {
+            document.getElementById('cartView__sumTable').style.display = 'block';
+            content += [...cart].map((item) => {
+                const name = item[0];
+                const { img, price, quantity, totalPrice, description } = item[1];
+                return `
+                    <tr>
+                      <td><img src="${img}" alt="product image" class="h-50 p-2"/></td>
+                      <td>${name}</td>
+                      <td>${formatCurrency(price)}</td>
+                      <td>
+                        <div class="table__updateQuantity">
+                                <button class="btn btn-success" name="minus">
+                                    <span class="fa fa-minus"></span>
+                                </button>                                                            
+                      <input type="number" value='${quantity}' name='updateQuantity[]' min='1' class="form-control text-center"/>
+                                <button class="btn btn-success" name="plus">
+                                    <span class="fa fa-plus"></span>
+                                </button>
+                        </div>
+                      </td>
+                      <td>${formatCurrency(totalPrice)}</td>
+                      <td><button class="btn btn-danger" name="remove"><span class="fa fa-times"></span></button></td>
+                    </tr>`
+            }).join('');
         }
-
-        /* A to Z */
-        function sortAZ(products) {
-            sortedProducts = products.slice().sort((product1, product2) => {
-                const name1 = extractProductInfo(product1).name;
-                const name2 = extractProductInfo(product2).name;
-                return name1.localeCompare(name2);
-            });
-        }
-        /*Z to A*/
-        function sortZA(products) {
-            sortedProducts = products.slice().sort((product1, product2) => {
-                const name1 = extractProductInfo(product1).name;
-                const name2 = extractProductInfo(product2).name;
-                return name2.localeCompare(name1);
-            });
-        }
-        /*BY PRICE ASC*/
-        function sortPriceASC(products) {
-            sortedProducts = products.slice().sort((product1, product2) => {
-                const price1 = extractProductInfo(product1).price;
-                const price2 = extractProductInfo(product2).price;
-                return price1 - price2;
-            });
-        }
-        /*BY PRICE DESC*/
-        function sortPriceDESC(products) {
-            sortedProducts = products.slice().sort((product1, product2) => {
-                const price1 = extractProductInfo(product1).price;
-                const price2 = extractProductInfo(product2).price;
-                return price2 - price1;
-            });
-        }
-        /*BY DATE ASC*/
-        function sortOldest(products) {
-            sortedProducts = products.slice().sort((product1, product2) => {
-                const id1 = extractProductInfo(product1).id;
-                const id2 = extractProductInfo(product2).id;
-                return id1.localeCompare(id2);
-            });
-        }
-        /* BY DATE DESC */
-        function sortLatest(products) {
-            sortedProducts = products.slice().sort((product1, product2) => {
-                const id1 = extractProductInfo(product1).id;
-                const id2 = extractProductInfo(product2).id;
-                return id2.localeCompare(id1);
-            });
-        }
-
-        /*Fill the container with sorted products*/
-        sortedProducts.forEach((product) =>
-            currentProductsContainer.append(product)
-        );
+        content += '</tbody></table>'
+        document.getElementById('customerCartView').innerHTML = content;
+        document.querySelectorAll(`td[name='sum']`).forEach(td => td.innerText = formatCurrency(getCost(cart)));
     }
 
-    sortProducts.addEventListener("change", sortByOption);
+    showCart();
+
+
+    //UPDATE PRICE EVERY TIME QUANTITY CHANGES
+
+    function updatePriceInView(currentChild) {
+        const price = +currentChild.children[2].innerText.replace(/[,|₫]/gi, "");
+        const quantity = +currentChild.children[3].children[0].children[1].value;
+        const totalPrice = price * quantity;
+        currentChild.children[4].innerText = formatCurrency(totalPrice);
+        updateCartItem(currentChild);
+    }
+
+    //DECREASE QUANTITY BY 1
+
+    document.querySelectorAll("button[name='minus']").forEach((button) => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+            const { value } = event.target.nextElementSibling;
+            event.target.nextElementSibling.value = (+value - 1 || 1);
+            updatePriceInView(event.target.parentNode.parentNode.parentNode);
+        })
+    })
+
+    //INCREASE QUANTITY BY 1
+
+    document.querySelectorAll("button[name='plus']").forEach((button) => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault(event.target.parentNode.parentNode.parentNode);
+            const { value } = event.target.previousElementSibling;
+            event.target.previousElementSibling.value = (+value + 1);
+            updatePriceInView(event.target.parentNode.parentNode.parentNode);
+        })
+    })
+
+    //REMOVE FROM TABLE AND CART
+    document.querySelectorAll("button[name='remove']").forEach((button) => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+            const table = document.getElementsByTagName('tbody')[0];
+            removeItem(event.target.parentNode.parentNode.children[1].innerText);
+            table.removeChild(event.target.parentNode.parentNode);
+        })
+    })
+
+    //UPDATE CART 
+    function updateCartItem(currentChild) {
+        const name = currentChild.querySelector('td:nth-child(2)').innerText;
+        const product = {
+            img: currentChild.querySelector('td > img').src,
+            price: +currentChild.querySelector('td:nth-child(3)').innerText.replace(/[,|₫]/gi, ""),
+            quantity: +currentChild.querySelector('input').value,
+            totalPrice: +currentChild.querySelector('td:nth-child(5)').innerText.replace(/[,|₫]/gi, ""),
+        }
+
+        cart.set(name, product);
+        document.querySelectorAll(`td[name='sum']`).forEach(td => td.innerText = formatCurrency(getCost(cart)));
+        setCart(cart);
+    }
     </script>
 </body>
 
