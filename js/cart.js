@@ -68,9 +68,10 @@ function updateItem(event) {
             price: price,
             totalPrice: totalPrice + price,
             quantity: quantity + 1,
+            description: ''
         })
     } else {
-        cart.set(name, { img: img, price: price, totalPrice: price, quantity: 1 });
+        cart.set(name, { img: img, price: price, totalPrice: price, quantity: 1, description: '' });
     }
     console.log(cart);
     setCart(cart);

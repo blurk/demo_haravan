@@ -441,11 +441,11 @@
             document.getElementById('cartView__sumTable').style.display = 'block';
             content += [...cart].map((item) => {
                 const name = item[0];
-                const { img, price, quantity, totalPrice } = item[1];
+                const { img, price, quantity, totalPrice, description } = item[1];
                 return `
                     <tr>
                       <td><img src="${img}" alt="product image" class="h-50 p-2"/></td>
-                      <td>${name}</td>
+                      <td>${name}<br/>${description || ""}</td>
                       <td>${formatCurrency(price)}</td>
                       <td>
                         <div class="table__updateQuantity">
