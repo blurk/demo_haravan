@@ -1,41 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <!-- FONTAWESOME -->
-    <link
-      rel="stylesheet"
-      href="./fonts/fontawesome-free-5.14.0-web/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-      crossorigin=""
-    />
-
+    <link rel="stylesheet" href="./fonts/fontawesome-free-5.14.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
     <!-- OPTIIONAL CSS -->
     <link rel="stylesheet" href="./css/style.css" />
-
     <title>Demo - Theme Store Haravan</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- TOPBAR -->
     <div class="top-bar bg-dark">
         <div class="container">
-            <div class="row justify-content-start align-item">
+            <div class="row justify-content-start align-items-center">
                 <div class="top-bar__contact mr-auto py-2 col-lg-8 d-lg-block d-none small" text-left>
                     <div class="top-bar__hotline d-inline-block">
                         <img src="./img/icondienthoai.png" alt="phone icon" />
@@ -57,13 +42,13 @@
                             <a class="btn btn-light d-block" href="./signUp.html">Đăng ký</a>
                         </div>
                     </div>
-                    <div class="cart-dropdown py-2 d-lg-inline-block d-none top-bar__user__cart" id="cart">
-                        <a class="btn-sm text-light text-decoration-none" id="cartBtn" href="#">
+                    <div class="cart-dropdown py-2 d-inline-block top-bar__user__cart" id="cart">
+                        <a class="btn-sm text-light text-decoration-none" id="cartBtn" href="./cart.html">
                             <i class="fa fa-shopping-cart"></i>
                             <span>Giỏ Hàng
                                 <span id="cartAmount" class="badge badge-light"></span></span>
                         </a>
-                        <div class="cart-dropdown__menu">
+                        <div class="cart-dropdown__menu d-lg-block d-none">
                         </div>
                     </div>
                 </div>
@@ -256,250 +241,189 @@
             </form>
         </div>
     </header>
-
     <!-- ABOUT US -->
-
     <div class="container">
-      <div class="row mt-3">
-        <div class="col-12 py-2 mb-3">
-          <span class="page__title h3">Giới thiệu</span>
+        <div class="row mt-3">
+            <div class="col-12 py-2 mb-3">
+                <span class="page__title h3">Giới thiệu</span>
+            </div>
+            <div class="col-12 col-md-6 my-auto">
+                <p class="lead">
+                    Trang giới thiệu giúp khách hàng hiểu rõ hơn về cửa hàng của bạn.
+                    Hãy cung cấp thông tin cụ thể về việc kinh doanh, về cửa hàng, thông
+                    tin liên hệ. Điều này sẽ giúp khách hàng cảm thấy tin tưởng khi mua
+                    hàng trên website của bạn.
+                </p>
+            </div>
+            <div class="col-12 col-md-6 mt-2">
+                <p class="lead">
+                    Một vài gợi ý cho nội dung trang
+                    <span class="text-success">Giới thiệu</span>:
+                    <ul class="list-group-flush">
+                        <li class="list-group-item">Bạn là ai?</li>
+                        <li class="list-group-item">Giá trị kinh doanh của bạn là gì?</li>
+                        <li class="list-group-item"> Địa chỉ cửa hàng?</li>
+                        <li class="list-group-item">Bạn đã kinh doanh trong
+                            ngành hàng này bao lâu rồi? </li>
+                        <li class="list-group-item">Đội ngũ của bạn gồm những ai?</li>
+                        <li class="list-group-item">Thông tin liên hệ </li>
+                        <li class="list-group-item">Liên kết
+                            đến các trang mạng xã hội (Twitter, Facebook)</li>
+                        <li class="list-group-item">Bạn kinh doanh ngành hàng online được bao lâu?
+                        </li>
+                    </ul>
+                </p>
+            </div>
+            <div class="col-12 col-md-6">
+                <p class="lead">
+                    Bạn có thể chỉnh sửa
+                    hoặc xoá bài viết này tại <a href="#" class="text-success">đây</a> hoặc thêm những bài viết mới trong
+                    phần quản lý <a href="#" class=" text-success">Trang nội dung</a>.
+                </p>
+            </div>
         </div>
-        <div class="col-12 col-md-6 my-auto">
-          <p class="lead">
-            Trang giới thiệu giúp khách hàng hiểu rõ hơn về cửa hàng của bạn.
-            Hãy cung cấp thông tin cụ thể về việc kinh doanh, về cửa hàng, thông
-            tin liên hệ. Điều này sẽ giúp khách hàng cảm thấy tin tưởng khi mua
-            hàng trên website của bạn.
-          </p>
-        </div>
-          <div class="col-12 col-md-6 mt-2"> 
-          <p class="lead">
-            Một vài gợi ý cho nội dung trang
-            <span class="text-success">Giới thiệu</span>: 
-            <ul class="list-group-flush">
-               
-              <li class="list-group-item">Bạn là ai?</li>
-              <li class="list-group-item">Giá trị kinh doanh của bạn là gì?</li>
-              <li class="list-group-item"> Địa chỉ cửa hàng?</li>
-              <li class="list-group-item">Bạn đã kinh doanh trong
-                ngành hàng này bao lâu rồi? </li>
-              <li class="list-group-item">Đội ngũ của bạn gồm những ai?</li>
-              <li class="list-group-item">Thông tin liên hệ </li>
-              <li class="list-group-item">Liên kết
-                đến các trang mạng xã hội (Twitter, Facebook)</li>
-              <li class="list-group-item">Bạn kinh doanh ngành hàng online được bao lâu?
-              </li>
-            </ul>
-          </p>
-         
-        </div>
-        <div class="col-12 col-md-6"> <p class="lead">
-          Bạn có thể chỉnh sửa
-          hoặc xoá bài viết này tại <a href="#" class="text-success">đây</a> hoặc thêm những bài viết mới trong
-          phần quản lý <a href="#" class=" text-success">Trang nội dung</a>.
-        </p></div>
-      </div>
     </div>
-
     <!-- ADDRESS -->
-
     <section id="address" class="container">
-      <div class="row mt-5">
-        <div class="col-md-6 col-12 card bg-success rounded-0 text-light">
-          <div
-            class="card-header d-flex justify-content-start align-items-center"
-          >
-            <div class="p-1">
-              <img src="./img/icon_shop.png" alt="" />
+        <div class="row mt-5">
+            <div class="col-md-6 col-12 card bg-success rounded-0 text-light">
+                <div class="card-header d-flex justify-content-start align-items-center">
+                    <div class="p-1">
+                        <img src="./img/icon_shop.png" alt="" />
+                    </div>
+                    <div class="p-1">
+                        <div class="card-title text-uppercase font-italic h4">
+                            FLEXSHOP
+                        </div>
+                        <p class="card-subtitle text-uppercase">
+                            Nội thất hiện đại
+                        </p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-text">
+                        <i class="fa fa-map-marker-alt mr-3"></i>
+                        <span class="lead">P214 , Chung cư B3, Ngõ 118 , Nguyễn Khánh Toàn</span>
+                    </div>
+                    <div class="card-text">
+                        <i class="fa fa-envelope mr-3"></i>
+                        <span>Email:
+                            <a href="mailto:songvangvietnam@gmail.com" class="text-light">songvangvietnam@gmail.com</a></span>
+                    </div>
+                    <div class="card-text">
+                        <i class="fa fa-phone mr-3"></i>
+                        <span>Phone:
+                            <a href="tel:+84902.068.068" class="text-light">0902.068.068</a></span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>FOLLOW US: </span>
+                    <a href="#" class="d-inline-block p-1 rounded-circle"><i class="fab fa-facebook text-light"></i></a>
+                    <a href="#" class="d-inline-block p-1 rounded-circle"><i class="fab fa-twitter text-light"></i></a>
+                    <a href="#" class="d-inline-block p-1 rounded-circle"><i class="fa fa-rss text-light"></i></a>
+                    <a href="#" class="d-inline-block p-1 rounded-circle"><i class="fab fa-google-plus text-light"></i></a>
+                    <a href="#" class="d-inline-block p-1 rounded-circle"><i class="fab fa-pinterest text-light"></i></a>
+                </div>
             </div>
-            <div class="p-1">
-              <div class="card-title text-uppercase font-italic h4">
-                FLEXSHOP
-              </div>
-              <p class="card-subtitle text-uppercase">
-                Nội thất hiện đại
-              </p>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="card-text">
-              <i class="fa fa-map-marker-alt mr-3"></i>
-              <span class="lead"
-                >P214 , Chung cư B3, Ngõ 118 , Nguyễn Khánh Toàn</span
-              >
-            </div>
-            <div class="card-text">
-              <i class="fa fa-envelope mr-3"></i>
-              <span
-                >Email:
-                <a href="mailto:songvangvietnam@gmail.com" class="text-light"
-                  >songvangvietnam@gmail.com</a
-                ></span
-              >
-            </div>
-            <div class="card-text">
-              <i class="fa fa-phone mr-3"></i>
-              <span
-                >Phone:
-                <a href="tel:+84902.068.068" class="text-light"
-                  >0902.068.068</a
-                ></span
-              >
-            </div>
-          </div>
-          <div class="card-footer">
-            <span>FOLLOW US: </span>
-            <a href="#" class="d-inline-block p-1 rounded-circle"
-              ><i class="fab fa-facebook text-light"></i
-            ></a>
-            <a href="#" class="d-inline-block p-1 rounded-circle"
-              ><i class="fab fa-twitter text-light"></i
-            ></a>
-            <a href="#" class="d-inline-block p-1 rounded-circle"
-              ><i class="fa fa-rss text-light"></i
-            ></a>
-            <a href="#" class="d-inline-block p-1 rounded-circle"
-              ><i class="fab fa-google-plus text-light"></i
-            ></a>
-            <a href="#" class="d-inline-block p-1 rounded-circle"
-              ><i class="fab fa-pinterest text-light"></i
-            ></a>
-          </div>
+            <div id="mapid" class="col-md-6 col-12"></div>
         </div>
-        <div id="mapid" class="col-md-6 col-12"></div>
-      </div>
     </section>
-
     <!-- FOOTER -->
-
     <footer id="footer" class="footer bg-dark">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
-            <h5 class="text-light mb-2">Hỗ trợ</h5>
-            <ul>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> TÌm kiếm</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> Tư vấn thiết kế</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> Chăm sóc khách hàng</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> Kiểm tra đơn hàng</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
-            <h5 class="text-light mb-2">Hướng dẫn</h5>
-            <ul>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> Hướng dẫn thanh
-                  toán</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> giao nhận và thanh
-                  toán</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> đổi trả và bảo hành</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> Đăng ký thành viên</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
-            <h5 class="text-light mb-2">Chính sách</h5>
-            <ul>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> Chính sách thanh
-                  toán</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> chính sách vận
-                  chuyển</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> chính sách đổi trả
-                </a>
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> chính sách bảo hành</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
-            <h5 class="text-light mb-2">Tại sao chọn chúng tôi</h5>
-            <ul>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> Đội ngũ chuyên
-                  nghiệp</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> giá cả hợp lý</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> kinh nghiệm trên 20
-                  năm</a
-                >
-              </li>
-              <li class="d-block">
-                <a href="#" class="text-light"
-                  ><i class="fa fa-caret-right mr-1"></i> đảm bảo tiến độ</a
-                >
-              </li>
-            </ul>
-          </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
+                    <h5 class="text-light mb-2">Hỗ trợ</h5>
+                    <ul>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> TÌm kiếm</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Tư vấn thiết kế</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Chăm sóc khách hàng</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Kiểm tra đơn hàng</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
+                    <h5 class="text-light mb-2">Hướng dẫn</h5>
+                    <ul>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Hướng dẫn thanh
+                                toán</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> giao nhận và thanh
+                                toán</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> đổi trả và bảo hành</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Đăng ký thành viên</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
+                    <h5 class="text-light mb-2">Chính sách</h5>
+                    <ul>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Chính sách thanh
+                                toán</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> chính sách vận
+                                chuyển</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> chính sách đổi trả
+                            </a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> chính sách bảo hành</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
+                    <h5 class="text-light mb-2">Tại sao chọn chúng tôi</h5>
+                    <ul>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Đội ngũ chuyên
+                                nghiệp</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> giá cả hợp lý</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> kinh nghiệm trên 20
+                                năm</a>
+                        </li>
+                        <li class="d-block">
+                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> đảm bảo tiến độ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
     </footer>
-
     <button id="toTop" class="btn rounded-0">
-      <i class="fa fa-angle-up"></i>
+        <i class="fa fa-angle-up"></i>
     </button>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="./js/jquery-3.5.1.slim.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-    <script
-      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-      crossorigin=""
-    ></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <!-- Optional JavaScript -->
     <script src="./js/app.js"></script>
-  </body>
+    <script src="./js/cart.js"></script>
+</body>
+
 </html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="./fonts/fontawesome-free-5.14.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+    <!-- OPTIIONAL CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Demo - Theme Store Haravan</title>
+</head>
+
+<body>
+    <main class="p-lg-5 px-lg-0 py-5 px-3 checkout">
+        <div class="container">
+            <div class="mb-3">
+                <a href="/index.html" class="text-success h1">Flexshop</a>
+            </div>
+            <div class="row flex-lg-row flex-column-reverse">
+                <div class="col-lg-6 col-12">
+                    <div class="step1 card p-3">
+                        <h4 class="mb-3">Thông tin giao hàng</h4>
+                        <h6 class="text-muted mb-3">Bạn đã có tài khoản? <a href="/login.html" class="text-success">Đăng nhập</a></h6>
+                        <form class="form checkout__form" method="get" action="" id="checkoutForm">
+                            <div class="form-row">
+                                <div class="form-group col-12 col-md-6">
+                                    <input type="text" class="form-control" id="inputSurname" name="bill[surname]" placeholder="Họ">
+                                </div>
+                                <div class="form-group col-12 col-md-6">
+                                    <input type="text" class="form-control" id="inputName" name="bill[name]" placeholder="Tên">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-12 col-md-7">
+                                    <input type="email" class="form-control" id="inputEmail" name="bill[email]" placeholder="Email">
+                                </div>
+                                <div class="form-group col-12 col-md-5">
+                                    <input type="text" class="form-control" id="inputPhone" name="bill[phone]" placeholder="Số điện thoại">
+                                    <p class="text-danger small mt-1 p-0 m-0" id="phoneWarning">Số điện thoại không hợp lệ (độ dài từ 8 - 10 ký tự, không chứa ký tự đặc biệt và khoảng trắng)</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="inputAddress" name="bill[address]" placeholder="Địa chỉ">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-12 col-md-6">
+                                    <select id="inputProvince" class="form-control" name="bill[province]">
+                                        <option value="" selected>Chọn tỉnh/thành</option>
+                                        <option value="HN">Hà Nội</option>
+                                        <option value="HCM">Hồ Chí Minh</option>
+                                        <option value="DN">Đà nẵng</option>
+                                    </select>
+                                    <p class="text-danger small mt-1 p-0 m-0" id="provinceWarning">Vui lòng chọn tỉnh thành</p>
+                                </div>
+                                <div class="form-group col-12 col-md-6">
+                                    <select id="inputDistrict" class="form-control" name="bill[distric]">
+                                        <option value="" selected>Chọn quận huyện</option>
+                                        <option value="...">...</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-md-row flex-column-reverse justify-content-between align-items-center py-3 checkout__form__btns">
+                                <a href="/cart.html" class="text-success checkout__form__btn_back mt-2 mt-md-0"> <i class="fa fa-sort-up fa-rotate-270"></i> Giỏ hàng</a>
+                                <button class="btn btn-success" id="btnSubmit" type="submit">Tiếp tục</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="step2">
+                        <div class="transferMethod mb-4 form-group card">
+                            <h2 class="h4 mb-2 card-title card-header">Phương thức vận chuyển</h2>
+                            <div class="form-check card-body px-5">
+                                <input class="form-check-input" type="radio" value="GHTN" id="transferMethod" name="transferMethod" checked>
+                                <label lass="form-check-label" for="transferMethod">
+                                    Giao hàng tận nơi
+                                </label>
+                                <span id="transferFee" class="text-muted float-right">40,000₫</span>
+                            </div>
+                        </div>
+                        <div class="paymentMethod form-group card">
+                            <h2 class="h4 mb-2 card-title card-header">Phương thức thanh toán</h2>
+                            <form class="form-check card-body px-5">
+                                <div class="form-group">
+                                    <input class="form-check-input" type="radio" value="COD" id="paymentMethod1" name="paymentMethod" checked>
+                                    <label lass="form-check-label" for="paymentMethod1">
+                                        Thanh toán khi giao hàng(COD)
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-check-input" type="radio" value="CKNH" id="paymentMethod2" name="paymentMethod">
+                                    <label lass="form-check-label" for="paymentMethod2">
+                                        Chuyển khoản qua ngân hàng
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="d-flex flex-md-row flex-column-reverse justify-content-between align-items-center py-3 checkout__form__btns">
+                            <a href="#" class="text-success checkout__form__btn_back mt-2 mt-md-0" id="btnBackToInfo"> <i class="fa fa-sort-up fa-rotate-270"></i> Quay lại</a>
+                            <button class="btn btn-success" id="btnComplete" type="submit">Hoàn tất đơn hàng</button>
+                        </div>
+                    </div>
+                    <div class="showBill">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Thông tin đơn hàng</h3>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-subtitle">Thông tin giao hàng</h5>
+                                <p class="card-text">
+                                    <div class="bill__id">12131313</span>
+                                        <div class="text-muted" id="customerAddress"></div>
+                                        <div class="text-muted">Viet Nam</div>
+                                        <div class="bill__id text-muted">12131313</div>
+                                </p>
+                                <h5 class="card-subtitle">Phương thức thanh toán</h5>
+                                <p class="card-text">
+                                    <div class="text-muted" id="customerPaymentMethod"></div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <p>Cần hỗ trợ? <a href="/contact.html" class="text-success">Liên hệ chúng thôi</a></p>
+                        <a href="/" class="btn btn-success">Tiếp tục mua</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12 mb-lg-0 mb-4" id="billContainer">
+                <div class="card" id="bill">
+                    <button class="btn btn-success d-lg-none" type="button" data-toggle="collapse" data-target="#collapseBill" aria-expanded="true" aria-controls="collapseBill">
+                        Thông tin đơn hàng
+                    </button>
+                    <div class="px-3" id="collapseBill">
+                        <div class="bill__items" id="billItems">
+                        </div>
+                        <div class="bill__fees bill__item" id="billFees">
+                            <p class="text-muted">Tạm tính
+                                <span class="bil__fees-temp text-success" id="billFeesTemp"></span>
+                            </p>
+                            <p class="text-muted">Phí vận chuyển
+                                <span class="bil__fees-transfer text-success" id="billFeesTransfer"></span>
+                            </p>
+                        </div>
+                        <div class="bill__discount bill__item d-flex flex-md-row flex-column" id="billDiscount">
+                            <input type="text" class="form-control  col-12 col-md-9 mr-md-2 mb-md-0 mb-2" name="bill[discount]" placeholder="Mã giảm giá">
+                            <button class="btn btn-success disabled col-12 col-md-3">Sử dụng</button>
+                        </div>
+                        <div class="bill__totalPrice bill__item d-flex flex-column flex-md-row justify-content-between align-items-center" id="billTotalPrice">
+                            <p class="text-muted">Tổng cộng</p>
+                            <h2 class="bill__totalPrice__number text-success"></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./js/jquery-3.5.1.slim.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <!-- Optional JavaScript -->
+    <script src="/js/cart.js"></script>
+    <script type="text/javascript">
+    $('[data-toggle="tooltip"]').tooltip();
+
+    const btnSubmit = document.getElementById("btnSubmit")
+
+    btnSubmit.addEventListener('click', (e) => {
+        e.preventDefault();
+        const formElem = document.getElementById('checkoutForm');
+        const form = new FormData(formElem);
+        const provinceWarning = document.getElementById('provinceWarning');
+        const phoneWarning = document.getElementById('phoneWarning');
+
+        let values = [...form.values()];
+
+        if (!values[5]) {
+            provinceWarning.style.display = 'block'
+            document.getElementById('inputProvince').classList.add('border-danger');
+        } else {
+            document.getElementById('inputProvince').classList.remove('border-danger');
+            provinceWarning.style.display = 'none';
+        }
+
+
+        if (!/(0[3|5|8|7|9])+([0-9]{8})\b/g.test(values[3])) {
+            phoneWarning.style.display = 'block';
+            document.getElementById('inputPhone').classList.add('border-danger');
+        } else {
+            document.getElementById('inputPhone').classList.remove('border-danger');
+            phoneWarning.style.display = 'none';
+        }
+
+        if (values[3] && values[5]) {
+            document.querySelector('.step1').style.display = 'none';
+            document.querySelector('.step2').style.display = 'block';
+        }
+    })
+
+    document.getElementById('btnBackToInfo').addEventListener('click', () => {
+        document.querySelector('.step1').style.display = 'block';
+        document.querySelector('.step2').style.display = 'none';
+    })
+
+    document.getElementById('btnComplete').addEventListener('click', () => {
+        document.querySelector('.step2').style.display = 'none';
+        document.querySelector('.showBill').style.display = 'block';
+        document.querySelector('#collapseBill').removeChild(document.querySelector('#billDiscount'));
+
+        const paymentMethod = [...document.getElementsByName('paymentMethod')].find(payment => payment.checked).value;
+        const transferMethod = document.getElementsByName('transferMethod')[0].value;
+
+        document.getElementById('customerPaymentMethod').innerText = paymentMethod;
+        document.getElementById('billFeesTransfer').innerText = document.getElementById('transferFee').innerText;
+
+        Swal.fire({
+            icon: 'success',
+            title: 'Thanh toán thành công',
+            showConfirmButton: false,
+            showCancelButton: false,
+            timer: 1500
+        });
+    })
+
+
+    /*  RENDER VIEW OF BILL*/
+
+    let content = ``;
+
+    content += [...cart].map((item) => {
+        const name = item[0];
+        const { img, price, quantity } = item[1];
+        return `<div class="bill__items__item">
+                    <div><img src="${img}"/><span class="quantityCircle">${quantity}</span></div>
+                    <p>${name} </p>
+                    <h5>${formatCurrency(price)}</h5>
+                </div>`
+    }).join('');
+
+    document.getElementById('billItems').innerHTML += content;
+    const billDiscount = document.getElementById('billDiscount');
+
+    billDiscount.querySelector('input').addEventListener('input', (e) => {
+        if (e.target.value.length > 0) {
+            billDiscount.querySelector('button').classList.remove('disabled');
+        } else {
+            billDiscount.querySelector('button').classList.add('disabled');
+        }
+    })
+
+    $('#billFeesTemp').text(formatCurrency(getCost(cart)));
+    $('#billFeesTransfer').text("");
+    $('.bill__totalPrice__number').text(formatCurrency(getCost(cart)));
+
+
+    /*ADD COLLAPASE ON PHONE*/
+
+    if (window.innerWidth <= 992) {
+        $('#collapseBill').addClass('collapse');
+    }
+
+    $(window).on('resize', () => {
+        window.innerWidth <= 992 ? $('#collapseBill').addClass('collapse') : $('#collapseBill').removeClass('collapse');
+    })
+    </script>
+</body>
+
+</html>

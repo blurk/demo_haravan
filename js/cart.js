@@ -12,8 +12,10 @@ if (!sessionStorage.cart) {
 }
 
 //UPDATE CART WHEN PAGE LOAD 1st time
-updateCartView(); //CONTENT INSDIE CART
-updateQuantity(getAmount(cart)); //CART AMOUNT
+if (cartAmountIcon && cartView) {
+    updateCartView(); //CONTENT INSDIE CART
+    updateQuantity(getAmount(cart)); //CART AMOUNT
+}
 
 function traverseToParent(target) {
     while (1) {
@@ -116,7 +118,7 @@ function getAmount(cart) {
 function updateCartView() {
     let content = ``;
     if (!getAmount(cart)) {
-        content = '<span class="text-muted small">Giỏ hàng hiện đang trống</span>'
+        content = '<span class="text-muted small p-0">Giỏ hàng hiện đang trống</span>'
     } else {
         content += [...cart].map((item) => {
             const name = item[0];
@@ -154,4 +156,10 @@ function removeItem(name) {
     cart.delete(name);
     setCart(cart);
     console.log(cart)
+}
+
+/*FORMAT CURRENCY*/
+
+function formatCurrency(amount) {
+    return new Intl.NumberFormat('vn-VN', { style: 'currency', currency: 'VND' }).format(amount).slice(1) + '₫';
 }

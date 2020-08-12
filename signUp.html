@@ -20,7 +20,7 @@
     <!-- TOPBAR -->
     <div class="top-bar bg-dark">
         <div class="container">
-            <div class="row justify-content-start align-item">
+            <div class="row justify-content-start align-items-center">
                 <div class="top-bar__contact mr-auto py-2 col-lg-8 d-lg-block d-none small" text-left>
                     <div class="top-bar__hotline d-inline-block">
                         <img src="./img/icondienthoai.png" alt="phone icon" />
@@ -42,13 +42,13 @@
                             <a class="btn btn-light d-block" href="./signUp.html">Đăng ký</a>
                         </div>
                     </div>
-                    <div class="cart-dropdown py-2 d-lg-inline-block d-none top-bar__user__cart" id="cart">
-                        <a class="btn-sm text-light text-decoration-none" id="cartBtn" href="#">
+                    <div class="cart-dropdown py-2 d-inline-block top-bar__user__cart" id="cart">
+                        <a class="btn-sm text-light text-decoration-none" id="cartBtn" href="./cart.html">
                             <i class="fa fa-shopping-cart"></i>
                             <span>Giỏ Hàng
                                 <span id="cartAmount" class="badge badge-light"></span></span>
                         </a>
-                        <div class="cart-dropdown__menu">
+                        <div class="cart-dropdown__menu d-lg-block d-none">
                         </div>
                     </div>
                 </div>
@@ -247,7 +247,7 @@
             <div class="col-12 py-2 text-center">
                 <span class="page__title h3">Đăng ký tài khoản</span>
             </div>
-            <div class="col-6 offset-3 mt-2">
+            <div class="col-12 col-md-6 offset-md-3 mt-2">
                 <form method="get" action="#">
                     <div class="form-group">
                         <label for="surname" class="text-success h6">Họ*</label>
@@ -270,7 +270,6 @@
                     </button>
                 </form>
             </div>
-            <div class="col-12 col-sm-6"></div>
         </div>
     </div>
     <!-- ADDRESS -->
@@ -403,15 +402,17 @@
     <button id="toTop" class="btn rounded-0">
         <i class="fa fa-angle-up"></i>
     </button>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="./js/jquery-3.5.1.slim.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <!-- Optional JavaScript -->
     <script src="./js/app.js"></script>
+    <script src="./js/cart.js"></script>
 </body>
 
 </html>
