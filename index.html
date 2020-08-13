@@ -1,1592 +1,2060 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <!-- FONTAWESOME -->
-    <link rel="stylesheet" href="./fonts/fontawesome-free-5.14.0-web/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+    <link
+      rel="stylesheet"
+      href="./fonts/fontawesome-free-5.14.0-web/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
     <!-- OPTIIONAL CSS -->
     <link rel="stylesheet" href="./css/style.css" />
     <title>Demo - Theme Store Haravan</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- TOPBAR -->
     <div class="top-bar bg-dark">
-        <div class="container">
-            <div class="row justify-content-start align-items-center">
-                <div class="top-bar__contact mr-auto py-2 col-lg-8 d-lg-block d-none small" text-left>
-                    <div class="top-bar__hotline d-inline-block">
-                        <img src="./img/icondienthoai.png" alt="phone icon" />
-                        <b class="text-light">Tư Vấn 24/7:</b><span class="text-muted"> 0909528368</span>
-                    </div>
-                    <div class="top-bar__address d-inline-block ml-2">
-                        <b class="text-light">Địa chỉ:</b><span class="text-muted">
-                            P214 , Chung cư B3, Ngõ 118 , Nguyễn Khánh Toàn</span>
-                    </div>
-                </div>
-                <div class="top-bar__user ml-auto col-lg-4 col-12 text-right top-bar__user__account">
-                    <div class="account__dropdown py-1 d-inline-block">
-                        <a class="btn-sm py-5 text-light text-decoration-none" href="#">
-                            <i class="fa fa-user"></i>
-                            <span>Tài Khoản</span>
-                        </a>
-                        <div class="account__dropdown-menu">
-                            <a class="btn btn-light d-block" href="./signIn.html">Đăng nhập</a>
-                            <a class="btn btn-light d-block" href="./signUp.html">Đăng ký</a>
-                        </div>
-                    </div>
-                    <div class="cart-dropdown py-2 d-inline-block top-bar__user__cart" id="cart">
-                        <a class="btn-sm text-light text-decoration-none" id="cartBtn" href="./cart.html">
-                            <i class="fa fa-shopping-cart"></i>
-                            <span>Giỏ Hàng
-                                <span id="cartAmount" class="badge badge-light"></span></span>
-                        </a>
-                        <div class="cart-dropdown__menu d-lg-block d-none">
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row justify-content-start align-items-center">
+          <div
+            class="top-bar__contact mr-auto py-2 col-lg-8 d-lg-block d-none small"
+            text-left
+          >
+            <div class="top-bar__hotline d-inline-block">
+              <img src="./img/icondienthoai.png" alt="phone icon" />
+              <b class="text-light">Tư Vấn 24/7:</b
+              ><span class="text-muted"> 0909528368</span>
             </div>
+            <div class="top-bar__address d-inline-block ml-2">
+              <b class="text-light">Địa chỉ:</b
+              ><span class="text-muted">
+                P214 , Chung cư B3, Ngõ 118 , Nguyễn Khánh Toàn</span
+              >
+            </div>
+          </div>
+          <div
+            class="top-bar__user ml-auto col-lg-4 col-12 text-right top-bar__user__account"
+          >
+            <div class="account__dropdown py-1 d-inline-block">
+              <a class="btn-sm py-5 text-light text-decoration-none" href="#">
+                <i class="fa fa-user"></i>
+                <span>Tài Khoản</span>
+              </a>
+              <div class="account__dropdown-menu">
+                <a class="btn btn-light d-block" href="./signIn.html"
+                  >Đăng nhập</a
+                >
+                <a class="btn btn-light d-block" href="./signUp.html"
+                  >Đăng ký</a
+                >
+              </div>
+            </div>
+            <div
+              class="cart-dropdown py-2 d-inline-block top-bar__user__cart"
+              id="cart"
+            >
+              <a
+                class="btn-sm text-light text-decoration-none"
+                id="cartBtn"
+                href="./cart.html"
+              >
+                <i class="fa fa-shopping-cart"></i>
+                <span
+                  >Giỏ Hàng
+                  <span id="cartAmount" class="badge badge-light"></span
+                ></span>
+              </a>
+              <div class="cart-dropdown__menu d-lg-block d-none"></div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- HEADER -->
-    <header class="container-fluid" id="header" style="background-color: #f4f4f4;">
-        <div class="row">
-            <!-- NAVIGATION -->
-            <div class="col-lg-8 col-12">
-                <div class="navbar-container">
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="#">
-                            <img src="./img/logo.png" alt="logo" />
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="./index.html">Trang chủ </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./about.html">Giới thiệu</a>
-                                </li>
-                                <li class="nav-item my-dropdown">
-                                    <span></span>
-                                    <a class="nav-link" href="/index.html" id="myDropDownBtn">
-                                        Sản phẩm
-                                        <i class="fa fa-angle-down d-lg-inline-block d-none"></i>
-                                    </a>
-                                    <div class="my-dropdown-menu product__dropdown-menu rounded mt-2">
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-12 col-md-8">
-                                                    <ul class="row">
-                                                        <li class="col-sm-6 col-12 py-2">
-                                                            <a href="./products.html" class="h6">Phòng khách</a>
-                                                            <ul class="list-group-flush">
-                                                                <li class="list-group-item py-1">
-                                                                    <a href="./products.html" class="text-muted">Ghế bành</a>
-                                                                </li>
-                                                                <li class="list-group-item py-1">
-                                                                    <a href="./products.html" class="text-muted">Bàn tiếp khách</a>
-                                                                </li>
-                                                                <li class="list-group-item py-1">
-                                                                    <a href="./products.html" class="text-muted">Tủ cao</a>
-                                                                </li>
-                                                                <li class="list-group-item py-1">
-                                                                    <a href="./products.html" class="text-muted">Ghế tựa</a>
-                                                                </li>
-                                                                <li class="list-group-item py-1">
-                                                                    <a href="./products.html" class="text-muted">Ghế vuông</a>
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                        <li class="col-sm-6 col-12 py-2">
-                                                            <a href="./products.html" class="h6">Phòng ngủ</a>
-                                                            <ul class="list-group-flush">
-                                                                <li class="list-group-item py-1">
-                                                                    <a href="./products.html" class="text-muted">Bàn trang điểm</a>
-                                                                </li>
-                                                                <li class="list-group-item py-1">
-                                                                    <a href="./products.html" class="text-muted">Giường ngủ</a>
-                                                                </li>
-                                                                <li class="list-group-item py-1">
-                                                                    <a href="./products.html" class="text-muted">Rèm</a>
-                                                                </li>
-                                                                <li class="list-group-item py-1">
-                                                                    <a href="./products.html" class="text-muted">Tủ</a>
-                                                                </li>
-                                                                <li class="list-group-item py-1">
-                                                                    <a href="./products.html" class="text-muted">Ghế</a>
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                        <li class="col-sm-6 col-12 py-2">
-                                                            <a href="./products.html" class="h6">Nhà bếp</a>
-                                                            <ul class="list-group-flush">
-                                                                <li class="list-group-item py-1">
-                                                                    <a href="./products.html" class="text-muted">Bồn rửa</a>
-                                                                </li>
-                                                                <li class="list-group-item py-1">
-                                                                    <a href="./products.html" class="text-muted">Tủ bếp</a>
-                                                                </li>
-                                                                <li class="list-group-item py-1">
-                                                                    <a href="./products.html" class="text-muted">Nội thất</a>
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                        <li class="col-sm-6 col-12 py-2">
-                                                            <a href="./products.html" class="h6">Thiết bị vệ sinh</a>
-                                                        </li>
-                                                        <li class="col-sm-6 col-12 py-2">
-                                                            <a href="./products.html" class="h6">Đồ trang trí</a>
-                                                        </li>
-                                                        <li class="col-sm-6 col-12 py-2">
-                                                            <a href="./products.html" class="h6">Nhà thông minh</a>
-                                                        </li>
-                                                        <li class="col-sm-6 col-12 py-2">
-                                                            <a href="./products.html" class="h6">Sofa</a>
-                                                        </li>
-                                                        <li class="col-sm-6 col-12 py-2">
-                                                            <a href="./products.html" class="h6">Phòng tắm</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-12 col-md-4">
-                                                    <h6 class="text-success py-2">Sản phẩm nổi bật</h6>
-                                                    <div class="d-block best-seller__container">
-                                                        <div class="best-seller">
-                                                            <div class="row">
-                                                                <a href="./productDetail.html" class="col-sm-6 col-12">
-                                                                    <img class="w-100 h-100" src="./img/ban_go.jpg" /></a>
-                                                                <div class="col-sm-6 col-12 best-seller__info">
-                                                                    <div class="h6">
-                                                                        Lorem, ipsum
-                                                                    </div>
-                                                                    <div class="best-seller__price">
-                                                                        <span class="price-before text-muted">
-                                                                            26,000,000₫
-                                                                        </span>
-                                                                        19,000,000₫
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="best-seller">
-                                                            <div class="row">
-                                                                <a href="./productDetail.html" class="col-sm-6 col-12">
-                                                                    <img class="w-100 h-100" src="./img/ban_go.jpg" /></a>
-                                                                <div class="col-sm-6 col-12 best-seller__info">
-                                                                    <div class="h6">
-                                                                        Lorem, ipsum
-                                                                    </div>
-                                                                    <div class="best-seller__price">
-                                                                        <span class="price-before text-muted">
-                                                                            26,000,000₫
-                                                                        </span>
-                                                                        19,000,000₫
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="best-seller">
-                                                            <div class="row">
-                                                                <a href="./productDetail.html" class="col-sm-6 col-12">
-                                                                    <img class="w-100 h-100" src="./img/ban_go.jpg" /></a>
-                                                                <div class="col-sm-6 col-12 best-seller__info">
-                                                                    <div class="h6">
-                                                                        Lorem, ipsum
-                                                                    </div>
-                                                                    <div class="best-seller__price">
-                                                                        <span class="price-before text-muted">
-                                                                            26,000,000₫
-                                                                        </span>
-                                                                        19,000,000₫
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Thiết kế nội thất</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./news.html">Tin Tức</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./contact.html">Liên hệ</a>
-                                </li>
+    <header
+      class="container-fluid"
+      id="header"
+      style="background-color: #f4f4f4;"
+    >
+      <div class="row">
+        <!-- NAVIGATION -->
+        <div class="col-lg-8 col-12">
+          <div class="navbar-container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <a class="navbar-brand" href="#">
+                <img src="./img/logo.png" alt="logo" />
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Trang chủ </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./about.html">Giới thiệu</a>
+                  </li>
+                  <li class="nav-item my-dropdown">
+                    <span></span>
+                    <a class="nav-link" href="/index.html" id="myDropDownBtn">
+                      Sản phẩm
+                      <i class="fa fa-angle-down d-lg-inline-block d-none"></i>
+                    </a>
+                    <div
+                      class="my-dropdown-menu product__dropdown-menu rounded mt-2"
+                    >
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-12 col-md-8">
+                            <ul class="row">
+                              <li class="col-sm-6 col-12 py-2">
+                                <a href="./products.html" class="h6"
+                                  >Phòng khách</a
+                                >
+                                <ul class="list-group-flush">
+                                  <li class="list-group-item py-1">
+                                    <a href="./products.html" class="text-muted"
+                                      >Ghế bành</a
+                                    >
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="./products.html" class="text-muted"
+                                      >Bàn tiếp khách</a
+                                    >
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="./products.html" class="text-muted"
+                                      >Tủ cao</a
+                                    >
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="./products.html" class="text-muted"
+                                      >Ghế tựa</a
+                                    >
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="./products.html" class="text-muted"
+                                      >Ghế vuông</a
+                                    >
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="col-sm-6 col-12 py-2">
+                                <a href="./products.html" class="h6"
+                                  >Phòng ngủ</a
+                                >
+                                <ul class="list-group-flush">
+                                  <li class="list-group-item py-1">
+                                    <a href="./products.html" class="text-muted"
+                                      >Bàn trang điểm</a
+                                    >
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="./products.html" class="text-muted"
+                                      >Giường ngủ</a
+                                    >
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="./products.html" class="text-muted"
+                                      >Rèm</a
+                                    >
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="./products.html" class="text-muted"
+                                      >Tủ</a
+                                    >
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="./products.html" class="text-muted"
+                                      >Ghế</a
+                                    >
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="col-sm-6 col-12 py-2">
+                                <a href="./products.html" class="h6">Nhà bếp</a>
+                                <ul class="list-group-flush">
+                                  <li class="list-group-item py-1">
+                                    <a href="./products.html" class="text-muted"
+                                      >Bồn rửa</a
+                                    >
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="./products.html" class="text-muted"
+                                      >Tủ bếp</a
+                                    >
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="./products.html" class="text-muted"
+                                      >Nội thất</a
+                                    >
+                                  </li>
+                                </ul>
+                              </li>
+                              <li class="col-sm-6 col-12 py-2">
+                                <a href="./products.html" class="h6"
+                                  >Thiết bị vệ sinh</a
+                                >
+                              </li>
+                              <li class="col-sm-6 col-12 py-2">
+                                <a href="./products.html" class="h6"
+                                  >Đồ trang trí</a
+                                >
+                              </li>
+                              <li class="col-sm-6 col-12 py-2">
+                                <a href="./products.html" class="h6"
+                                  >Nhà thông minh</a
+                                >
+                              </li>
+                              <li class="col-sm-6 col-12 py-2">
+                                <a href="./products.html" class="h6">Sofa</a>
+                              </li>
+                              <li class="col-sm-6 col-12 py-2">
+                                <a href="./products.html" class="h6"
+                                  >Phòng tắm</a
+                                >
+                              </li>
                             </ul>
+                          </div>
+                          <div class="col-12 col-md-4">
+                            <h6 class="text-success py-2">Sản phẩm nổi bật</h6>
+                            <div class="d-block best-seller__container">
+                              <div class="best-seller">
+                                <div class="row">
+                                  <a
+                                    href="./productDetail.html"
+                                    class="col-sm-6 col-12"
+                                  >
+                                    <img
+                                      class="w-100 h-100"
+                                      src="./img/ban_go.jpg"
+                                  /></a>
+                                  <div
+                                    class="col-sm-6 col-12 best-seller__info"
+                                  >
+                                    <div class="h6">
+                                      Lorem, ipsum
+                                    </div>
+                                    <div class="best-seller__price">
+                                      <span class="price-before text-muted">
+                                        26,000,000₫
+                                      </span>
+                                      19,000,000₫
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="best-seller">
+                                <div class="row">
+                                  <a
+                                    href="./productDetail.html"
+                                    class="col-sm-6 col-12"
+                                  >
+                                    <img
+                                      class="w-100 h-100"
+                                      src="./img/ban_go.jpg"
+                                  /></a>
+                                  <div
+                                    class="col-sm-6 col-12 best-seller__info"
+                                  >
+                                    <div class="h6">
+                                      Lorem, ipsum
+                                    </div>
+                                    <div class="best-seller__price">
+                                      <span class="price-before text-muted">
+                                        26,000,000₫
+                                      </span>
+                                      19,000,000₫
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="best-seller">
+                                <div class="row">
+                                  <a
+                                    href="./productDetail.html"
+                                    class="col-sm-6 col-12"
+                                  >
+                                    <img
+                                      class="w-100 h-100"
+                                      src="./img/ban_go.jpg"
+                                  /></a>
+                                  <div
+                                    class="col-sm-6 col-12 best-seller__info"
+                                  >
+                                    <div class="h6">
+                                      Lorem, ipsum
+                                    </div>
+                                    <div class="best-seller__price">
+                                      <span class="price-before text-muted">
+                                        26,000,000₫
+                                      </span>
+                                      19,000,000₫
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                    </nav>
-                </div>
-            </div>
-            <!--    SEARCH FORM -->
-            <form class="form-inline justify-content-lg-end col-lg-4 col-md-12 my-2 my-lg-0">
-                <input class="form-control w-50 rounded-0" type="search" id="searchBar" name="q" placeholder="Bạn muốn tìm gì?" maxlength="128" aria-label="Search" />
-                <button class="btn btn-success ml-2 my-2 my-sm-0 rounded-0" type="submit">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
-            </form>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Thiết kế nội thất</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./news.html">Tin Tức</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./contact.html">Liên hệ</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
         </div>
+        <!--    SEARCH FORM -->
+        <form
+          class="form-inline justify-content-lg-end col-lg-4 col-md-12 my-2 my-lg-0"
+        >
+          <input
+            class="form-control w-50 rounded-0"
+            type="search"
+            id="searchBar"
+            name="q"
+            placeholder="Bạn muốn tìm gì?"
+            maxlength="128"
+            aria-label="Search"
+          />
+          <button
+            class="btn btn-success ml-2 my-2 my-sm-0 rounded-0"
+            type="submit"
+          >
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
     </header>
     <!-- SLIDER -->
     <div class="container">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="./img/slide1.jpg" alt="First slide" />
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./img/slide2.jpg" alt="Second slide" />
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./img/slide3.jpg" alt="Third slide" />
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span aria-hidden="true">
-                    <i class="fa fa-angle-left" aria-hidden="true"></i>
-                </span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span aria-hidden="true">
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                </span>
-                <span class="sr-only">Next</span>
-            </a>
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="d-block w-100"
+              src="./img/slide1.jpg"
+              alt="First slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="./img/slide2.jpg"
+              alt="Second slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="./img/slide3.jpg"
+              alt="Third slide"
+            />
+          </div>
         </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="prev"
+        >
+          <span aria-hidden="true">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+          </span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="next"
+        >
+          <span aria-hidden="true">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     </div>
     <!-- SERVICES -->
     <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-sm-6 col-12">
-                    <div class="service">
-                        <i class="fa fa-exchange-alt"></i>
-                        <p class="service__text">
-                            TƯ VẤN 24/7 <span class="service__emphasis">MIỄN PHÍ</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 col-12">
-                    <div class="service">
-                        <i class="fa fa-truck"></i>
-                        <p class="service__text">
-                            VẬN CHUYỂN <span class="service__emphasis">MIỄN PHÍ</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 col-12">
-                    <div class="service">
-                        <i class="fa fa-dollar-sign"></i>
-                        <p class="service__text">
-                            NHẬN HÀNG <span class="service__emphasis">NHẬN TIỀN</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 col-12">
-                    <div class="service">
-                        <i class="fa fa-phone"></i>
-                        <p class="service__text">
-                            GỌI NGAY <span class="service__emphasis">0902 068 068</span>
-                        </p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6 col-12">
+            <div class="service">
+              <i class="fa fa-exchange-alt"></i>
+              <p class="service__text">
+                TƯ VẤN 24/7 <span class="service__emphasis">MIỄN PHÍ</span>
+              </p>
             </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-12">
+            <div class="service">
+              <i class="fa fa-truck"></i>
+              <p class="service__text">
+                VẬN CHUYỂN <span class="service__emphasis">MIỄN PHÍ</span>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-12">
+            <div class="service">
+              <i class="fa fa-dollar-sign"></i>
+              <p class="service__text">
+                NHẬN HÀNG <span class="service__emphasis">NHẬN TIỀN</span>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-12">
+            <div class="service">
+              <i class="fa fa-phone"></i>
+              <p class="service__text">
+                GỌI NGAY <span class="service__emphasis">0902 068 068</span>
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- BANNER -->
     <section id="banner" class="container d-md-block d-none">
-        <div class="row">
-            <div class="col-sm-8 col-12">
-                <a href="#" class="banner">
-                    <img src="./img/t5.jpg" alt="banner 01" />
-                </a>
-            </div>
-            <div class="col-sm-4 col-12">
-                <a href="#" class="banner">
-                    <img src="./img/t6.jpg" alt="banner 02" />
-                </a>
-            </div>
+      <div class="row">
+        <div class="col-sm-8 col-12">
+          <a href="#" class="banner">
+            <img src="./img/t5.jpg" alt="banner 01" />
+          </a>
         </div>
+        <div class="col-sm-4 col-12">
+          <a href="#" class="banner">
+            <img src="./img/t6.jpg" alt="banner 02" />
+          </a>
+        </div>
+      </div>
     </section>
     <!-- PRODUCTS -->
     <section id="products">
-        <div class="container">
-            <div class="products__header">
-                <h3>Danh mục <span style="color: #888;">sản phẩm</span></h3>
-            </div>
-            <div class="row">
-                <div class="col-12 col-sm-4 p-0 col-md-3 d-md-block d-none">
-                    <div class="category card">
-                        <ul class="category__list list-group">
-                            <li class="category__list__item list-group-item">
-                                <a href="#" class="card-title">
-                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                    Phòng khách
-                                </a>
-                                <ul style="display: none;"></ul>
-                            </li>
-                            <li class="category__list__item list-group-item">
-                                <a href="" class="card-title">
-                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                    Phòng ngủ
-                                </a>
-                                <ul style="display: none;"></ul>
-                            </li>
-                            <li class="category__list__item list-group-item">
-                                <a href="" class="card-title"><i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                    Sofa</a>
-                            </li>
-                            <li class="category__list__item list-group-item">
-                                <a href="" class="card-title"><i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                    Phòng bếp</a>
-                            </li>
-                            <li class="category__list__item list-group-item">
-                                <a href="" class="card-title"><i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                    Phòng trẻ em</a>
-                            </li>
-                            <li class="category__list__item list-group-item">
-                                <a href="" class="card-title"><i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                    Thiết bị bếp</a>
-                            </li>
-                            <li class="category__list__item list-group-item">
-                                <a href="" class="card-title"><i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                    Thiết bị vệ sinh</a>
-                            </li>
-                            <li class="category__list__item list-group-item">
-                                <a href="" class="card-title"><i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                    Đồ trang trí</a>
-                            </li>
-                            <li class="category__list__item list-group-item">
-                                <a href="" class="card-title"><i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                    Phụ kiện bếp</a>
-                            </li>
-                            <li class="category__list__item list-group-item">
-                                <a href="" class="card-title"><i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                    Nhà thông minh</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="banner card mt-2">
-                        <a href="#" class="card-img-top banner"><img src="./img/c1.jpg" alt="banner" /></a>
-                    </div>
-                </div>
-                <div class="col-12 col-md-9">
-                    <div class="row products">
-                        <div class="col-lg-3 col-sm-6 col-12 product" id="1">
-                            <div class="card">
-                                <a href="#" class="product__image">
-                                    <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Bồn cầu</a>
-                                    <div class="card-text product__price">
-                                        13,000,000₫
-                                    </div>
-                                    <div class="product__button">
-                                        <a name="addToCart" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-12 product" id="2">
-                            <div class="card sale">
-                                <a href="#" class="product__image">
-                                    <img src="./img/bo_dieu_khien.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Bộ điều khiển</a>
-                                    <span class="price-before text-muted">
-                                        26,000,000₫
-                                    </span>
-                                    <div class="card-text product__price">
-                                        13,000,000₫
-                                    </div>
-                                    <div class="product__button">
-                                        <a name="addToCart" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-12 product" id="3">
-                            <div class="card sale">
-                                <a href="#" class="product__image">
-                                    <img src="./img/den.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Đèn</a>
-                                    <span class="price-before text-muted">
-                                        26,000,000₫
-                                    </span>
-                                    <div class="card-text product__price">
-                                        13,000,000₫
-                                    </div>
-                                    <div class="product__button">
-                                        <a name="addToCart" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-12 product" id="4">
-                            <div class="card">
-                                <a href="#" class="product__image">
-                                    <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Bồn cầu</a>
-                                    <div class="card-text product__price">
-                                        13,000,000₫
-                                    </div>
-                                    <div class="product__button">
-                                        <a name="addToCart" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-12 product" id="5">
-                            <div class="card sale">
-                                <a href="#" class="product__image">
-                                    <img src="./img/bep.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Bếp</a>
-                                    <span class="price-before text-muted">
-                                        26,000,000₫
-                                    </span>
-                                    <div class="card-text product__price">
-                                        13,000,000₫
-                                    </div>
-                                    <div class="product__button">
-                                        <a name="addToCart" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-12 product" id="6">
-                            <div class="card">
-                                <a href="#" class="product__image">
-                                    <img src="./img/ghe.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Ghế</a>
-                                    <div class="card-text product__price">
-                                        13,000,000₫
-                                    </div>
-                                    <div class="product__button">
-                                        <a name="addToCart" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-12 product" id="7">
-                            <div class="card">
-                                <a href="#" class="product__image">
-                                    <img src="./img/ban_go.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Bàn gỗ</a>
-                                    <div class="card-text product__price">
-                                        13,000,000₫
-                                    </div>
-                                    <div class="product__button">
-                                        <a name="addToCart" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-12 product" id="8">
-                            <div class="card">
-                                <a href="#" class="product__image">
-                                    <img src="./img/ban_go.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Bàn gỗ</a>
-                                    <div class="card-text product__price">
-                                        13,000,000₫
-                                    </div>
-                                    <div class="product__button">
-                                        <a name="addToCart" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="load-more text-center my-3">
-                        <button class="btn btn-success" id="btnLoadMore">
-                            Xem thêm
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- OTHER PRODUCTS -->
-            <!-- 1ST -->
-            <div class="container">
-                <div class="row">
-                    <div class="products__header">
-                        <h3>Thiết bị <span style="color: #888;">vệ sinh</span></h3>
-                    </div>
-                    <!-- SLIDER -->
-                    <div class="container position-relative">
-                        <div class="slider" id="slider1">
-                            <div class="product" id="1">
-                                <div class="card">
-                                    <a href="#" class="product__image">
-                                        <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                    </a>
-                                    <div class="card-body text-center product__info pt-5">
-                                        <a class="card-title product__name" href="#">Sản phẩm</a>
-                                        <div class="card-text product__price">
-                                            13,000,000₫
-                                        </div>
-                                        <div href="" class="product__button">
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </a>
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-search-plus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product" id="2">
-                                <div class="card sale">
-                                    <a href="#" class="product__image">
-                                        <img src="./img/bo_dieu_khien.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                    </a>
-                                    <div class="card-body text-center product__info pt-5">
-                                        <a class="card-title product__name" href="#">Sản phẩm</a>
-                                        <div class="row justify-content-center align-items-center">
-                                            <span class="price-before text-muted d-block mr-2">
-                                                26,000,000₫
-                                            </span>
-                                            <div class="card-text product__price">
-                                                13,000,000₫
-                                            </div>
-                                        </div>
-                                        <div href="" class="product__button">
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </a>
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-search-plus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product" id="3">
-                                <div class="card sale">
-                                    <a href="#" class="product__image">
-                                        <img src="./img/den.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                    </a>
-                                    <div class="card-body text-center product__info pt-5">
-                                        <a class="card-title product__name" href="#">Sản phẩm</a>
-                                        <div class="row justify-content-center align-items-center">
-                                            <span class="price-before text-muted d-block mr-2">
-                                                26,000,000₫
-                                            </span>
-                                            <div class="card-text product__price">
-                                                13,000,000₫
-                                            </div>
-                                        </div>
-                                        <div href="" class="product__button">
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </a>
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-search-plus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product" id="4">
-                                <div class="card">
-                                    <a href="#" class="product__image">
-                                        <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                    </a>
-                                    <div class="card-body text-center product__info pt-5">
-                                        <a class="card-title product__name" href="#">Sản phẩm</a>
-                                        <div class="card-text product__price">
-                                            13,000,000₫
-                                        </div>
-                                        <div href="" class="product__button">
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </a>
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-search-plus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product" id="5">
-                                <div class="card">
-                                    <a href="#" class="product__image">
-                                        <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                    </a>
-                                    <div class="card-body text-center product__info pt-5">
-                                        <a class="card-title product__name" href="#">Sản phẩm</a>
-                                        <div class="card-text product__price">
-                                            13,000,000₫
-                                        </div>
-                                        <div href="" class="product__button">
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </a>
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-search-plus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product" id="6">
-                                <div class="card">
-                                    <a href="#" class="product__image">
-                                        <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                    </a>
-                                    <div class="card-body text-center product__info pt-5">
-                                        <a class="card-title product__name" href="#">Sản phẩm</a>
-                                        <div class="card-text product__price">
-                                            13,000,000₫
-                                        </div>
-                                        <div href="" class="product__button">
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </a>
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-search-plus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product" id="7">
-                                <div class="card">
-                                    <a href="#" class="product__image">
-                                        <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                    </a>
-                                    <div class="card-body text-center product__info pt-5">
-                                        <a class="card-title product__name" href="#">Sản phẩm</a>
-                                        <div class="card-text product__price">
-                                            13,000,000₫
-                                        </div>
-                                        <div href="" class="product__button">
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </a>
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-search-plus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product" id="8">
-                                <div class="card">
-                                    <a href="#" class="product__image">
-                                        <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                    </a>
-                                    <div class="card-body text-center product__info pt-5">
-                                        <a class="card-title product__name" href="#">Sản phẩm</a>
-                                        <div class="card-text product__price">
-                                            13,000,000₫
-                                        </div>
-                                        <div href="" class="product__button">
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </a>
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-search-plus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider-controls" id="slider-controls1">
-                            <div class="btn btn-success btn-sm">
-                                <i class="fa fa-angle-double-left text-light"></i>
-                            </div>
-                            <div class="btn btn-success btn-sm">
-                                <i class="fa fa-angle-double-right text-light"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- 2ND -->
-            <div class="container">
-                <div class="row">
-                    <div class="products__header">
-                        <h3>Thiết bị <span style="color: #888;">bếp</span></h3>
-                    </div>
-                    <!-- SLIDER -->
-                    <div class="container position-relative">
-                        <div class="slider" id="slider2">
-                            <div class="product" id="1">
-                                <div class="card">
-                                    <a href="#" class="product__image">
-                                        <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                    </a>
-                                    <div class="card-body text-center product__info pt-5">
-                                        <a class="card-title product__name" href="#">Sản phẩm</a>
-                                        <div class="card-text product__price">
-                                            13,000,000₫
-                                        </div>
-                                        <div href="" class="product__button">
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </a>
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-search-plus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product" id="2">
-                                <div class="card sale">
-                                    <a href="#" class="product__image">
-                                        <img src="./img/bo_dieu_khien.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                    </a>
-                                    <div class="card-body text-center product__info pt-5">
-                                        <a class="card-title product__name" href="#">Sản phẩm</a>
-                                        <div class="row justify-content-center align-items-center">
-                                            <span class="price-before text-muted d-block mr-2">
-                                                26,000,000₫
-                                            </span>
-                                            <div class="card-text product__price">
-                                                13,000,000₫
-                                            </div>
-                                        </div>
-                                        <div href="" class="product__button">
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </a>
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-search-plus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product" id="3">
-                                <div class="card sale">
-                                    <a href="#" class="product__image">
-                                        <img src="./img/den.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                    </a>
-                                    <div class="card-body text-center product__info pt-5">
-                                        <a class="card-title product__name" href="#">Sản phẩm</a>
-                                        <div class="row justify-content-center align-items-center">
-                                            <span class="price-before text-muted d-block mr-2">
-                                                26,000,000₫
-                                            </span>
-                                            <div class="card-text product__price">
-                                                13,000,000₫
-                                            </div>
-                                        </div>
-                                        <div href="" class="product__button">
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </a>
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-search-plus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product" id="4">
-                                <div class="card">
-                                    <a href="#" class="product__image">
-                                        <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                    </a>
-                                    <div class="card-body text-center product__info pt-5">
-                                        <a class="card-title product__name" href="#">Sản phẩm</a>
-                                        <div class="card-text product__price">
-                                            13,000,000₫
-                                        </div>
-                                        <div href="" class="product__button">
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </a>
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-search-plus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product" id="5">
-                                <div class="card">
-                                    <a href="#" class="product__image">
-                                        <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                    </a>
-                                    <div class="card-body text-center product__info pt-5">
-                                        <a class="card-title product__name" href="#">Sản phẩm</a>
-                                        <div class="card-text product__price">
-                                            13,000,000₫
-                                        </div>
-                                        <div href="" class="product__button">
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </a>
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-search-plus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product" id="6">
-                                <div class="card">
-                                    <a href="#" class="product__image">
-                                        <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                    </a>
-                                    <div class="card-body text-center product__info pt-5">
-                                        <a class="card-title product__name" href="#">Sản phẩm</a>
-                                        <div class="card-text product__price">
-                                            13,000,000₫
-                                        </div>
-                                        <div href="" class="product__button">
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </a>
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-search-plus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product" id="5">
-                                <div class="card">
-                                    <a href="#" class="product__image">
-                                        <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                    </a>
-                                    <div class="card-body text-center product__info pt-5">
-                                        <a class="card-title product__name" href="#">Sản phẩm</a>
-                                        <div class="card-text product__price">
-                                            13,000,000₫
-                                        </div>
-                                        <div href="" class="product__button">
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </a>
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-search-plus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product" id="5">
-                                <div class="card">
-                                    <a href="#" class="product__image">
-                                        <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                    </a>
-                                    <div class="card-body text-center product__info pt-5">
-                                        <a class="card-title product__name" href="#">Sản phẩm</a>
-                                        <div class="card-text product__price">
-                                            13,000,000₫
-                                        </div>
-                                        <div href="" class="product__button">
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-shopping-cart"></i>
-                                            </a>
-                                            <a href="#" class="mx-1">
-                                                <i class="fa fa-search-plus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider-controls" id="slider-controls2">
-                            <div class="btn btn-success btn-sm">
-                                <i class="fa fa-angle-double-left text-light"></i>
-                            </div>
-                            <div class="btn btn-success btn-sm">
-                                <i class="fa fa-angle-double-right text-light"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="products__header">
+          <h3>Danh mục <span style="color: #888;">sản phẩm</span></h3>
         </div>
+        <div class="row">
+          <div class="col-12 col-sm-4 p-0 col-md-3 d-md-block d-none">
+            <div class="category card">
+              <ul class="category__list list-group">
+                <li class="category__list__item list-group-item">
+                  <a href="#" class="card-title">
+                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    Phòng khách
+                  </a>
+                  <ul style="display: none;"></ul>
+                </li>
+                <li class="category__list__item list-group-item">
+                  <a href="" class="card-title">
+                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    Phòng ngủ
+                  </a>
+                  <ul style="display: none;"></ul>
+                </li>
+                <li class="category__list__item list-group-item">
+                  <a href="" class="card-title"
+                    ><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    Sofa</a
+                  >
+                </li>
+                <li class="category__list__item list-group-item">
+                  <a href="" class="card-title"
+                    ><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    Phòng bếp</a
+                  >
+                </li>
+                <li class="category__list__item list-group-item">
+                  <a href="" class="card-title"
+                    ><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    Phòng trẻ em</a
+                  >
+                </li>
+                <li class="category__list__item list-group-item">
+                  <a href="" class="card-title"
+                    ><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    Thiết bị bếp</a
+                  >
+                </li>
+                <li class="category__list__item list-group-item">
+                  <a href="" class="card-title"
+                    ><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    Thiết bị vệ sinh</a
+                  >
+                </li>
+                <li class="category__list__item list-group-item">
+                  <a href="" class="card-title"
+                    ><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    Đồ trang trí</a
+                  >
+                </li>
+                <li class="category__list__item list-group-item">
+                  <a href="" class="card-title"
+                    ><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    Phụ kiện bếp</a
+                  >
+                </li>
+                <li class="category__list__item list-group-item">
+                  <a href="" class="card-title"
+                    ><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    Nhà thông minh</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="banner card mt-2">
+              <a href="#" class="card-img-top banner"
+                ><img src="./img/c1.jpg" alt="banner"
+              /></a>
+            </div>
+          </div>
+          <div class="col-12 col-md-9">
+            <div class="row products">
+              <div class="col-lg-3 col-sm-6 col-12 product" id="1">
+                <div class="card">
+                  <a href="#" class="product__image">
+                    <img
+                      src="./img/bon_cau.jpg"
+                      id="1"
+                      alt="product"
+                      class="card-img-top img-fluid"
+                    />
+                  </a>
+                  <div class="card-body text-center product__info pt-5">
+                    <a class="card-title product__name" href="#">Bồn cầu</a>
+                    <div class="card-text product__price">
+                      13,000,000₫
+                    </div>
+                    <div class="product__button">
+                      <a name="addToCart" class="mx-1">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-search-plus"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6 col-12 product" id="2">
+                <div class="card sale">
+                  <a href="#" class="product__image">
+                    <img
+                      src="./img/bo_dieu_khien.jpg"
+                      id="1"
+                      alt="product"
+                      class="card-img-top img-fluid"
+                    />
+                  </a>
+                  <div class="card-body text-center product__info pt-5">
+                    <a class="card-title product__name" href="#"
+                      >Bộ điều khiển</a
+                    >
+                    <span class="price-before text-muted">
+                      26,000,000₫
+                    </span>
+                    <div class="card-text product__price">
+                      13,000,000₫
+                    </div>
+                    <div class="product__button">
+                      <a name="addToCart" class="mx-1">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-search-plus"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6 col-12 product" id="3">
+                <div class="card sale">
+                  <a href="#" class="product__image">
+                    <img
+                      src="./img/den.jpg"
+                      id="1"
+                      alt="product"
+                      class="card-img-top img-fluid"
+                    />
+                  </a>
+                  <div class="card-body text-center product__info pt-5">
+                    <a class="card-title product__name" href="#">Đèn</a>
+                    <span class="price-before text-muted">
+                      26,000,000₫
+                    </span>
+                    <div class="card-text product__price">
+                      13,000,000₫
+                    </div>
+                    <div class="product__button">
+                      <a name="addToCart" class="mx-1">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-search-plus"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6 col-12 product" id="4">
+                <div class="card">
+                  <a href="#" class="product__image">
+                    <img
+                      src="./img/bon_cau.jpg"
+                      id="1"
+                      alt="product"
+                      class="card-img-top img-fluid"
+                    />
+                  </a>
+                  <div class="card-body text-center product__info pt-5">
+                    <a class="card-title product__name" href="#">Bồn cầu</a>
+                    <div class="card-text product__price">
+                      13,000,000₫
+                    </div>
+                    <div class="product__button">
+                      <a name="addToCart" class="mx-1">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-search-plus"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6 col-12 product" id="5">
+                <div class="card sale">
+                  <a href="#" class="product__image">
+                    <img
+                      src="./img/bep.jpg"
+                      id="1"
+                      alt="product"
+                      class="card-img-top img-fluid"
+                    />
+                  </a>
+                  <div class="card-body text-center product__info pt-5">
+                    <a class="card-title product__name" href="#">Bếp</a>
+                    <span class="price-before text-muted">
+                      26,000,000₫
+                    </span>
+                    <div class="card-text product__price">
+                      13,000,000₫
+                    </div>
+                    <div class="product__button">
+                      <a name="addToCart" class="mx-1">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-search-plus"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6 col-12 product" id="6">
+                <div class="card">
+                  <a href="#" class="product__image">
+                    <img
+                      src="./img/ghe.jpg"
+                      id="1"
+                      alt="product"
+                      class="card-img-top img-fluid"
+                    />
+                  </a>
+                  <div class="card-body text-center product__info pt-5">
+                    <a class="card-title product__name" href="#">Ghế</a>
+                    <div class="card-text product__price">
+                      13,000,000₫
+                    </div>
+                    <div class="product__button">
+                      <a name="addToCart" class="mx-1">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-search-plus"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6 col-12 product" id="7">
+                <div class="card">
+                  <a href="#" class="product__image">
+                    <img
+                      src="./img/ban_go.jpg"
+                      id="1"
+                      alt="product"
+                      class="card-img-top img-fluid"
+                    />
+                  </a>
+                  <div class="card-body text-center product__info pt-5">
+                    <a class="card-title product__name" href="#">Bàn gỗ</a>
+                    <div class="card-text product__price">
+                      13,000,000₫
+                    </div>
+                    <div class="product__button">
+                      <a name="addToCart" class="mx-1">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-search-plus"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6 col-12 product" id="8">
+                <div class="card">
+                  <a href="#" class="product__image">
+                    <img
+                      src="./img/ban_go.jpg"
+                      id="1"
+                      alt="product"
+                      class="card-img-top img-fluid"
+                    />
+                  </a>
+                  <div class="card-body text-center product__info pt-5">
+                    <a class="card-title product__name" href="#">Bàn gỗ</a>
+                    <div class="card-text product__price">
+                      13,000,000₫
+                    </div>
+                    <div class="product__button">
+                      <a name="addToCart" class="mx-1">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-search-plus"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="load-more text-center my-3">
+              <button class="btn btn-success" id="btnLoadMore">
+                Xem thêm
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- OTHER PRODUCTS -->
+        <!-- 1ST -->
+        <div class="container">
+          <div class="row">
+            <div class="products__header">
+              <h3>Thiết bị <span style="color: #888;">vệ sinh</span></h3>
+            </div>
+            <!-- SLIDER -->
+            <div class="container position-relative">
+              <div class="slider" id="slider1">
+                <div class="product" id="1">
+                  <div class="card">
+                    <a href="#" class="product__image">
+                      <img
+                        src="./img/bon_cau.jpg"
+                        id="1"
+                        alt="product"
+                        class="card-img-top img-fluid"
+                      />
+                    </a>
+                    <div class="card-body text-center product__info pt-5">
+                      <a class="card-title product__name" href="#">Sản phẩm</a>
+                      <div class="card-text product__price">
+                        13,000,000₫
+                      </div>
+                      <div href="" class="product__button">
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-shopping-cart"></i>
+                        </a>
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-search-plus"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product" id="2">
+                  <div class="card sale">
+                    <a href="#" class="product__image">
+                      <img
+                        src="./img/bo_dieu_khien.jpg"
+                        id="1"
+                        alt="product"
+                        class="card-img-top img-fluid"
+                      />
+                    </a>
+                    <div class="card-body text-center product__info pt-5">
+                      <a class="card-title product__name" href="#">Sản phẩm</a>
+                      <div
+                        class="row justify-content-center align-items-center"
+                      >
+                        <span class="price-before text-muted d-block mr-2">
+                          26,000,000₫
+                        </span>
+                        <div class="card-text product__price">
+                          13,000,000₫
+                        </div>
+                      </div>
+                      <div href="" class="product__button">
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-shopping-cart"></i>
+                        </a>
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-search-plus"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product" id="3">
+                  <div class="card sale">
+                    <a href="#" class="product__image">
+                      <img
+                        src="./img/den.jpg"
+                        id="1"
+                        alt="product"
+                        class="card-img-top img-fluid"
+                      />
+                    </a>
+                    <div class="card-body text-center product__info pt-5">
+                      <a class="card-title product__name" href="#">Sản phẩm</a>
+                      <div
+                        class="row justify-content-center align-items-center"
+                      >
+                        <span class="price-before text-muted d-block mr-2">
+                          26,000,000₫
+                        </span>
+                        <div class="card-text product__price">
+                          13,000,000₫
+                        </div>
+                      </div>
+                      <div href="" class="product__button">
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-shopping-cart"></i>
+                        </a>
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-search-plus"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product" id="4">
+                  <div class="card">
+                    <a href="#" class="product__image">
+                      <img
+                        src="./img/bon_cau.jpg"
+                        id="1"
+                        alt="product"
+                        class="card-img-top img-fluid"
+                      />
+                    </a>
+                    <div class="card-body text-center product__info pt-5">
+                      <a class="card-title product__name" href="#">Sản phẩm</a>
+                      <div class="card-text product__price">
+                        13,000,000₫
+                      </div>
+                      <div href="" class="product__button">
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-shopping-cart"></i>
+                        </a>
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-search-plus"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product" id="5">
+                  <div class="card">
+                    <a href="#" class="product__image">
+                      <img
+                        src="./img/bon_cau.jpg"
+                        id="1"
+                        alt="product"
+                        class="card-img-top img-fluid"
+                      />
+                    </a>
+                    <div class="card-body text-center product__info pt-5">
+                      <a class="card-title product__name" href="#">Sản phẩm</a>
+                      <div class="card-text product__price">
+                        13,000,000₫
+                      </div>
+                      <div href="" class="product__button">
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-shopping-cart"></i>
+                        </a>
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-search-plus"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product" id="6">
+                  <div class="card">
+                    <a href="#" class="product__image">
+                      <img
+                        src="./img/bon_cau.jpg"
+                        id="1"
+                        alt="product"
+                        class="card-img-top img-fluid"
+                      />
+                    </a>
+                    <div class="card-body text-center product__info pt-5">
+                      <a class="card-title product__name" href="#">Sản phẩm</a>
+                      <div class="card-text product__price">
+                        13,000,000₫
+                      </div>
+                      <div href="" class="product__button">
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-shopping-cart"></i>
+                        </a>
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-search-plus"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product" id="7">
+                  <div class="card">
+                    <a href="#" class="product__image">
+                      <img
+                        src="./img/bon_cau.jpg"
+                        id="1"
+                        alt="product"
+                        class="card-img-top img-fluid"
+                      />
+                    </a>
+                    <div class="card-body text-center product__info pt-5">
+                      <a class="card-title product__name" href="#">Sản phẩm</a>
+                      <div class="card-text product__price">
+                        13,000,000₫
+                      </div>
+                      <div href="" class="product__button">
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-shopping-cart"></i>
+                        </a>
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-search-plus"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product" id="8">
+                  <div class="card">
+                    <a href="#" class="product__image">
+                      <img
+                        src="./img/bon_cau.jpg"
+                        id="1"
+                        alt="product"
+                        class="card-img-top img-fluid"
+                      />
+                    </a>
+                    <div class="card-body text-center product__info pt-5">
+                      <a class="card-title product__name" href="#">Sản phẩm</a>
+                      <div class="card-text product__price">
+                        13,000,000₫
+                      </div>
+                      <div href="" class="product__button">
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-shopping-cart"></i>
+                        </a>
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-search-plus"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slider-controls" id="slider-controls1">
+                <div class="btn btn-success btn-sm">
+                  <i class="fa fa-angle-double-left text-light"></i>
+                </div>
+                <div class="btn btn-success btn-sm">
+                  <i class="fa fa-angle-double-right text-light"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 2ND -->
+        <div class="container">
+          <div class="row">
+            <div class="products__header">
+              <h3>Thiết bị <span style="color: #888;">bếp</span></h3>
+            </div>
+            <!-- SLIDER -->
+            <div class="container position-relative">
+              <div class="slider" id="slider2">
+                <div class="product" id="1">
+                  <div class="card">
+                    <a href="#" class="product__image">
+                      <img
+                        src="./img/bon_cau.jpg"
+                        id="1"
+                        alt="product"
+                        class="card-img-top img-fluid"
+                      />
+                    </a>
+                    <div class="card-body text-center product__info pt-5">
+                      <a class="card-title product__name" href="#">Sản phẩm</a>
+                      <div class="card-text product__price">
+                        13,000,000₫
+                      </div>
+                      <div href="" class="product__button">
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-shopping-cart"></i>
+                        </a>
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-search-plus"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product" id="2">
+                  <div class="card sale">
+                    <a href="#" class="product__image">
+                      <img
+                        src="./img/bo_dieu_khien.jpg"
+                        id="1"
+                        alt="product"
+                        class="card-img-top img-fluid"
+                      />
+                    </a>
+                    <div class="card-body text-center product__info pt-5">
+                      <a class="card-title product__name" href="#">Sản phẩm</a>
+                      <div
+                        class="row justify-content-center align-items-center"
+                      >
+                        <span class="price-before text-muted d-block mr-2">
+                          26,000,000₫
+                        </span>
+                        <div class="card-text product__price">
+                          13,000,000₫
+                        </div>
+                      </div>
+                      <div href="" class="product__button">
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-shopping-cart"></i>
+                        </a>
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-search-plus"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product" id="3">
+                  <div class="card sale">
+                    <a href="#" class="product__image">
+                      <img
+                        src="./img/den.jpg"
+                        id="1"
+                        alt="product"
+                        class="card-img-top img-fluid"
+                      />
+                    </a>
+                    <div class="card-body text-center product__info pt-5">
+                      <a class="card-title product__name" href="#">Sản phẩm</a>
+                      <div
+                        class="row justify-content-center align-items-center"
+                      >
+                        <span class="price-before text-muted d-block mr-2">
+                          26,000,000₫
+                        </span>
+                        <div class="card-text product__price">
+                          13,000,000₫
+                        </div>
+                      </div>
+                      <div href="" class="product__button">
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-shopping-cart"></i>
+                        </a>
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-search-plus"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product" id="4">
+                  <div class="card">
+                    <a href="#" class="product__image">
+                      <img
+                        src="./img/bon_cau.jpg"
+                        id="1"
+                        alt="product"
+                        class="card-img-top img-fluid"
+                      />
+                    </a>
+                    <div class="card-body text-center product__info pt-5">
+                      <a class="card-title product__name" href="#">Sản phẩm</a>
+                      <div class="card-text product__price">
+                        13,000,000₫
+                      </div>
+                      <div href="" class="product__button">
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-shopping-cart"></i>
+                        </a>
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-search-plus"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product" id="5">
+                  <div class="card">
+                    <a href="#" class="product__image">
+                      <img
+                        src="./img/bon_cau.jpg"
+                        id="1"
+                        alt="product"
+                        class="card-img-top img-fluid"
+                      />
+                    </a>
+                    <div class="card-body text-center product__info pt-5">
+                      <a class="card-title product__name" href="#">Sản phẩm</a>
+                      <div class="card-text product__price">
+                        13,000,000₫
+                      </div>
+                      <div href="" class="product__button">
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-shopping-cart"></i>
+                        </a>
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-search-plus"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product" id="6">
+                  <div class="card">
+                    <a href="#" class="product__image">
+                      <img
+                        src="./img/bon_cau.jpg"
+                        id="1"
+                        alt="product"
+                        class="card-img-top img-fluid"
+                      />
+                    </a>
+                    <div class="card-body text-center product__info pt-5">
+                      <a class="card-title product__name" href="#">Sản phẩm</a>
+                      <div class="card-text product__price">
+                        13,000,000₫
+                      </div>
+                      <div href="" class="product__button">
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-shopping-cart"></i>
+                        </a>
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-search-plus"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product" id="5">
+                  <div class="card">
+                    <a href="#" class="product__image">
+                      <img
+                        src="./img/bon_cau.jpg"
+                        id="1"
+                        alt="product"
+                        class="card-img-top img-fluid"
+                      />
+                    </a>
+                    <div class="card-body text-center product__info pt-5">
+                      <a class="card-title product__name" href="#">Sản phẩm</a>
+                      <div class="card-text product__price">
+                        13,000,000₫
+                      </div>
+                      <div href="" class="product__button">
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-shopping-cart"></i>
+                        </a>
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-search-plus"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product" id="5">
+                  <div class="card">
+                    <a href="#" class="product__image">
+                      <img
+                        src="./img/bon_cau.jpg"
+                        id="1"
+                        alt="product"
+                        class="card-img-top img-fluid"
+                      />
+                    </a>
+                    <div class="card-body text-center product__info pt-5">
+                      <a class="card-title product__name" href="#">Sản phẩm</a>
+                      <div class="card-text product__price">
+                        13,000,000₫
+                      </div>
+                      <div href="" class="product__button">
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-shopping-cart"></i>
+                        </a>
+                        <a href="#" class="mx-1">
+                          <i class="fa fa-search-plus"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slider-controls" id="slider-controls2">
+                <div class="btn btn-success btn-sm">
+                  <i class="fa fa-angle-double-left text-light"></i>
+                </div>
+                <div class="btn btn-success btn-sm">
+                  <i class="fa fa-angle-double-right text-light"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- CONTACT -->
     <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="text-center contact">
-                        <div class="h2 text-light">
-                            ĐĂNG KÝ NHẬN
-                            <span style="color: #3ab54a;">
-                                TƯ VẤN MIỄN PHÍ
-                            </span>
-                        </div>
-                        <p class="font-weight-ligt my-3" style="color: #bbb;">
-                            Bạn là khách hàng , lớn hay nhỏ, và muốn chúng tôi phục vụ , xin
-                            vui lòng gửi cho chúng tôi một email để support@megashop.com
-                        </p>
-                        <form class="form-inline justify-content-center" method="POST" action="#">
-                            <label class="sr-only" for="inlineFormInputName2">Email</label>
-                            <input type="email" class="form-control mb-2 rounded-0 w-50" id="inlineFormInputName2" placeholder="Nhập email..." required />
-                            <button type="submit" class="btn btn-success mb-2 rounded-0">
-                                Đăng ký
-                            </button>
-                        </form>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="text-center contact">
+              <div class="h2 text-light">
+                ĐĂNG KÝ NHẬN
+                <span style="color: #3ab54a;">
+                  TƯ VẤN MIỄN PHÍ
+                </span>
+              </div>
+              <p class="font-weight-ligt my-3" style="color: #bbb;">
+                Bạn là khách hàng , lớn hay nhỏ, và muốn chúng tôi phục vụ , xin
+                vui lòng gửi cho chúng tôi một email để support@megashop.com
+              </p>
+              <form
+                class="form-inline justify-content-center"
+                method="POST"
+                action="#"
+              >
+                <label class="sr-only" for="inlineFormInputName2">Email</label>
+                <input
+                  type="email"
+                  class="form-control mb-2 rounded-0 w-50"
+                  id="inlineFormInputName2"
+                  placeholder="Nhập email..."
+                  required
+                />
+                <button type="submit" class="btn btn-success mb-2 rounded-0">
+                  Đăng ký
+                </button>
+              </form>
             </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- ANOTHER PRODUCT PROMO -->
     <section id="productsSmartHouse" class="container">
-        <div class="container">
-            <div class="row">
-                <div class="products__header">
-                    <h3>Nhà <span style="color: #888;">thông minh</span></h3>
-                </div>
-            </div>
-            <div class="row align-items-start">
-                <!-- SLIDER -->
-                <div class="col-md-3 col-sm-4 d-md-block d-none">
-                    <div class="card mt-2">
-                        <div class="card-img">
-                            <a href="#" class="banner">
-                                <img src="./img/banne2.jpg" alt="banner smart house" class="w-100" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="position-relative col-md-9 col-12">
-                    <div class="slider" id="slider3">
-                        <div class="product" id="1">
-                            <div class="card">
-                                <a href="#" class="product__image">
-                                    <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Sản phẩm</a>
-                                    <div class="card-text product__price">
-                                        13,000,000₫
-                                    </div>
-                                    <div href="" class="product__button">
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product" id="2">
-                            <div class="card sale">
-                                <a href="#" class="product__image">
-                                    <img src="./img/bo_dieu_khien.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Sản phẩm</a>
-                                    <div class="card-text product__price">
-                                        13,000,000₫
-                                    </div>
-                                    <div href="" class="product__button">
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product" id="3">
-                            <div class="card sale">
-                                <a href="#" class="product__image">
-                                    <img src="./img/den.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Sản phẩm</a>
-                                    <div class="card-text product__price">
-                                        13,000,000₫
-                                    </div>
-                                    <div href="" class="product__button">
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product" id="4">
-                            <div class="card">
-                                <a href="#" class="product__image">
-                                    <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Sản phẩm</a>
-                                    <div class="card-text product__price">
-                                        13,000,000₫
-                                    </div>
-                                    <div href="" class="product__button">
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product" id="5">
-                            <div class="card">
-                                <a href="#" class="product__image">
-                                    <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Sản phẩm</a>
-                                    <div class="card-text product__price">
-                                        13,000,000₫
-                                    </div>
-                                    <div href="" class="product__button">
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product" id="6">
-                            <div class="card">
-                                <a href="#" class="product__image">
-                                    <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Sản phẩm</a>
-                                    <div class="card-text product__price">
-                                        13,000,000₫
-                                    </div>
-                                    <div href="" class="product__button">
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product" id="5">
-                            <div class="card">
-                                <a href="#" class="product__image">
-                                    <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Sản phẩm</a>
-                                    <div class="card-text product__price">
-                                        13,000,000₫
-                                    </div>
-                                    <div href="" class="product__button">
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product" id="5">
-                            <div class="card">
-                                <a href="#" class="product__image">
-                                    <img src="./img/bon_cau.jpg" id="1" alt="product" class="card-img-top img-fluid" />
-                                </a>
-                                <div class="card-body text-center product__info pt-5">
-                                    <a class="card-title product__name" href="#">Sản phẩm</a>
-                                    <div class="card-text product__price">
-                                        13,000,000₫
-                                    </div>
-                                    <div href="" class="product__button">
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </a>
-                                        <a href="#" class="mx-1">
-                                            <i class="fa fa-search-plus"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-controls" id="slider-controls3">
-                        <div class="btn btn-success btn-sm">
-                            <i class="fa fa-angle-double-left text-light"></i>
-                        </div>
-                        <div class="btn btn-success btn-sm">
-                            <i class="fa fa-angle-double-right text-light"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="products__header">
+            <h3>Nhà <span style="color: #888;">thông minh</span></h3>
+          </div>
         </div>
+        <div class="row align-items-start">
+          <!-- SLIDER -->
+          <div class="col-md-3 col-sm-4 d-md-block d-none">
+            <div class="card mt-2">
+              <div class="card-img">
+                <a href="#" class="banner">
+                  <img
+                    src="./img/banne2.jpg"
+                    alt="banner smart house"
+                    class="w-100"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="position-relative col-md-9 col-12">
+            <div class="slider" id="slider3">
+              <div class="product" id="1">
+                <div class="card">
+                  <a href="#" class="product__image">
+                    <img
+                      src="./img/bon_cau.jpg"
+                      id="1"
+                      alt="product"
+                      class="card-img-top img-fluid"
+                    />
+                  </a>
+                  <div class="card-body text-center product__info pt-5">
+                    <a class="card-title product__name" href="#">Sản phẩm</a>
+                    <div class="card-text product__price">
+                      13,000,000₫
+                    </div>
+                    <div href="" class="product__button">
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-search-plus"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product" id="2">
+                <div class="card sale">
+                  <a href="#" class="product__image">
+                    <img
+                      src="./img/bo_dieu_khien.jpg"
+                      id="1"
+                      alt="product"
+                      class="card-img-top img-fluid"
+                    />
+                  </a>
+                  <div class="card-body text-center product__info pt-5">
+                    <a class="card-title product__name" href="#">Sản phẩm</a>
+                    <div class="card-text product__price">
+                      13,000,000₫
+                    </div>
+                    <div href="" class="product__button">
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-search-plus"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product" id="3">
+                <div class="card sale">
+                  <a href="#" class="product__image">
+                    <img
+                      src="./img/den.jpg"
+                      id="1"
+                      alt="product"
+                      class="card-img-top img-fluid"
+                    />
+                  </a>
+                  <div class="card-body text-center product__info pt-5">
+                    <a class="card-title product__name" href="#">Sản phẩm</a>
+                    <div class="card-text product__price">
+                      13,000,000₫
+                    </div>
+                    <div href="" class="product__button">
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-search-plus"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product" id="4">
+                <div class="card">
+                  <a href="#" class="product__image">
+                    <img
+                      src="./img/bon_cau.jpg"
+                      id="1"
+                      alt="product"
+                      class="card-img-top img-fluid"
+                    />
+                  </a>
+                  <div class="card-body text-center product__info pt-5">
+                    <a class="card-title product__name" href="#">Sản phẩm</a>
+                    <div class="card-text product__price">
+                      13,000,000₫
+                    </div>
+                    <div href="" class="product__button">
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-search-plus"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product" id="5">
+                <div class="card">
+                  <a href="#" class="product__image">
+                    <img
+                      src="./img/bon_cau.jpg"
+                      id="1"
+                      alt="product"
+                      class="card-img-top img-fluid"
+                    />
+                  </a>
+                  <div class="card-body text-center product__info pt-5">
+                    <a class="card-title product__name" href="#">Sản phẩm</a>
+                    <div class="card-text product__price">
+                      13,000,000₫
+                    </div>
+                    <div href="" class="product__button">
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-search-plus"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product" id="6">
+                <div class="card">
+                  <a href="#" class="product__image">
+                    <img
+                      src="./img/bon_cau.jpg"
+                      id="1"
+                      alt="product"
+                      class="card-img-top img-fluid"
+                    />
+                  </a>
+                  <div class="card-body text-center product__info pt-5">
+                    <a class="card-title product__name" href="#">Sản phẩm</a>
+                    <div class="card-text product__price">
+                      13,000,000₫
+                    </div>
+                    <div href="" class="product__button">
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-search-plus"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product" id="5">
+                <div class="card">
+                  <a href="#" class="product__image">
+                    <img
+                      src="./img/bon_cau.jpg"
+                      id="1"
+                      alt="product"
+                      class="card-img-top img-fluid"
+                    />
+                  </a>
+                  <div class="card-body text-center product__info pt-5">
+                    <a class="card-title product__name" href="#">Sản phẩm</a>
+                    <div class="card-text product__price">
+                      13,000,000₫
+                    </div>
+                    <div href="" class="product__button">
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-search-plus"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product" id="5">
+                <div class="card">
+                  <a href="#" class="product__image">
+                    <img
+                      src="./img/bon_cau.jpg"
+                      id="1"
+                      alt="product"
+                      class="card-img-top img-fluid"
+                    />
+                  </a>
+                  <div class="card-body text-center product__info pt-5">
+                    <a class="card-title product__name" href="#">Sản phẩm</a>
+                    <div class="card-text product__price">
+                      13,000,000₫
+                    </div>
+                    <div href="" class="product__button">
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-shopping-cart"></i>
+                      </a>
+                      <a href="#" class="mx-1">
+                        <i class="fa fa-search-plus"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-controls" id="slider-controls3">
+              <div class="btn btn-success btn-sm">
+                <i class="fa fa-angle-double-left text-light"></i>
+              </div>
+              <div class="btn btn-success btn-sm">
+                <i class="fa fa-angle-double-right text-light"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- CUSTOMER -->
     <section id="customer">
-        <div id="carouselcustomer" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active row">
-                    <div class="col-8 text-light p-3 mx-auto">
-                        <div class="container">
-                            <div class="row justify-content-center align-items-center">
-                                <div class="col-md-4 col-12 text-md-right text-center">
-                                    <img src="./img/partner_01.jpg" alt="partner avatar" class="rounded-circle img-fluid w-50 h-50" />
-                                </div>
-                                <div class="col-md-8 col-12">
-                                    <div class="h3">Lorem, ipsum.</div>
-                                    <div class="h6">
-                                        Lorem ipsum dolor sit amet.
-                                    </div>
-                                    <p class="font-weight-light">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                        Aut asperiores molestiae labore atque id quam vitae vero
-                                        fuga magni maxime?
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+      <div id="carouselcustomer" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active row">
+            <div class="col-8 text-light p-3 mx-auto">
+              <div class="container">
+                <div class="row justify-content-center align-items-center">
+                  <div class="col-md-4 col-12 text-md-right text-center">
+                    <img
+                      src="./img/partner_01.jpg"
+                      alt="partner avatar"
+                      class="rounded-circle img-fluid w-50 h-50zz"
+                    />
+                  </div>
+                  <div class="col-md-8 col-12">
+                    <div class="h3">Lorem, ipsum.</div>
+                    <div class="h6">
+                      Lorem ipsum dolor sit amet.
                     </div>
+                    <p class="font-weight-light">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Aut asperiores molestiae labore atque id quam vitae vero
+                      fuga magni maxime?
+                    </p>
+                  </div>
                 </div>
-                <div class="carousel-item row">
-                    <div class="col-8 text-light p-3 mx-auto">
-                        <div class="container">
-                            <div class="row justify-content-center align-items-center">
-                                <div class="col-md-4 col-12 text-md-right text-center">
-                                    <img src="./img/partner_02.jpg" alt="partner avatar" class="rounded-circle img-fluid w-50 h-50" />
-                                </div>
-                                <div class="col-md-8 col-12">
-                                    <div class="h3">Lorem, ipsum.</div>
-                                    <div class="h6">
-                                        Lorem ipsum dolor sit amet.
-                                    </div>
-                                    <p class="font-weight-light">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                        Aut asperiores molestiae labore atque id quam vitae vero
-                                        fuga magni maxime?
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item row">
-                    <div class="col-8 text-light p-3 mx-auto">
-                        <div class="container">
-                            <div class="row justify-content-center align-items-center">
-                                <div class="col-md-4 col-12 text-md-right text-center">
-                                    <img src="./img/partner_03.jpg" alt="partner avatar" class="rounded-circle img-fluid w-50 h-50" />
-                                </div>
-                                <div class="col-md-8 col-12">
-                                    <div class="h3">Lorem, ipsum.</div>
-                                    <div class="h6">
-                                        Lorem ipsum dolor sit amet.
-                                    </div>
-                                    <p class="font-weight-light">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                        Aut asperiores molestiae labore atque id quam vitae vero
-                                        fuga magni maxime?
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item row">
-                    <div class="col-8 text-light p-3 mx-auto">
-                        <div class="container">
-                            <div class="row justify-content-center align-items-center">
-                                <div class="col-md-4 col-12 text-md-right text-center">
-                                    <img src="./img/partner_04.jpg" alt="partner avatar" class="rounded-circle img-fluid w-50 h-50" />
-                                </div>
-                                <div class="col-md-8 col-12">
-                                    <div class="h3">Lorem, ipsum.</div>
-                                    <div class="h6">
-                                        Lorem ipsum dolor sit amet.
-                                    </div>
-                                    <p class="font-weight-light">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                        Aut asperiores molestiae labore atque id quam vitae vero
-                                        fuga magni maxime?
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item row">
-                    <div class="col-8 text-light p-3 mx-auto">
-                        <div class="container">
-                            <div class="row justify-content-center align-items-center">
-                                <div class="col-md-4 col-12 text-md-right text-center">
-                                    <img src="./img/partner_05.jpg" alt="partner avatar" class="rounded-circle img-fluid w-50 h-50" />
-                                </div>
-                                <div class="col-md-8 col-12">
-                                    <div class="h3">Lorem, ipsum.</div>
-                                    <div class="h6">
-                                        Lorem ipsum dolor sit amet.
-                                    </div>
-                                    <p class="font-weight-light">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                        Aut asperiores molestiae labore atque id quam vitae vero
-                                        fuga magni maxime?
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <a class="carousel-control-prev customer-carousel-control" href="#carouselcustomer" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next customer-carousel-control" href="#carouselcustomer" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+          </div>
+          <div class="carousel-item row">
+            <div class="col-8 text-light p-3 mx-auto">
+              <div class="container">
+                <div class="row justify-content-center align-items-center">
+                  <div class="col-md-4 col-12 text-md-right text-center">
+                    <img
+                      src="./img/partner_02.jpg"
+                      alt="partner avatar"
+                      class="rounded-circle img-fluid w-50 h-50zz"
+                    />
+                  </div>
+                  <div class="col-md-8 col-12">
+                    <div class="h3">Lorem, ipsum.</div>
+                    <div class="h6">
+                      Lorem ipsum dolor sit amet.
+                    </div>
+                    <p class="font-weight-light">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Aut asperiores molestiae labore atque id quam vitae vero
+                      fuga magni maxime?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item row">
+            <div class="col-8 text-light p-3 mx-auto">
+              <div class="container">
+                <div class="row justify-content-center align-items-center">
+                  <div class="col-md-4 col-12 text-md-right text-center">
+                    <img
+                      src="./img/partner_03.jpg"
+                      alt="partner avatar"
+                      class="rounded-circle img-fluid w-50 h-50zz"
+                    />
+                  </div>
+                  <div class="col-md-8 col-12">
+                    <div class="h3">Lorem, ipsum.</div>
+                    <div class="h6">
+                      Lorem ipsum dolor sit amet.
+                    </div>
+                    <p class="font-weight-light">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Aut asperiores molestiae labore atque id quam vitae vero
+                      fuga magni maxime?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item row">
+            <div class="col-8 text-light p-3 mx-auto">
+              <div class="container">
+                <div class="row justify-content-center align-items-center">
+                  <div class="col-md-4 col-12 text-md-right text-center">
+                    <img
+                      src="./img/partner_04.jpg"
+                      alt="partner avatar"
+                      class="rounded-circle img-fluid w-50 h-50zz"
+                    />
+                  </div>
+                  <div class="col-md-8 col-12">
+                    <div class="h3">Lorem, ipsum.</div>
+                    <div class="h6">
+                      Lorem ipsum dolor sit amet.
+                    </div>
+                    <p class="font-weight-light">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Aut asperiores molestiae labore atque id quam vitae vero
+                      fuga magni maxime?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item row">
+            <div class="col-8 text-light p-3 mx-auto">
+              <div class="container">
+                <div class="row justify-content-center align-items-center">
+                  <div class="col-md-4 col-12 text-md-right text-center">
+                    <img
+                      src="./img/partner_05.jpg"
+                      alt="partner avatar"
+                      class="rounded-circle img-fluid w-50 h-50zz"
+                    />
+                  </div>
+                  <div class="col-md-8 col-12">
+                    <div class="h3">Lorem, ipsum.</div>
+                    <div class="h6">
+                      Lorem ipsum dolor sit amet.
+                    </div>
+                    <p class="font-weight-light">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Aut asperiores molestiae labore atque id quam vitae vero
+                      fuga magni maxime?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <a
+          class="carousel-control-prev customer-carousel-control"
+          href="#carouselcustomer"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next customer-carousel-control"
+          href="#carouselcustomer"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     </section>
     <!-- NEWS -->
     <section id="news">
-        <div class="container">
-            <div class="row">
-                <div class="products__header">
-                    <h3>Tin <span style="color: #888;">mới</span></h3>
+      <div class="container">
+        <div class="row">
+          <div class="products__header">
+            <h3>Tin <span style="color: #888;">mới</span></h3>
+          </div>
+          <div class="position-relative">
+            <div class="slide" id="slider4">
+              <div class="news card" id="1">
+                <img
+                  src="./img/news_01.jpg"
+                  id="1"
+                  alt="news image"
+                  class="news__img"
+                />
+                <div class="news__body card-img-overlay text-light rounded">
+                  <a class="h3 news_title text-light" href="#"
+                    >Lorem, ipsum dolor.</a
+                  >
+                  <p class="news__description h6 font-weight-light">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptates, provident molestias? Natus ipsam ullam quisquam
+                    maiores eius consequatur animi commodi!
+                  </p>
+                  <a href="#" class="btn btn-success">Xem thêm</a>
                 </div>
-                <div class="position-relative">
-                    <div class="slide" id="slider4">
-                        <div class="news card" id="1">
-                            <img src="./img/news_01.jpg" id="1" alt="news image" class="news__img" />
-                            <div class="news__body card-img-overlay text-light rounded">
-                                <a class="h3 news_title text-light" href="#">Lorem, ipsum dolor.</a>
-                                <p class="news__description h6 font-weight-light">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptates, provident molestias? Natus ipsam ullam quisquam
-                                    maiores eius consequatur animi commodi!
-                                </p>
-                                <a href="#" class="btn btn-success">Xem thêm</a>
-                            </div>
-                        </div>
-                        <div class="news card" id="2">
-                            <img src="./img/news_02.jpg" id="1" alt="news image" class="news__img" />
-                            <div class="news__body card-img-overlay text-light rounded">
-                                <a class="h3 news_title text-light" href="#">Lorem, ipsum dolor.</a>
-                                <p class="news__description h6 font-weight-light">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptates, provident molestias? Natus ipsam ullam quisquam
-                                    maiores eius consequatur animi commodi!
-                                </p>
-                                <a href="#" class="btn btn-success">Xem thêm</a>
-                            </div>
-                        </div>
-                        <div class="news card" id="3">
-                            <img src="./img/news_03.jpg" id="1" alt="news image" class="news__img" />
-                            <div class="news__body card-img-overlay text-light rounded">
-                                <a class="h3 news_title text-light" href="#">Lorem, ipsum dolor.</a>
-                                <p class="news__description h6 font-weight-light">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptates, provident molestias? Natus ipsam ullam quisquam
-                                    maiores eius consequatur animi commodi!
-                                </p>
-                                <a href="#" class="btn btn-success">Xem thêm</a>
-                            </div>
-                        </div>
-                        <div class="news card" id="4">
-                            <img src="./img/news_04.jpg" id="1" alt="news image" class="news__img" />
-                            <div class="news__body card-img-overlay text-light rounded">
-                                <a class="h3 news_title text-light" href="#">Lorem, ipsum dolor.</a>
-                                <p class="news__description h6 font-weight-light">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptates, provident molestias? Natus ipsam ullam quisquam
-                                    maiores eius consequatur animi commodi!
-                                </p>
-                                <a href="#" class="btn btn-success">Xem thêm</a>
-                            </div>
-                        </div>
-                        <div class="news card" id="5">
-                            <img src="./img/news_05.jpg" id="1" alt="news image" class="news__img" />
-                            <div class="news__body card-img-overlay text-light rounded">
-                                <a class="h3 news_title text-light" href="#">Lorem, ipsum dolor.</a>
-                                <p class="news__description h6 font-weight-light">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Voluptates, provident molestias? Natus ipsam ullam quisquam
-                                    maiores eius consequatur animi commodi!
-                                </p>
-                                <a href="#" class="btn btn-success">Xem thêm</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-controls" id="slider-controls4">
-                        <div class="btn btn-success btn-sm">
-                            <i class="fa fa-angle-double-left text-light"></i>
-                        </div>
-                        <div class="btn btn-success btn-sm">
-                            <i class="fa fa-angle-double-right text-light"></i>
-                        </div>
-                    </div>
+              </div>
+              <div class="news card" id="2">
+                <img
+                  src="./img/news_02.jpg"
+                  id="1"
+                  alt="news image"
+                  class="news__img"
+                />
+                <div class="news__body card-img-overlay text-light rounded">
+                  <a class="h3 news_title text-light" href="#"
+                    >Lorem, ipsum dolor.</a
+                  >
+                  <p class="news__description h6 font-weight-light">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptates, provident molestias? Natus ipsam ullam quisquam
+                    maiores eius consequatur animi commodi!
+                  </p>
+                  <a href="#" class="btn btn-success">Xem thêm</a>
                 </div>
+              </div>
+              <div class="news card" id="3">
+                <img
+                  src="./img/news_03.jpg"
+                  id="1"
+                  alt="news image"
+                  class="news__img"
+                />
+                <div class="news__body card-img-overlay text-light rounded">
+                  <a class="h3 news_title text-light" href="#"
+                    >Lorem, ipsum dolor.</a
+                  >
+                  <p class="news__description h6 font-weight-light">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptates, provident molestias? Natus ipsam ullam quisquam
+                    maiores eius consequatur animi commodi!
+                  </p>
+                  <a href="#" class="btn btn-success">Xem thêm</a>
+                </div>
+              </div>
+              <div class="news card" id="4">
+                <img
+                  src="./img/news_04.jpg"
+                  id="1"
+                  alt="news image"
+                  class="news__img"
+                />
+                <div class="news__body card-img-overlay text-light rounded">
+                  <a class="h3 news_title text-light" href="#"
+                    >Lorem, ipsum dolor.</a
+                  >
+                  <p class="news__description h6 font-weight-light">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptates, provident molestias? Natus ipsam ullam quisquam
+                    maiores eius consequatur animi commodi!
+                  </p>
+                  <a href="#" class="btn btn-success">Xem thêm</a>
+                </div>
+              </div>
+              <div class="news card" id="5">
+                <img
+                  src="./img/news_05.jpg"
+                  id="1"
+                  alt="news image"
+                  class="news__img"
+                />
+                <div class="news__body card-img-overlay text-light rounded">
+                  <a class="h3 news_title text-light" href="#"
+                    >Lorem, ipsum dolor.</a
+                  >
+                  <p class="news__description h6 font-weight-light">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptates, provident molestias? Natus ipsam ullam quisquam
+                    maiores eius consequatur animi commodi!
+                  </p>
+                  <a href="#" class="btn btn-success">Xem thêm</a>
+                </div>
+              </div>
             </div>
+            <div class="slider-controls" id="slider-controls4">
+              <div class="btn btn-success btn-sm">
+                <i class="fa fa-angle-double-left text-light"></i>
+              </div>
+              <div class="btn btn-success btn-sm">
+                <i class="fa fa-angle-double-right text-light"></i>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- PARTNERS -->
     <section id="partners" class="container">
-        <div class="products__header">
-            <h3>Đối <span style="color: #888;">tác</span></h3>
+      <div class="products__header">
+        <h3>Đối <span style="color: #888;">tác</span></h3>
+      </div>
+      <div class="position-relative">
+        <div class="slide" id="slider5">
+          <div class="p-0 text-center">
+            <img src="./img/doitac1.jpg" alt="partner logo" />
+          </div>
+          <div class="p-0 text-center">
+            <img src="./img/doitac2.jpg" alt="partner logo" />
+          </div>
+          <div class="p-0 text-center">
+            <img src="./img/doitac3.jpg" alt="partner logo" />
+          </div>
+          <div class="p-0 text-center">
+            <img src="./img/doitac4.jpg" alt="partner logo" />
+          </div>
+          <div class="p-0 text-center">
+            <img src="./img/doitac5.jpg" alt="partner logo" />
+          </div>
+          <div class="p-0 text-center">
+            <img src="./img/doitac6.jpg" alt="partner logo" />
+          </div>
+          <div class="p-0 text-center">
+            <img src="./img/doitac7.jpg" alt="partner logo" />
+          </div>
+          <div class="p-0 text-center">
+            <img src="./img/doitac8.jpg" alt="partner logo" />
+          </div>
+          <div class="p-0 text-center">
+            <img src="./img/doitac9.jpg" alt="partner logo" />
+          </div>
+          <div class="p-0 text-center">
+            <img src="./img/doitac10.jpg" alt="partner logo" />
+          </div>
         </div>
-        <div class="position-relative">
-            <div class="slide" id="slider5">
-                <div class="p-0 text-center">
-                    <img src="./img/doitac1.jpg" alt="partner logo" />
-                </div>
-                <div class="p-0 text-center">
-                    <img src="./img/doitac2.jpg" alt="partner logo" />
-                </div>
-                <div class="p-0 text-center">
-                    <img src="./img/doitac3.jpg" alt="partner logo" />
-                </div>
-                <div class="p-0 text-center">
-                    <img src="./img/doitac4.jpg" alt="partner logo" />
-                </div>
-                <div class="p-0 text-center">
-                    <img src="./img/doitac5.jpg" alt="partner logo" />
-                </div>
-                <div class="p-0 text-center">
-                    <img src="./img/doitac6.jpg" alt="partner logo" />
-                </div>
-                <div class="p-0 text-center">
-                    <img src="./img/doitac7.jpg" alt="partner logo" />
-                </div>
-                <div class="p-0 text-center">
-                    <img src="./img/doitac8.jpg" alt="partner logo" />
-                </div>
-                <div class="p-0 text-center">
-                    <img src="./img/doitac9.jpg" alt="partner logo" />
-                </div>
-                <div class="p-0 text-center">
-                    <img src="./img/doitac10.jpg" alt="partner logo" />
-                </div>
-            </div>
-            <div class="slider-controls" id="slider-controls5">
-                <div class="btn btn-success btn-sm">
-                    <i class="fa fa-angle-double-left text-light"></i>
-                </div>
-                <div class="btn btn-success btn-sm">
-                    <i class="fa fa-angle-double-right text-light"></i>
-                </div>
-            </div>
+        <div class="slider-controls" id="slider-controls5">
+          <div class="btn btn-success btn-sm">
+            <i class="fa fa-angle-double-left text-light"></i>
+          </div>
+          <div class="btn btn-success btn-sm">
+            <i class="fa fa-angle-double-right text-light"></i>
+          </div>
         </div>
+      </div>
     </section>
     <!-- ADDRESS -->
     <section id="address" class="container">
-        <div class="row mt-5">
-            <div class="col-md-6 col-12 card bg-success rounded-0 text-light">
-                <div class="card-header d-flex justify-content-start align-items-center">
-                    <div class="p-1">
-                        <img src="./img/icon_shop.png" alt="" />
-                    </div>
-                    <div class="p-1">
-                        <div class="card-title text-uppercase font-italic h4">
-                            FLEXSHOP
-                        </div>
-                        <p class="card-subtitle text-uppercase">
-                            Nội thất hiện đại
-                        </p>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="card-text">
-                        <i class="fa fa-map-marker-alt mr-3"></i>
-                        <span class="lead">P214 , Chung cư B3, Ngõ 118 , Nguyễn Khánh Toàn</span>
-                    </div>
-                    <div class="card-text">
-                        <i class="fa fa-envelope mr-3"></i>
-                        <span>Email:
-                            <a href="mailto:songvangvietnam@gmail.com" class="text-light">songvangvietnam@gmail.com</a></span>
-                    </div>
-                    <div class="card-text">
-                        <i class="fa fa-phone mr-3"></i>
-                        <span>Phone:
-                            <a href="tel:+84902.068.068" class="text-light">0902.068.068</a></span>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <span>FOLLOW US: </span>
-                    <a href="#" class="d-inline-block p-1 rounded-circle"><i class="fab fa-facebook text-light"></i></a>
-                    <a href="#" class="d-inline-block p-1 rounded-circle"><i class="fab fa-twitter text-light"></i></a>
-                    <a href="#" class="d-inline-block p-1 rounded-circle"><i class="fa fa-rss text-light"></i></a>
-                    <a href="#" class="d-inline-block p-1 rounded-circle"><i class="fab fa-google-plus text-light"></i></a>
-                    <a href="#" class="d-inline-block p-1 rounded-circle"><i class="fab fa-pinterest text-light"></i></a>
-                </div>
+      <div class="row mt-5">
+        <div class="col-md-6 col-12 card bg-success rounded-0 text-light">
+          <div
+            class="card-header d-flex justify-content-start align-items-center"
+          >
+            <div class="p-1">
+              <img src="./img/icon_shop.png" alt="" />
             </div>
-            <div id="mapid" class="col-md-6 col-12"></div>
+            <div class="p-1">
+              <div class="card-title text-uppercase font-italic h4">
+                FLEXSHOP
+              </div>
+              <p class="card-subtitle text-uppercase">
+                Nội thất hiện đại
+              </p>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-text">
+              <i class="fa fa-map-marker-alt mr-3"></i>
+              <span class="lead"
+                >P214 , Chung cư B3, Ngõ 118 , Nguyễn Khánh Toàn</span
+              >
+            </div>
+            <div class="card-text">
+              <i class="fa fa-envelope mr-3"></i>
+              <span
+                >Email:
+                <a href="mailto:songvangvietnam@gmail.com" class="text-light"
+                  >songvangvietnam@gmail.com</a
+                ></span
+              >
+            </div>
+            <div class="card-text">
+              <i class="fa fa-phone mr-3"></i>
+              <span
+                >Phone:
+                <a href="tel:+84902.068.068" class="text-light"
+                  >0902.068.068</a
+                ></span
+              >
+            </div>
+          </div>
+          <div class="card-footer">
+            <span>FOLLOW US: </span>
+            <a href="#" class="d-inline-block p-1 rounded-circle"
+              ><i class="fab fa-facebook text-light"></i
+            ></a>
+            <a href="#" class="d-inline-block p-1 rounded-circle"
+              ><i class="fab fa-twitter text-light"></i
+            ></a>
+            <a href="#" class="d-inline-block p-1 rounded-circle"
+              ><i class="fa fa-rss text-light"></i
+            ></a>
+            <a href="#" class="d-inline-block p-1 rounded-circle"
+              ><i class="fab fa-google-plus text-light"></i
+            ></a>
+            <a href="#" class="d-inline-block p-1 rounded-circle"
+              ><i class="fab fa-pinterest text-light"></i
+            ></a>
+          </div>
         </div>
+        <div id="mapid" class="col-md-6 col-12"></div>
+      </div>
     </section>
     <!-- FOOTER -->
     <footer id="footer" class="footer bg-dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
-                    <h5 class="text-light mb-2">Hỗ trợ</h5>
-                    <ul>
-                        <li class="d-block">
-                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> TÌm kiếm</a>
-                        </li>
-                        <li class="d-block">
-                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Tư vấn thiết kế</a>
-                        </li>
-                        <li class="d-block">
-                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Chăm sóc khách hàng</a>
-                        </li>
-                        <li class="d-block">
-                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Kiểm tra đơn hàng</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
-                    <h5 class="text-light mb-2">Hướng dẫn</h5>
-                    <ul>
-                        <li class="d-block">
-                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Hướng dẫn thanh
-                                toán</a>
-                        </li>
-                        <li class="d-block">
-                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> giao nhận và thanh
-                                toán</a>
-                        </li>
-                        <li class="d-block">
-                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> đổi trả và bảo hành</a>
-                        </li>
-                        <li class="d-block">
-                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Đăng ký thành viên</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
-                    <h5 class="text-light mb-2">Chính sách</h5>
-                    <ul>
-                        <li class="d-block">
-                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Chính sách thanh
-                                toán</a>
-                        </li>
-                        <li class="d-block">
-                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> chính sách vận
-                                chuyển</a>
-                        </li>
-                        <li class="d-block">
-                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> chính sách đổi trả
-                            </a>
-                        </li>
-                        <li class="d-block">
-                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> chính sách bảo hành</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
-                    <h5 class="text-light mb-2">Tại sao chọn chúng tôi</h5>
-                    <ul>
-                        <li class="d-block">
-                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> Đội ngũ chuyên
-                                nghiệp</a>
-                        </li>
-                        <li class="d-block">
-                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> giá cả hợp lý</a>
-                        </li>
-                        <li class="d-block">
-                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> kinh nghiệm trên 20
-                                năm</a>
-                        </li>
-                        <li class="d-block">
-                            <a href="#" class="text-light"><i class="fa fa-caret-right mr-1"></i> đảm bảo tiến độ</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
+            <h5 class="text-light mb-2">Hỗ trợ</h5>
+            <ul>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> TÌm kiếm</a
+                >
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> Tư vấn thiết kế</a
+                >
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> Chăm sóc khách hàng</a
+                >
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> Kiểm tra đơn hàng</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
+            <h5 class="text-light mb-2">Hướng dẫn</h5>
+            <ul>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> Hướng dẫn thanh
+                  toán</a
+                >
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> giao nhận và thanh
+                  toán</a
+                >
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> đổi trả và bảo hành</a
+                >
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> Đăng ký thành viên</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
+            <h5 class="text-light mb-2">Chính sách</h5>
+            <ul>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> Chính sách thanh
+                  toán</a
+                >
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> chính sách vận
+                  chuyển</a
+                >
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> chính sách đổi trả
+                </a>
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> chính sách bảo hành</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-2">
+            <h5 class="text-light mb-2">Tại sao chọn chúng tôi</h5>
+            <ul>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> Đội ngũ chuyên
+                  nghiệp</a
+                >
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> giá cả hợp lý</a
+                >
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> kinh nghiệm trên 20
+                  năm</a
+                >
+              </li>
+              <li class="d-block">
+                <a href="#" class="text-light"
+                  ><i class="fa fa-caret-right mr-1"></i> đảm bảo tiến độ</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </footer>
     <button id="toTop" class="btn rounded-0">
-        <i class="fa fa-angle-up"></i>
+      <i class="fa fa-angle-up"></i>
     </button>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="./js/jquery-3.5.1.slim.min.js"></script>
@@ -1594,14 +2062,18 @@
     <script src="./js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <!-- Optional JavaScript -->
     <script src="./js/app.js"></script>
     <script src="./js/cart.js"></script>
     <script>
-    /* SLIDER */
-    let slider1 = tns({
+      /* SLIDER */
+      let slider1 = tns({
         container: "#slider1",
         loop: false,
         startIndex: 0,
@@ -1611,19 +2083,19 @@
         gutter: 20,
         controlsContainer: "#slider-controls1",
         responsive: {
-            "576": {
-                items: 1,
-            },
-            "768": {
-                items: 3,
-            },
-            "992": {
-                items: 4,
-            },
+          "576": {
+            items: 1,
+          },
+          "768": {
+            items: 3,
+          },
+          "992": {
+            items: 4,
+          },
         },
-    });
+      });
 
-    let slider2 = tns({
+      let slider2 = tns({
         container: "#slider2",
         loop: false,
         startIndex: 0,
@@ -1633,19 +2105,19 @@
         gutter: 20,
         controlsContainer: "#slider-controls2",
         responsive: {
-            "576": {
-                items: 1,
-            },
-            "768": {
-                items: 3,
-            },
-            "992": {
-                items: 4,
-            },
+          "576": {
+            items: 1,
+          },
+          "768": {
+            items: 3,
+          },
+          "992": {
+            items: 4,
+          },
         },
-    });
+      });
 
-    let slider3 = tns({
+      let slider3 = tns({
         container: "#slider3",
         loop: false,
         startIndex: 0,
@@ -1655,19 +2127,19 @@
         gutter: 20,
         controlsContainer: "#slider-controls3",
         responsive: {
-            "576": {
-                items: 1,
-            },
-            "768": {
-                items: 3,
-            },
-            "992": {
-                items: 4,
-            },
+          "576": {
+            items: 1,
+          },
+          "768": {
+            items: 3,
+          },
+          "992": {
+            items: 4,
+          },
         },
-    });
+      });
 
-    let slider4 = tns({
+      let slider4 = tns({
         container: "#slider4",
         startIndex: 0,
         loop: false,
@@ -1676,16 +2148,16 @@
         speed: 400,
         controlsContainer: "#slider-controls4",
         responsive: {
-            "576": {
-                items: 1.1,
-            },
-            "768": {
-                items: 4.1,
-            },
+          "576": {
+            items: 1.1,
+          },
+          "768": {
+            items: 4.1,
+          },
         },
-    });
+      });
 
-    let slider5 = tns({
+      let slider5 = tns({
         container: "#slider5",
         startIndex: 0,
         nav: false,
@@ -1694,27 +2166,26 @@
         speed: 400,
         controlsContainer: "#slider-controls5",
         responsive: {
-            "576": {
-                items: 2,
-            },
-            "768": {
-                items: 4,
-            },
+          "576": {
+            items: 2,
+          },
+          "768": {
+            items: 4,
+          },
         },
-    });
-    /*       LOAD MORE ITEM */
-    $("#btnLoadMore").click(() => {
+      });
+      /*       LOAD MORE ITEM */
+      $("#btnLoadMore").click(() => {
         $(".load-more").append("<div class='loader mx-auto'></div>");
         $("#btnLoadMore").hide();
         axios
-            .get("https://picsum.photos/v2/list?page=1&limit=8")
-            .then(({ data }) => {
-                $(".loader").remove();
-                render("product", "products", 8);
-                $("#btnLoadMore").show();
-            });
-    });
+          .get("https://picsum.photos/v2/list?page=1&limit=8")
+          .then(({ data }) => {
+            $(".loader").remove();
+            render("product", "products", 8);
+            $("#btnLoadMore").show();
+          });
+      });
     </script>
-</body>
-
+  </body>
 </html>
