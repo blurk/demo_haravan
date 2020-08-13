@@ -118,6 +118,10 @@ a {
   z-index: 9999;
 }
 
+.navbar-brand {
+  margin-right: 0;
+}
+
 .navbar-brand img {
   margin-right: 10px;
   margin-left: -10px;
@@ -741,17 +745,26 @@ li.my-dropdown:hover > span::after {
 }
 
 .user__comment {
-  font-size: 18px;
   font-weight: 400;
+  padding: 0;
   color: #666;
+  flex: 3;
+}
+
+.user__comment__content {
+  font-size: 16px;
+}
+
+.user__avatar {
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  flex: 2;
+  padding: 0;
 }
 
 #commentSectionCount {
   font-size: 14px;
-}
-
-.user {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 #productView {
@@ -849,7 +862,8 @@ input[type="number"] {
 #myTabContent,
 #formSearchProduct,
 .card,
-.products__item {
+.products__item,
+.user {
   border-radius: 5px;
   border: 0px solid;
   box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.1);
