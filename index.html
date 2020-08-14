@@ -18,6 +18,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"
     />
+
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
@@ -478,7 +479,7 @@
           <h3>Danh mục <span style="color: #888;">sản phẩm</span></h3>
         </div>
         <div class="row">
-          <div class="col-12 col-sm-4 p-0 col-md-3 d-md-block d-none">
+          <div class="col-12 col-sm-4 col-md-3 d-md-block d-none">
             <div class="category card">
               <ul class="category__list list-group">
                 <li class="category__list__item list-group-item">
@@ -551,225 +552,281 @@
               /></a>
             </div>
           </div>
-          <div class="col-12 col-md-9">
+          <div class="col-12 col-md-9 px-md-0 px-5">
             <div class="row products">
-              <div class="col-lg-3 col-sm-6 col-12 product" id="1">
+              <div class="col-xl-3 col-md-4 col-sm-6 col-12 product" id="1">
                 <div class="card">
-                  <a href="#" class="product__image">
+                  <a
+                    href="./productDetail.html"
+                    class="product__image"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Xem chi tiết"
+                  >
                     <img
                       src="./img/bon_cau.jpg"
-                      id="1"
+                      id="productImg1"
                       alt="product"
-                      class="card-img-top img-fluid"
+                      class="card-img-top"
                     />
                   </a>
-                  <div class="card-body text-center product__info pt-5">
+                  <div class="card-body product__info">
                     <a class="card-title product__name" href="#">Bồn cầu</a>
-                    <div class="card-text product__price">
+                    <p class="card-text product__price">
                       13,000,000₫
-                    </div>
-                    <div class="product__button">
-                      <a name="addToCart" class="mx-1">
-                        <i class="fa fa-shopping-cart"></i>
-                      </a>
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-search-plus"></i>
-                      </a>
-                    </div>
+                    </p>
                   </div>
+                  <a
+                    class="btn text-light bg-success card-footer"
+                    name="addToCart"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Mua nhanh"
+                  >
+                    <i class="fa fa-shopping-cart fa-white"></i>
+                  </a>
                 </div>
               </div>
-              <div class="col-lg-3 col-sm-6 col-12 product" id="2">
+              <div class="col-xl-3 col-md-4 col-sm-6 col-12 product" id="2">
                 <div class="card sale">
-                  <a href="#" class="product__image">
+                  <a
+                    href="./productDetail.html"
+                    class="product__image"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Xem chi tiết"
+                  >
                     <img
                       src="./img/bo_dieu_khien.jpg"
-                      id="1"
+                      id="productImg2"
                       alt="product"
-                      class="card-img-top img-fluid"
+                      class="card-img-top"
                     />
                   </a>
-                  <div class="card-body text-center product__info pt-5">
+                  <div class="card-body product__info">
                     <a class="card-title product__name" href="#"
                       >Bộ điều khiển</a
                     >
-                    <span class="price-before text-muted">
+                    <span class="price-before text-muted small">
                       26,000,000₫
                     </span>
-                    <div class="card-text product__price">
+                    <p class="card-text product__price">
                       13,000,000₫
-                    </div>
-                    <div class="product__button">
-                      <a name="addToCart" class="mx-1">
-                        <i class="fa fa-shopping-cart"></i>
-                      </a>
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-search-plus"></i>
-                      </a>
-                    </div>
+                    </p>
                   </div>
+                  <a
+                    class="btn text-light bg-success card-footer"
+                    name="addToCart"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Mua nhanh"
+                  >
+                    <i class="fa fa-shopping-cart fa-white"></i>
+                  </a>
                 </div>
               </div>
-              <div class="col-lg-3 col-sm-6 col-12 product" id="3">
+              <div class="col-xl-3 col-md-4 col-sm-6 col-12 product" id="3">
                 <div class="card sale">
-                  <a href="#" class="product__image">
+                  <a
+                    href="./productDetail.html"
+                    class="product__image"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Xem chi tiết"
+                  >
                     <img
                       src="./img/den.jpg"
-                      id="1"
+                      id="productImg3"
                       alt="product"
-                      class="card-img-top img-fluid"
+                      class="card-img-top"
                     />
                   </a>
-                  <div class="card-body text-center product__info pt-5">
+                  <div class="card-body product__info">
                     <a class="card-title product__name" href="#">Đèn</a>
-                    <span class="price-before text-muted">
+                    <span class="price-before text-muted small">
                       26,000,000₫
                     </span>
-                    <div class="card-text product__price">
+                    <p class="card-text product__price">
                       13,000,000₫
-                    </div>
-                    <div class="product__button">
-                      <a name="addToCart" class="mx-1">
-                        <i class="fa fa-shopping-cart"></i>
-                      </a>
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-search-plus"></i>
-                      </a>
-                    </div>
+                    </p>
                   </div>
+                  <a
+                    class="btn text-light bg-success card-footer"
+                    name="addToCart"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Mua nhanh"
+                  >
+                    <i class="fa fa-shopping-cart fa-white"></i>
+                  </a>
                 </div>
               </div>
-              <div class="col-lg-3 col-sm-6 col-12 product" id="4">
+              <div class="col-xl-3 col-md-4 col-sm-6 col-12 product" id="4">
                 <div class="card">
-                  <a href="#" class="product__image">
+                  <a
+                    href="./productDetail.html"
+                    class="product__image"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Xem chi tiết"
+                  >
                     <img
                       src="./img/bon_cau.jpg"
-                      id="1"
+                      id="productImg4"
                       alt="product"
-                      class="card-img-top img-fluid"
+                      class="card-img-top"
                     />
                   </a>
-                  <div class="card-body text-center product__info pt-5">
+                  <div class="card-body product__info">
                     <a class="card-title product__name" href="#">Bồn cầu</a>
-                    <div class="card-text product__price">
+                    <p class="card-text product__price">
                       13,000,000₫
-                    </div>
-                    <div class="product__button">
-                      <a name="addToCart" class="mx-1">
-                        <i class="fa fa-shopping-cart"></i>
-                      </a>
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-search-plus"></i>
-                      </a>
-                    </div>
+                    </p>
                   </div>
+                  <a
+                    class="btn text-light bg-success card-footer"
+                    name="addToCart"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Mua nhanh"
+                  >
+                    <i class="fa fa-shopping-cart fa-white"></i>
+                  </a>
                 </div>
               </div>
-              <div class="col-lg-3 col-sm-6 col-12 product" id="5">
+              <div class="col-xl-3 col-md-4 col-sm-6 col-12 product" id="5">
                 <div class="card sale">
-                  <a href="#" class="product__image">
+                  <a
+                    href="./productDetail.html"
+                    class="product__image"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Xem chi tiết"
+                  >
                     <img
                       src="./img/bep.jpg"
-                      id="1"
+                      id="productImg5"
                       alt="product"
-                      class="card-img-top img-fluid"
+                      class="card-img-top"
                     />
                   </a>
-                  <div class="card-body text-center product__info pt-5">
+                  <div class="card-body product__info">
                     <a class="card-title product__name" href="#">Bếp</a>
-                    <span class="price-before text-muted">
+                    <span class="price-before text-muted small">
                       26,000,000₫
                     </span>
-                    <div class="card-text product__price">
+                    <p class="card-text product__price">
                       13,000,000₫
-                    </div>
-                    <div class="product__button">
-                      <a name="addToCart" class="mx-1">
-                        <i class="fa fa-shopping-cart"></i>
-                      </a>
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-search-plus"></i>
-                      </a>
-                    </div>
+                    </p>
                   </div>
+                  <a
+                    class="btn text-light bg-success card-footer"
+                    name="addToCart"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Mua nhanh"
+                  >
+                    <i class="fa fa-shopping-cart fa-white"></i>
+                  </a>
                 </div>
               </div>
-              <div class="col-lg-3 col-sm-6 col-12 product" id="6">
+              <div class="col-xl-3 col-md-4 col-sm-6 col-12 product" id="6">
                 <div class="card">
-                  <a href="#" class="product__image">
+                  <a
+                    href="./productDetail.html"
+                    class="product__image"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Xem chi tiết"
+                  >
                     <img
                       src="./img/ghe.jpg"
-                      id="1"
+                      id="productImg6"
                       alt="product"
-                      class="card-img-top img-fluid"
+                      class="card-img-top"
                     />
                   </a>
-                  <div class="card-body text-center product__info pt-5">
+                  <div class="card-body product__info">
                     <a class="card-title product__name" href="#">Ghế</a>
-                    <div class="card-text product__price">
+                    <p class="card-text product__price">
                       13,000,000₫
-                    </div>
-                    <div class="product__button">
-                      <a name="addToCart" class="mx-1">
-                        <i class="fa fa-shopping-cart"></i>
-                      </a>
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-search-plus"></i>
-                      </a>
-                    </div>
+                    </p>
                   </div>
+                  <a
+                    class="btn text-light bg-success card-footer"
+                    name="addToCart"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Mua nhanh"
+                  >
+                    <i class="fa fa-shopping-cart fa-white"></i>
+                  </a>
                 </div>
               </div>
-              <div class="col-lg-3 col-sm-6 col-12 product" id="7">
+              <div class="col-xl-3 col-md-4 col-sm-6 col-12 product" id="7">
                 <div class="card">
-                  <a href="#" class="product__image">
+                  <a
+                    href="./productDetail.html"
+                    class="product__image"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Xem chi tiết"
+                  >
                     <img
                       src="./img/ban_go.jpg"
-                      id="1"
+                      id="productImg7"
                       alt="product"
-                      class="card-img-top img-fluid"
+                      class="card-img-top"
                     />
                   </a>
-                  <div class="card-body text-center product__info pt-5">
+                  <div class="card-body product__info">
                     <a class="card-title product__name" href="#">Bàn gỗ</a>
-                    <div class="card-text product__price">
+                    <p class="card-text product__price">
                       13,000,000₫
-                    </div>
-                    <div class="product__button">
-                      <a name="addToCart" class="mx-1">
-                        <i class="fa fa-shopping-cart"></i>
-                      </a>
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-search-plus"></i>
-                      </a>
-                    </div>
+                    </p>
                   </div>
+                  <a
+                    class="btn text-light bg-success card-footer"
+                    name="addToCart"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Mua nhanh"
+                  >
+                    <i class="fa fa-shopping-cart fa-white"></i>
+                  </a>
                 </div>
               </div>
-              <div class="col-lg-3 col-sm-6 col-12 product" id="8">
+              <div class="col-xl-3 col-md-4 col-sm-6 col-12 product" id="8">
                 <div class="card">
-                  <a href="#" class="product__image">
+                  <a
+                    href="./productDetail.html"
+                    class="product__image"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Xem chi tiết"
+                  >
                     <img
                       src="./img/ban_go.jpg"
-                      id="1"
+                      id="productImg8"
                       alt="product"
-                      class="card-img-top img-fluid"
+                      class="card-img-top"
                     />
                   </a>
-                  <div class="card-body text-center product__info pt-5">
+                  <div class="card-body product__info">
                     <a class="card-title product__name" href="#">Bàn gỗ</a>
-                    <div class="card-text product__price">
+                    <p class="card-text product__price">
                       13,000,000₫
-                    </div>
-                    <div class="product__button">
-                      <a name="addToCart" class="mx-1">
-                        <i class="fa fa-shopping-cart"></i>
-                      </a>
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-search-plus"></i>
-                      </a>
-                    </div>
+                    </p>
                   </div>
+                  <a
+                    class="btn text-light bg-success card-footer"
+                    name="addToCart"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="Mua nhanh"
+                  >
+                    <i class="fa fa-shopping-cart fa-white"></i>
+                  </a>
                 </div>
               </div>
             </div>
@@ -790,225 +847,294 @@
             <!-- SLIDER -->
             <div class="container position-relative">
               <div class="slider" id="slider1">
-                <div class="product" id="1">
-                  <div class="card">
-                    <a href="#" class="product__image">
-                      <img
-                        src="./img/bon_cau.jpg"
-                        id="1"
-                        alt="product"
-                        class="card-img-top img-fluid"
-                      />
-                    </a>
-                    <div class="card-body text-center product__info pt-5">
-                      <a class="card-title product__name" href="#">Sản phẩm</a>
-                      <div class="card-text product__price">
-                        13,000,000₫
+                <div class="slider__item">
+                  <div class="product" id="1">
+                    <div class="card">
+                      <a
+                        href="./productDetail.html"
+                        class="product__image"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Xem chi tiết"
+                      >
+                        <img
+                          src="./img/bon_cau.jpg"
+                          id="productImg1"
+                          alt="product"
+                          class="card-img-top"
+                        />
+                      </a>
+                      <div class="card-body product__info">
+                        <a class="card-title product__name" href="#">Bồn cầu</a>
+                        <p class="card-text product__price">
+                          13,000,000₫
+                        </p>
                       </div>
-                      <div href="" class="product__button">
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-shopping-cart"></i>
-                        </a>
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-search-plus"></i>
-                        </a>
-                      </div>
+                      <a
+                        class="btn text-light bg-success card-footer"
+                        name="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Mua nhanh"
+                      >
+                        <i class="fa fa-shopping-cart fa-white"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
-                <div class="product" id="2">
-                  <div class="card sale">
-                    <a href="#" class="product__image">
-                      <img
-                        src="./img/bo_dieu_khien.jpg"
-                        id="1"
-                        alt="product"
-                        class="card-img-top img-fluid"
-                      />
-                    </a>
-                    <div class="card-body text-center product__info pt-5">
-                      <a class="card-title product__name" href="#">Sản phẩm</a>
-                      <div
-                        class="row justify-content-center align-items-center"
+                <div class="slider__item">
+                  <div class="product" id="2">
+                    <div class="card sale">
+                      <a
+                        href="./productDetail.html"
+                        class="product__image"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Xem chi tiết"
                       >
-                        <span class="price-before text-muted d-block mr-2">
+                        <img
+                          src="./img/bo_dieu_khien.jpg"
+                          id="productImg2"
+                          alt="product"
+                          class="card-img-top"
+                        />
+                      </a>
+                      <div class="card-body product__info">
+                        <a class="card-title product__name" href="#"
+                          >Bộ điều khiển</a
+                        >
+                        <span class="price-before text-muted small">
                           26,000,000₫
                         </span>
-                        <div class="card-text product__price">
+                        <p class="card-text product__price">
                           13,000,000₫
-                        </div>
+                        </p>
                       </div>
-                      <div href="" class="product__button">
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-shopping-cart"></i>
-                        </a>
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-search-plus"></i>
-                        </a>
-                      </div>
+                      <a
+                        class="btn text-light bg-success card-footer"
+                        name="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Mua nhanh"
+                      >
+                        <i class="fa fa-shopping-cart fa-white"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
-                <div class="product" id="3">
-                  <div class="card sale">
-                    <a href="#" class="product__image">
-                      <img
-                        src="./img/den.jpg"
-                        id="1"
-                        alt="product"
-                        class="card-img-top img-fluid"
-                      />
-                    </a>
-                    <div class="card-body text-center product__info pt-5">
-                      <a class="card-title product__name" href="#">Sản phẩm</a>
-                      <div
-                        class="row justify-content-center align-items-center"
+                <div class="slider__item">
+                  <div class="product" id="3">
+                    <div class="card sale">
+                      <a
+                        href="./productDetail.html"
+                        class="product__image"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Xem chi tiết"
                       >
-                        <span class="price-before text-muted d-block mr-2">
+                        <img
+                          src="./img/den.jpg"
+                          id="productImg3"
+                          alt="product"
+                          class="card-img-top"
+                        />
+                      </a>
+                      <div class="card-body product__info">
+                        <a class="card-title product__name" href="#">Đèn</a>
+                        <span class="price-before text-muted small">
                           26,000,000₫
                         </span>
-                        <div class="card-text product__price">
+                        <p class="card-text product__price">
                           13,000,000₫
-                        </div>
+                        </p>
                       </div>
-                      <div href="" class="product__button">
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-shopping-cart"></i>
-                        </a>
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-search-plus"></i>
-                        </a>
-                      </div>
+                      <a
+                        class="btn text-light bg-success card-footer"
+                        name="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Mua nhanh"
+                      >
+                        <i class="fa fa-shopping-cart fa-white"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
-                <div class="product" id="4">
-                  <div class="card">
-                    <a href="#" class="product__image">
-                      <img
-                        src="./img/bon_cau.jpg"
-                        id="1"
-                        alt="product"
-                        class="card-img-top img-fluid"
-                      />
-                    </a>
-                    <div class="card-body text-center product__info pt-5">
-                      <a class="card-title product__name" href="#">Sản phẩm</a>
-                      <div class="card-text product__price">
-                        13,000,000₫
+                <div class="slider__item">
+                  <div class="product" id="4">
+                    <div class="card">
+                      <a
+                        href="./productDetail.html"
+                        class="product__image"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Xem chi tiết"
+                      >
+                        <img
+                          src="./img/bon_cau.jpg"
+                          id="productImg4"
+                          alt="product"
+                          class="card-img-top"
+                        />
+                      </a>
+                      <div class="card-body product__info">
+                        <a class="card-title product__name" href="#">Bồn cầu</a>
+                        <p class="card-text product__price">
+                          13,000,000₫
+                        </p>
                       </div>
-                      <div href="" class="product__button">
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-shopping-cart"></i>
-                        </a>
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-search-plus"></i>
-                        </a>
-                      </div>
+                      <a
+                        class="btn text-light bg-success card-footer"
+                        name="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Mua nhanh"
+                      >
+                        <i class="fa fa-shopping-cart fa-white"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
-                <div class="product" id="5">
-                  <div class="card">
-                    <a href="#" class="product__image">
-                      <img
-                        src="./img/bon_cau.jpg"
-                        id="1"
-                        alt="product"
-                        class="card-img-top img-fluid"
-                      />
-                    </a>
-                    <div class="card-body text-center product__info pt-5">
-                      <a class="card-title product__name" href="#">Sản phẩm</a>
-                      <div class="card-text product__price">
-                        13,000,000₫
+                <div class="slider__item">
+                  <div class="product" id="5">
+                    <div class="card sale">
+                      <a
+                        href="./productDetail.html"
+                        class="product__image"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Xem chi tiết"
+                      >
+                        <img
+                          src="./img/bep.jpg"
+                          id="productImg5"
+                          alt="product"
+                          class="card-img-top"
+                        />
+                      </a>
+                      <div class="card-body product__info">
+                        <a class="card-title product__name" href="#">Bếp</a>
+                        <span class="price-before text-muted small">
+                          26,000,000₫
+                        </span>
+                        <p class="card-text product__price">
+                          13,000,000₫
+                        </p>
                       </div>
-                      <div href="" class="product__button">
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-shopping-cart"></i>
-                        </a>
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-search-plus"></i>
-                        </a>
-                      </div>
+                      <a
+                        class="btn text-light bg-success card-footer"
+                        name="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Mua nhanh"
+                      >
+                        <i class="fa fa-shopping-cart fa-white"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
-                <div class="product" id="6">
-                  <div class="card">
-                    <a href="#" class="product__image">
-                      <img
-                        src="./img/bon_cau.jpg"
-                        id="1"
-                        alt="product"
-                        class="card-img-top img-fluid"
-                      />
-                    </a>
-                    <div class="card-body text-center product__info pt-5">
-                      <a class="card-title product__name" href="#">Sản phẩm</a>
-                      <div class="card-text product__price">
-                        13,000,000₫
+                <div class="slider__item">
+                  <div class="product" id="6">
+                    <div class="card">
+                      <a
+                        href="./productDetail.html"
+                        class="product__image"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Xem chi tiết"
+                      >
+                        <img
+                          src="./img/ghe.jpg"
+                          id="productImg6"
+                          alt="product"
+                          class="card-img-top"
+                        />
+                      </a>
+                      <div class="card-body product__info">
+                        <a class="card-title product__name" href="#">Ghế</a>
+                        <p class="card-text product__price">
+                          13,000,000₫
+                        </p>
                       </div>
-                      <div href="" class="product__button">
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-shopping-cart"></i>
-                        </a>
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-search-plus"></i>
-                        </a>
-                      </div>
+                      <a
+                        class="btn text-light bg-success card-footer"
+                        name="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Mua nhanh"
+                      >
+                        <i class="fa fa-shopping-cart fa-white"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
-                <div class="product" id="7">
-                  <div class="card">
-                    <a href="#" class="product__image">
-                      <img
-                        src="./img/bon_cau.jpg"
-                        id="1"
-                        alt="product"
-                        class="card-img-top img-fluid"
-                      />
-                    </a>
-                    <div class="card-body text-center product__info pt-5">
-                      <a class="card-title product__name" href="#">Sản phẩm</a>
-                      <div class="card-text product__price">
-                        13,000,000₫
+                <div class="slider__item">
+                  <div class="product" id="7">
+                    <div class="card">
+                      <a
+                        href="./productDetail.html"
+                        class="product__image"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Xem chi tiết"
+                      >
+                        <img
+                          src="./img/ban_go.jpg"
+                          id="productImg7"
+                          alt="product"
+                          class="card-img-top"
+                        />
+                      </a>
+                      <div class="card-body product__info">
+                        <a class="card-title product__name" href="#">Bàn gỗ</a>
+                        <p class="card-text product__price">
+                          13,000,000₫
+                        </p>
                       </div>
-                      <div href="" class="product__button">
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-shopping-cart"></i>
-                        </a>
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-search-plus"></i>
-                        </a>
-                      </div>
+                      <a
+                        class="btn text-light bg-success card-footer"
+                        name="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Mua nhanh"
+                      >
+                        <i class="fa fa-shopping-cart fa-white"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
-                <div class="product" id="8">
-                  <div class="card">
-                    <a href="#" class="product__image">
-                      <img
-                        src="./img/bon_cau.jpg"
-                        id="1"
-                        alt="product"
-                        class="card-img-top img-fluid"
-                      />
-                    </a>
-                    <div class="card-body text-center product__info pt-5">
-                      <a class="card-title product__name" href="#">Sản phẩm</a>
-                      <div class="card-text product__price">
-                        13,000,000₫
+                <div class="slider__item">
+                  <div class="product" id="8">
+                    <div class="card">
+                      <a
+                        href="./productDetail.html"
+                        class="product__image"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Xem chi tiết"
+                      >
+                        <img
+                          src="./img/ban_go.jpg"
+                          id="productImg8"
+                          alt="product"
+                          class="card-img-top"
+                        />
+                      </a>
+                      <div class="card-body product__info">
+                        <a class="card-title product__name" href="#">Bàn gỗ</a>
+                        <p class="card-text product__price">
+                          13,000,000₫
+                        </p>
                       </div>
-                      <div href="" class="product__button">
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-shopping-cart"></i>
-                        </a>
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-search-plus"></i>
-                        </a>
-                      </div>
+                      <a
+                        class="btn text-light bg-success card-footer"
+                        name="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Mua nhanh"
+                      >
+                        <i class="fa fa-shopping-cart fa-white"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -1033,225 +1159,294 @@
             <!-- SLIDER -->
             <div class="container position-relative">
               <div class="slider" id="slider2">
-                <div class="product" id="1">
-                  <div class="card">
-                    <a href="#" class="product__image">
-                      <img
-                        src="./img/bon_cau.jpg"
-                        id="1"
-                        alt="product"
-                        class="card-img-top img-fluid"
-                      />
-                    </a>
-                    <div class="card-body text-center product__info pt-5">
-                      <a class="card-title product__name" href="#">Sản phẩm</a>
-                      <div class="card-text product__price">
-                        13,000,000₫
+                <div class="slider__item">
+                  <div class="product" id="1">
+                    <div class="card">
+                      <a
+                        href="./productDetail.html"
+                        class="product__image"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Xem chi tiết"
+                      >
+                        <img
+                          src="./img/bon_cau.jpg"
+                          id="productImg1"
+                          alt="product"
+                          class="card-img-top"
+                        />
+                      </a>
+                      <div class="card-body product__info">
+                        <a class="card-title product__name" href="#">Bồn cầu</a>
+                        <p class="card-text product__price">
+                          13,000,000₫
+                        </p>
                       </div>
-                      <div href="" class="product__button">
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-shopping-cart"></i>
-                        </a>
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-search-plus"></i>
-                        </a>
-                      </div>
+                      <a
+                        class="btn text-light bg-success card-footer"
+                        name="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Mua nhanh"
+                      >
+                        <i class="fa fa-shopping-cart fa-white"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
-                <div class="product" id="2">
-                  <div class="card sale">
-                    <a href="#" class="product__image">
-                      <img
-                        src="./img/bo_dieu_khien.jpg"
-                        id="1"
-                        alt="product"
-                        class="card-img-top img-fluid"
-                      />
-                    </a>
-                    <div class="card-body text-center product__info pt-5">
-                      <a class="card-title product__name" href="#">Sản phẩm</a>
-                      <div
-                        class="row justify-content-center align-items-center"
+                <div class="slider__item">
+                  <div class="product" id="2">
+                    <div class="card sale">
+                      <a
+                        href="./productDetail.html"
+                        class="product__image"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Xem chi tiết"
                       >
-                        <span class="price-before text-muted d-block mr-2">
+                        <img
+                          src="./img/bo_dieu_khien.jpg"
+                          id="productImg2"
+                          alt="product"
+                          class="card-img-top"
+                        />
+                      </a>
+                      <div class="card-body product__info">
+                        <a class="card-title product__name" href="#"
+                          >Bộ điều khiển</a
+                        >
+                        <span class="price-before text-muted small">
                           26,000,000₫
                         </span>
-                        <div class="card-text product__price">
+                        <p class="card-text product__price">
                           13,000,000₫
-                        </div>
+                        </p>
                       </div>
-                      <div href="" class="product__button">
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-shopping-cart"></i>
-                        </a>
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-search-plus"></i>
-                        </a>
-                      </div>
+                      <a
+                        class="btn text-light bg-success card-footer"
+                        name="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Mua nhanh"
+                      >
+                        <i class="fa fa-shopping-cart fa-white"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
-                <div class="product" id="3">
-                  <div class="card sale">
-                    <a href="#" class="product__image">
-                      <img
-                        src="./img/den.jpg"
-                        id="1"
-                        alt="product"
-                        class="card-img-top img-fluid"
-                      />
-                    </a>
-                    <div class="card-body text-center product__info pt-5">
-                      <a class="card-title product__name" href="#">Sản phẩm</a>
-                      <div
-                        class="row justify-content-center align-items-center"
+                <div class="slider__item">
+                  <div class="product" id="3">
+                    <div class="card sale">
+                      <a
+                        href="./productDetail.html"
+                        class="product__image"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Xem chi tiết"
                       >
-                        <span class="price-before text-muted d-block mr-2">
+                        <img
+                          src="./img/den.jpg"
+                          id="productImg3"
+                          alt="product"
+                          class="card-img-top"
+                        />
+                      </a>
+                      <div class="card-body product__info">
+                        <a class="card-title product__name" href="#">Đèn</a>
+                        <span class="price-before text-muted small">
                           26,000,000₫
                         </span>
-                        <div class="card-text product__price">
+                        <p class="card-text product__price">
                           13,000,000₫
-                        </div>
+                        </p>
                       </div>
-                      <div href="" class="product__button">
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-shopping-cart"></i>
-                        </a>
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-search-plus"></i>
-                        </a>
-                      </div>
+                      <a
+                        class="btn text-light bg-success card-footer"
+                        name="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Mua nhanh"
+                      >
+                        <i class="fa fa-shopping-cart fa-white"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
-                <div class="product" id="4">
-                  <div class="card">
-                    <a href="#" class="product__image">
-                      <img
-                        src="./img/bon_cau.jpg"
-                        id="1"
-                        alt="product"
-                        class="card-img-top img-fluid"
-                      />
-                    </a>
-                    <div class="card-body text-center product__info pt-5">
-                      <a class="card-title product__name" href="#">Sản phẩm</a>
-                      <div class="card-text product__price">
-                        13,000,000₫
+                <div class="slider__item">
+                  <div class="product" id="4">
+                    <div class="card">
+                      <a
+                        href="./productDetail.html"
+                        class="product__image"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Xem chi tiết"
+                      >
+                        <img
+                          src="./img/bon_cau.jpg"
+                          id="productImg4"
+                          alt="product"
+                          class="card-img-top"
+                        />
+                      </a>
+                      <div class="card-body product__info">
+                        <a class="card-title product__name" href="#">Bồn cầu</a>
+                        <p class="card-text product__price">
+                          13,000,000₫
+                        </p>
                       </div>
-                      <div href="" class="product__button">
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-shopping-cart"></i>
-                        </a>
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-search-plus"></i>
-                        </a>
-                      </div>
+                      <a
+                        class="btn text-light bg-success card-footer"
+                        name="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Mua nhanh"
+                      >
+                        <i class="fa fa-shopping-cart fa-white"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
-                <div class="product" id="5">
-                  <div class="card">
-                    <a href="#" class="product__image">
-                      <img
-                        src="./img/bon_cau.jpg"
-                        id="1"
-                        alt="product"
-                        class="card-img-top img-fluid"
-                      />
-                    </a>
-                    <div class="card-body text-center product__info pt-5">
-                      <a class="card-title product__name" href="#">Sản phẩm</a>
-                      <div class="card-text product__price">
-                        13,000,000₫
+                <div class="slider__item">
+                  <div class="product" id="5">
+                    <div class="card sale">
+                      <a
+                        href="./productDetail.html"
+                        class="product__image"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Xem chi tiết"
+                      >
+                        <img
+                          src="./img/bep.jpg"
+                          id="productImg5"
+                          alt="product"
+                          class="card-img-top"
+                        />
+                      </a>
+                      <div class="card-body product__info">
+                        <a class="card-title product__name" href="#">Bếp</a>
+                        <span class="price-before text-muted small">
+                          26,000,000₫
+                        </span>
+                        <p class="card-text product__price">
+                          13,000,000₫
+                        </p>
                       </div>
-                      <div href="" class="product__button">
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-shopping-cart"></i>
-                        </a>
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-search-plus"></i>
-                        </a>
-                      </div>
+                      <a
+                        class="btn text-light bg-success card-footer"
+                        name="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Mua nhanh"
+                      >
+                        <i class="fa fa-shopping-cart fa-white"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
-                <div class="product" id="6">
-                  <div class="card">
-                    <a href="#" class="product__image">
-                      <img
-                        src="./img/bon_cau.jpg"
-                        id="1"
-                        alt="product"
-                        class="card-img-top img-fluid"
-                      />
-                    </a>
-                    <div class="card-body text-center product__info pt-5">
-                      <a class="card-title product__name" href="#">Sản phẩm</a>
-                      <div class="card-text product__price">
-                        13,000,000₫
+                <div class="slider__item">
+                  <div class="product" id="6">
+                    <div class="card">
+                      <a
+                        href="./productDetail.html"
+                        class="product__image"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Xem chi tiết"
+                      >
+                        <img
+                          src="./img/ghe.jpg"
+                          id="productImg6"
+                          alt="product"
+                          class="card-img-top"
+                        />
+                      </a>
+                      <div class="card-body product__info">
+                        <a class="card-title product__name" href="#">Ghế</a>
+                        <p class="card-text product__price">
+                          13,000,000₫
+                        </p>
                       </div>
-                      <div href="" class="product__button">
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-shopping-cart"></i>
-                        </a>
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-search-plus"></i>
-                        </a>
-                      </div>
+                      <a
+                        class="btn text-light bg-success card-footer"
+                        name="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Mua nhanh"
+                      >
+                        <i class="fa fa-shopping-cart fa-white"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
-                <div class="product" id="5">
-                  <div class="card">
-                    <a href="#" class="product__image">
-                      <img
-                        src="./img/bon_cau.jpg"
-                        id="1"
-                        alt="product"
-                        class="card-img-top img-fluid"
-                      />
-                    </a>
-                    <div class="card-body text-center product__info pt-5">
-                      <a class="card-title product__name" href="#">Sản phẩm</a>
-                      <div class="card-text product__price">
-                        13,000,000₫
+                <div class="slider__item">
+                  <div class="product" id="7">
+                    <div class="card">
+                      <a
+                        href="./productDetail.html"
+                        class="product__image"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Xem chi tiết"
+                      >
+                        <img
+                          src="./img/ban_go.jpg"
+                          id="productImg7"
+                          alt="product"
+                          class="card-img-top"
+                        />
+                      </a>
+                      <div class="card-body product__info">
+                        <a class="card-title product__name" href="#">Bàn gỗ</a>
+                        <p class="card-text product__price">
+                          13,000,000₫
+                        </p>
                       </div>
-                      <div href="" class="product__button">
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-shopping-cart"></i>
-                        </a>
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-search-plus"></i>
-                        </a>
-                      </div>
+                      <a
+                        class="btn text-light bg-success card-footer"
+                        name="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Mua nhanh"
+                      >
+                        <i class="fa fa-shopping-cart fa-white"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
-                <div class="product" id="5">
-                  <div class="card">
-                    <a href="#" class="product__image">
-                      <img
-                        src="./img/bon_cau.jpg"
-                        id="1"
-                        alt="product"
-                        class="card-img-top img-fluid"
-                      />
-                    </a>
-                    <div class="card-body text-center product__info pt-5">
-                      <a class="card-title product__name" href="#">Sản phẩm</a>
-                      <div class="card-text product__price">
-                        13,000,000₫
+                <div class="slider__item">
+                  <div class="product" id="8">
+                    <div class="card">
+                      <a
+                        href="./productDetail.html"
+                        class="product__image"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Xem chi tiết"
+                      >
+                        <img
+                          src="./img/ban_go.jpg"
+                          id="productImg8"
+                          alt="product"
+                          class="card-img-top"
+                        />
+                      </a>
+                      <div class="card-body product__info">
+                        <a class="card-title product__name" href="#">Bàn gỗ</a>
+                        <p class="card-text product__price">
+                          13,000,000₫
+                        </p>
                       </div>
-                      <div href="" class="product__button">
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-shopping-cart"></i>
-                        </a>
-                        <a href="#" class="mx-1">
-                          <i class="fa fa-search-plus"></i>
-                        </a>
-                      </div>
+                      <a
+                        class="btn text-light bg-success card-footer"
+                        name="addToCart"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Mua nhanh"
+                      >
+                        <i class="fa fa-shopping-cart fa-white"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -1332,211 +1527,294 @@
           </div>
           <div class="position-relative col-md-9 col-12">
             <div class="slider" id="slider3">
-              <div class="product" id="1">
-                <div class="card">
-                  <a href="#" class="product__image">
-                    <img
-                      src="./img/bon_cau.jpg"
-                      id="1"
-                      alt="product"
-                      class="card-img-top img-fluid"
-                    />
-                  </a>
-                  <div class="card-body text-center product__info pt-5">
-                    <a class="card-title product__name" href="#">Sản phẩm</a>
-                    <div class="card-text product__price">
-                      13,000,000₫
+              <div class="slider__item">
+                <div class="product" id="1">
+                  <div class="card">
+                    <a
+                      href="./productDetail.html"
+                      class="product__image"
+                      data-toggle="tooltip"
+                      data-placement="bottom"
+                      title="Xem chi tiết"
+                    >
+                      <img
+                        src="./img/bon_cau.jpg"
+                        id="productImg1"
+                        alt="product"
+                        class="card-img-top"
+                      />
+                    </a>
+                    <div class="card-body product__info">
+                      <a class="card-title product__name" href="#">Bồn cầu</a>
+                      <p class="card-text product__price">
+                        13,000,000₫
+                      </p>
                     </div>
-                    <div href="" class="product__button">
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-shopping-cart"></i>
-                      </a>
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-search-plus"></i>
-                      </a>
-                    </div>
+                    <a
+                      class="btn text-light bg-success card-footer"
+                      name="addToCart"
+                      data-toggle="tooltip"
+                      data-placement="bottom"
+                      title="Mua nhanh"
+                    >
+                      <i class="fa fa-shopping-cart fa-white"></i>
+                    </a>
                   </div>
                 </div>
               </div>
-              <div class="product" id="2">
-                <div class="card sale">
-                  <a href="#" class="product__image">
-                    <img
-                      src="./img/bo_dieu_khien.jpg"
-                      id="1"
-                      alt="product"
-                      class="card-img-top img-fluid"
-                    />
-                  </a>
-                  <div class="card-body text-center product__info pt-5">
-                    <a class="card-title product__name" href="#">Sản phẩm</a>
-                    <div class="card-text product__price">
-                      13,000,000₫
+              <div class="slider__item">
+                <div class="product" id="2">
+                  <div class="card sale">
+                    <a
+                      href="./productDetail.html"
+                      class="product__image"
+                      data-toggle="tooltip"
+                      data-placement="bottom"
+                      title="Xem chi tiết"
+                    >
+                      <img
+                        src="./img/bo_dieu_khien.jpg"
+                        id="productImg2"
+                        alt="product"
+                        class="card-img-top"
+                      />
+                    </a>
+                    <div class="card-body product__info">
+                      <a class="card-title product__name" href="#"
+                        >Bộ điều khiển</a
+                      >
+                      <span class="price-before text-muted small">
+                        26,000,000₫
+                      </span>
+                      <p class="card-text product__price">
+                        13,000,000₫
+                      </p>
                     </div>
-                    <div href="" class="product__button">
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-shopping-cart"></i>
-                      </a>
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-search-plus"></i>
-                      </a>
-                    </div>
+                    <a
+                      class="btn text-light bg-success card-footer"
+                      name="addToCart"
+                      data-toggle="tooltip"
+                      data-placement="bottom"
+                      title="Mua nhanh"
+                    >
+                      <i class="fa fa-shopping-cart fa-white"></i>
+                    </a>
                   </div>
                 </div>
               </div>
-              <div class="product" id="3">
-                <div class="card sale">
-                  <a href="#" class="product__image">
-                    <img
-                      src="./img/den.jpg"
-                      id="1"
-                      alt="product"
-                      class="card-img-top img-fluid"
-                    />
-                  </a>
-                  <div class="card-body text-center product__info pt-5">
-                    <a class="card-title product__name" href="#">Sản phẩm</a>
-                    <div class="card-text product__price">
-                      13,000,000₫
+              <div class="slider__item">
+                <div class="product" id="3">
+                  <div class="card sale">
+                    <a
+                      href="./productDetail.html"
+                      class="product__image"
+                      data-toggle="tooltip"
+                      data-placement="bottom"
+                      title="Xem chi tiết"
+                    >
+                      <img
+                        src="./img/den.jpg"
+                        id="productImg3"
+                        alt="product"
+                        class="card-img-top"
+                      />
+                    </a>
+                    <div class="card-body product__info">
+                      <a class="card-title product__name" href="#">Đèn</a>
+                      <span class="price-before text-muted small">
+                        26,000,000₫
+                      </span>
+                      <p class="card-text product__price">
+                        13,000,000₫
+                      </p>
                     </div>
-                    <div href="" class="product__button">
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-shopping-cart"></i>
-                      </a>
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-search-plus"></i>
-                      </a>
-                    </div>
+                    <a
+                      class="btn text-light bg-success card-footer"
+                      name="addToCart"
+                      data-toggle="tooltip"
+                      data-placement="bottom"
+                      title="Mua nhanh"
+                    >
+                      <i class="fa fa-shopping-cart fa-white"></i>
+                    </a>
                   </div>
                 </div>
               </div>
-              <div class="product" id="4">
-                <div class="card">
-                  <a href="#" class="product__image">
-                    <img
-                      src="./img/bon_cau.jpg"
-                      id="1"
-                      alt="product"
-                      class="card-img-top img-fluid"
-                    />
-                  </a>
-                  <div class="card-body text-center product__info pt-5">
-                    <a class="card-title product__name" href="#">Sản phẩm</a>
-                    <div class="card-text product__price">
-                      13,000,000₫
+              <div class="slider__item">
+                <div class="product" id="4">
+                  <div class="card">
+                    <a
+                      href="./productDetail.html"
+                      class="product__image"
+                      data-toggle="tooltip"
+                      data-placement="bottom"
+                      title="Xem chi tiết"
+                    >
+                      <img
+                        src="./img/bon_cau.jpg"
+                        id="productImg4"
+                        alt="product"
+                        class="card-img-top"
+                      />
+                    </a>
+                    <div class="card-body product__info">
+                      <a class="card-title product__name" href="#">Bồn cầu</a>
+                      <p class="card-text product__price">
+                        13,000,000₫
+                      </p>
                     </div>
-                    <div href="" class="product__button">
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-shopping-cart"></i>
-                      </a>
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-search-plus"></i>
-                      </a>
-                    </div>
+                    <a
+                      class="btn text-light bg-success card-footer"
+                      name="addToCart"
+                      data-toggle="tooltip"
+                      data-placement="bottom"
+                      title="Mua nhanh"
+                    >
+                      <i class="fa fa-shopping-cart fa-white"></i>
+                    </a>
                   </div>
                 </div>
               </div>
-              <div class="product" id="5">
-                <div class="card">
-                  <a href="#" class="product__image">
-                    <img
-                      src="./img/bon_cau.jpg"
-                      id="1"
-                      alt="product"
-                      class="card-img-top img-fluid"
-                    />
-                  </a>
-                  <div class="card-body text-center product__info pt-5">
-                    <a class="card-title product__name" href="#">Sản phẩm</a>
-                    <div class="card-text product__price">
-                      13,000,000₫
+              <div class="slider__item">
+                <div class="product" id="5">
+                  <div class="card sale">
+                    <a
+                      href="./productDetail.html"
+                      class="product__image"
+                      data-toggle="tooltip"
+                      data-placement="bottom"
+                      title="Xem chi tiết"
+                    >
+                      <img
+                        src="./img/bep.jpg"
+                        id="productImg5"
+                        alt="product"
+                        class="card-img-top"
+                      />
+                    </a>
+                    <div class="card-body product__info">
+                      <a class="card-title product__name" href="#">Bếp</a>
+                      <span class="price-before text-muted small">
+                        26,000,000₫
+                      </span>
+                      <p class="card-text product__price">
+                        13,000,000₫
+                      </p>
                     </div>
-                    <div href="" class="product__button">
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-shopping-cart"></i>
-                      </a>
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-search-plus"></i>
-                      </a>
-                    </div>
+                    <a
+                      class="btn text-light bg-success card-footer"
+                      name="addToCart"
+                      data-toggle="tooltip"
+                      data-placement="bottom"
+                      title="Mua nhanh"
+                    >
+                      <i class="fa fa-shopping-cart fa-white"></i>
+                    </a>
                   </div>
                 </div>
               </div>
-              <div class="product" id="6">
-                <div class="card">
-                  <a href="#" class="product__image">
-                    <img
-                      src="./img/bon_cau.jpg"
-                      id="1"
-                      alt="product"
-                      class="card-img-top img-fluid"
-                    />
-                  </a>
-                  <div class="card-body text-center product__info pt-5">
-                    <a class="card-title product__name" href="#">Sản phẩm</a>
-                    <div class="card-text product__price">
-                      13,000,000₫
+              <div class="slider__item">
+                <div class="product" id="6">
+                  <div class="card">
+                    <a
+                      href="./productDetail.html"
+                      class="product__image"
+                      data-toggle="tooltip"
+                      data-placement="bottom"
+                      title="Xem chi tiết"
+                    >
+                      <img
+                        src="./img/ghe.jpg"
+                        id="productImg6"
+                        alt="product"
+                        class="card-img-top"
+                      />
+                    </a>
+                    <div class="card-body product__info">
+                      <a class="card-title product__name" href="#">Ghế</a>
+                      <p class="card-text product__price">
+                        13,000,000₫
+                      </p>
                     </div>
-                    <div href="" class="product__button">
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-shopping-cart"></i>
-                      </a>
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-search-plus"></i>
-                      </a>
-                    </div>
+                    <a
+                      class="btn text-light bg-success card-footer"
+                      name="addToCart"
+                      data-toggle="tooltip"
+                      data-placement="bottom"
+                      title="Mua nhanh"
+                    >
+                      <i class="fa fa-shopping-cart fa-white"></i>
+                    </a>
                   </div>
                 </div>
               </div>
-              <div class="product" id="5">
-                <div class="card">
-                  <a href="#" class="product__image">
-                    <img
-                      src="./img/bon_cau.jpg"
-                      id="1"
-                      alt="product"
-                      class="card-img-top img-fluid"
-                    />
-                  </a>
-                  <div class="card-body text-center product__info pt-5">
-                    <a class="card-title product__name" href="#">Sản phẩm</a>
-                    <div class="card-text product__price">
-                      13,000,000₫
+              <div class="slider__item">
+                <div class="product" id="7">
+                  <div class="card">
+                    <a
+                      href="./productDetail.html"
+                      class="product__image"
+                      data-toggle="tooltip"
+                      data-placement="bottom"
+                      title="Xem chi tiết"
+                    >
+                      <img
+                        src="./img/ban_go.jpg"
+                        id="productImg7"
+                        alt="product"
+                        class="card-img-top"
+                      />
+                    </a>
+                    <div class="card-body product__info">
+                      <a class="card-title product__name" href="#">Bàn gỗ</a>
+                      <p class="card-text product__price">
+                        13,000,000₫
+                      </p>
                     </div>
-                    <div href="" class="product__button">
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-shopping-cart"></i>
-                      </a>
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-search-plus"></i>
-                      </a>
-                    </div>
+                    <a
+                      class="btn text-light bg-success card-footer"
+                      name="addToCart"
+                      data-toggle="tooltip"
+                      data-placement="bottom"
+                      title="Mua nhanh"
+                    >
+                      <i class="fa fa-shopping-cart fa-white"></i>
+                    </a>
                   </div>
                 </div>
               </div>
-              <div class="product" id="5">
-                <div class="card">
-                  <a href="#" class="product__image">
-                    <img
-                      src="./img/bon_cau.jpg"
-                      id="1"
-                      alt="product"
-                      class="card-img-top img-fluid"
-                    />
-                  </a>
-                  <div class="card-body text-center product__info pt-5">
-                    <a class="card-title product__name" href="#">Sản phẩm</a>
-                    <div class="card-text product__price">
-                      13,000,000₫
+              <div class="slider__item">
+                <div class="product" id="8">
+                  <div class="card">
+                    <a
+                      href="./productDetail.html"
+                      class="product__image"
+                      data-toggle="tooltip"
+                      data-placement="bottom"
+                      title="Xem chi tiết"
+                    >
+                      <img
+                        src="./img/ban_go.jpg"
+                        id="productImg8"
+                        alt="product"
+                        class="card-img-top"
+                      />
+                    </a>
+                    <div class="card-body product__info">
+                      <a class="card-title product__name" href="#">Bàn gỗ</a>
+                      <p class="card-text product__price">
+                        13,000,000₫
+                      </p>
                     </div>
-                    <div href="" class="product__button">
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-shopping-cart"></i>
-                      </a>
-                      <a href="#" class="mx-1">
-                        <i class="fa fa-search-plus"></i>
-                      </a>
-                    </div>
+                    <a
+                      class="btn text-light bg-success card-footer"
+                      name="addToCart"
+                      data-toggle="tooltip"
+                      data-placement="bottom"
+                      title="Mua nhanh"
+                    >
+                      <i class="fa fa-shopping-cart fa-white"></i>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1720,105 +1998,115 @@
     <!-- NEWS -->
     <section id="news">
       <div class="container">
-        <div class="row">
-          <div class="products__header">
-            <h3>Tin <span style="color: #888;">mới</span></h3>
-          </div>
-          <div class="position-relative">
+        <div class="products__header">
+          <h3>Tin <span style="color: #888;">mới</span></h3>
+        </div>
+        <div class="position-relative p-0">
+          <div class="row">
             <div class="slide" id="slider4">
-              <div class="news card" id="1">
-                <img
-                  src="./img/news_01.jpg"
-                  id="1"
-                  alt="news image"
-                  class="news__img"
-                />
-                <div class="news__body card-img-overlay text-light rounded">
-                  <a class="h3 news_title text-light" href="/post.html"
-                    >Lorem, ipsum dolor.</a
-                  >
-                  <p class="news__description h6 font-weight-light">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptates, provident molestias? Natus ipsam ullam quisquam
-                    maiores eius consequatur animi commodi!
-                  </p>
-                  <a href="/post.html" class="btn btn-success">Xem thêm</a>
+              <div class="slider__item">
+                <div class="news card" id="1">
+                  <img
+                    src="./img/news_01.jpg"
+                    id="1"
+                    alt="news image"
+                    class="news__img"
+                  />
+                  <div class="news__body card-img-overlay text-light rounded">
+                    <a class="h3 news_title text-light" href="/post.html"
+                      >Lorem, ipsum dolor.</a
+                    >
+                    <p class="news__description h6 font-weight-light">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Voluptates, provident molestias? Natus ipsam ullam
+                      quisquam maiores eius consequatur animi commodi!
+                    </p>
+                    <a href="/post.html" class="btn btn-success">Xem thêm</a>
+                  </div>
                 </div>
               </div>
-              <div class="news card" id="2">
-                <img
-                  src="./img/news_02.jpg"
-                  id="1"
-                  alt="news image"
-                  class="news__img"
-                />
-                <div class="news__body card-img-overlay text-light rounded">
-                  <a class="h3 news_title text-light" href="/post.html"
-                    >Lorem, ipsum dolor.</a
-                  >
-                  <p class="news__description h6 font-weight-light">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptates, provident molestias? Natus ipsam ullam quisquam
-                    maiores eius consequatur animi commodi!
-                  </p>
-                  <a href="/post.html" class="btn btn-success">Xem thêm</a>
+              <div class="slider__item">
+                <div class="news card" id="2">
+                  <img
+                    src="./img/news_02.jpg"
+                    id="1"
+                    alt="news image"
+                    class="news__img"
+                  />
+                  <div class="news__body card-img-overlay text-light rounded">
+                    <a class="h3 news_title text-light" href="/post.html"
+                      >Lorem, ipsum dolor.</a
+                    >
+                    <p class="news__description h6 font-weight-light">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Voluptates, provident molestias? Natus ipsam ullam
+                      quisquam maiores eius consequatur animi commodi!
+                    </p>
+                    <a href="/post.html" class="btn btn-success">Xem thêm</a>
+                  </div>
                 </div>
               </div>
-              <div class="news card" id="3">
-                <img
-                  src="./img/news_03.jpg"
-                  id="1"
-                  alt="news image"
-                  class="news__img"
-                />
-                <div class="news__body card-img-overlay text-light rounded">
-                  <a class="h3 news_title text-light" href="/post.html"
-                    >Lorem, ipsum dolor.</a
-                  >
-                  <p class="news__description h6 font-weight-light">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptates, provident molestias? Natus ipsam ullam quisquam
-                    maiores eius consequatur animi commodi!
-                  </p>
-                  <a href="/post.html" class="btn btn-success">Xem thêm</a>
+              <div class="slider__item">
+                <div class="news card" id="3">
+                  <img
+                    src="./img/news_03.jpg"
+                    id="1"
+                    alt="news image"
+                    class="news__img"
+                  />
+                  <div class="news__body card-img-overlay text-light rounded">
+                    <a class="h3 news_title text-light" href="/post.html"
+                      >Lorem, ipsum dolor.</a
+                    >
+                    <p class="news__description h6 font-weight-light">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Voluptates, provident molestias? Natus ipsam ullam
+                      quisquam maiores eius consequatur animi commodi!
+                    </p>
+                    <a href="/post.html" class="btn btn-success">Xem thêm</a>
+                  </div>
                 </div>
               </div>
-              <div class="news card" id="4">
-                <img
-                  src="./img/news_04.jpg"
-                  id="1"
-                  alt="news image"
-                  class="news__img"
-                />
-                <div class="news__body card-img-overlay text-light rounded">
-                  <a class="h3 news_title text-light" href="/post.html"
-                    >Lorem, ipsum dolor.</a
-                  >
-                  <p class="news__description h6 font-weight-light">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptates, provident molestias? Natus ipsam ullam quisquam
-                    maiores eius consequatur animi commodi!
-                  </p>
-                  <a href="/post.html" class="btn btn-success">Xem thêm</a>
+              <div class="slider__item">
+                <div class="news card" id="4">
+                  <img
+                    src="./img/news_04.jpg"
+                    id="1"
+                    alt="news image"
+                    class="news__img"
+                  />
+                  <div class="news__body card-img-overlay text-light rounded">
+                    <a class="h3 news_title text-light" href="/post.html"
+                      >Lorem, ipsum dolor.</a
+                    >
+                    <p class="news__description h6 font-weight-light">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Voluptates, provident molestias? Natus ipsam ullam
+                      quisquam maiores eius consequatur animi commodi!
+                    </p>
+                    <a href="/post.html" class="btn btn-success">Xem thêm</a>
+                  </div>
                 </div>
               </div>
-              <div class="news card" id="5">
-                <img
-                  src="./img/news_05.jpg"
-                  id="1"
-                  alt="news image"
-                  class="news__img"
-                />
-                <div class="news__body card-img-overlay text-light rounded">
-                  <a class="h3 news_title text-light" href="/post.html"
-                    >Lorem, ipsum dolor.</a
-                  >
-                  <p class="news__description h6 font-weight-light">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptates, provident molestias? Natus ipsam ullam quisquam
-                    maiores eius consequatur animi commodi!
-                  </p>
-                  <a href="/post.html" class="btn btn-success">Xem thêm</a>
+              <div class="slider__item">
+                <div class="news card" id="5">
+                  <img
+                    src="./img/news_05.jpg"
+                    id="1"
+                    alt="news image"
+                    class="news__img"
+                  />
+                  <div class="news__body card-img-overlay text-light rounded">
+                    <a class="h3 news_title text-light" href="/post.html"
+                      >Lorem, ipsum dolor.</a
+                    >
+                    <p class="news__description h6 font-weight-light">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Voluptates, provident molestias? Natus ipsam ullam
+                      quisquam maiores eius consequatur animi commodi!
+                    </p>
+                    <a href="/post.html" class="btn btn-success">Xem thêm</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2087,18 +2375,21 @@
         loop: false,
         startIndex: 0,
         nav: false,
-        swipeAngle: false,
+        swipeAngle: true,
         speed: 400,
         gutter: 20,
         controlsContainer: "#slider-controls1",
         responsive: {
-          "576": {
+          "0": {
             items: 1,
           },
-          "768": {
-            items: 3,
+          "576": {
+            items: 2,
           },
           "992": {
+            items: 3,
+          },
+          "1200": {
             items: 4,
           },
         },
@@ -2114,13 +2405,16 @@
         gutter: 20,
         controlsContainer: "#slider-controls2",
         responsive: {
-          "576": {
+          "0": {
             items: 1,
           },
-          "768": {
-            items: 3,
+          "576": {
+            items: 2,
           },
           "992": {
+            items: 3,
+          },
+          "1200": {
             items: 4,
           },
         },
@@ -2136,14 +2430,14 @@
         gutter: 20,
         controlsContainer: "#slider-controls3",
         responsive: {
-          "576": {
+          "0": {
             items: 1,
           },
-          "768": {
-            items: 3,
+          "576": {
+            items: 2,
           },
           "992": {
-            items: 4,
+            items: 3,
           },
         },
       });
@@ -2151,17 +2445,21 @@
       let slider4 = tns({
         container: "#slider4",
         startIndex: 0,
+        gutter: 20,
         loop: false,
         nav: false,
         swipeAngle: false,
         speed: 400,
         controlsContainer: "#slider-controls4",
         responsive: {
-          "576": {
-            items: 1.1,
+          "0": {
+            items: 1,
           },
-          "768": {
-            items: 4.1,
+          "576": {
+            items: 2,
+          },
+          "992": {
+            items: 3,
           },
         },
       });
@@ -2171,14 +2469,20 @@
         startIndex: 0,
         nav: false,
         swipeAngle: false,
-        gutter: 10,
+        gutter: 20,
         speed: 400,
         controlsContainer: "#slider-controls5",
         responsive: {
+          "0": {
+            items: 1,
+          },
           "576": {
             items: 2,
           },
-          "768": {
+          "992": {
+            items: 3,
+          },
+          "1200": {
             items: 4,
           },
         },

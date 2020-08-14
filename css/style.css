@@ -279,34 +279,24 @@ nav {
   background-color: #3ab54a;
 }
 
-.product__image {
-  height: 50%;
-  text-align: center;
-}
-
-.product__image > img {
-  width: 80%;
-  margin-top: 20px;
-}
-
 .list-group-item {
   border: 0;
 }
 
 .category {
-  padding: 10px 15px;
+  padding: 0;
+  margin: 0;
 }
 
 .category__list {
   background-color: #fff;
   border-radius: 2px;
   padding: 20px 0;
-  margin: 0 -10px;
 }
 
 .category__list__item {
   margin: 0;
-  padding: 10px !important;
+  padding: 5px !important;
   margin-top: -10px !important;
 }
 
@@ -320,7 +310,7 @@ nav {
   font-weight: 500;
   padding: 0 0 0 15px;
   margin-right: -15px;
-  font-size: 14px !important;
+  font-size: 13px !important;
   position: relative;
 }
 
@@ -424,17 +414,6 @@ li.my-dropdown:hover > span::after {
   color: #3ab54a !important;
 }
 
-.product {
-  font-weight: 500;
-  position: relative;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-
-.product > .card {
-  height: 100% !important;
-}
-
 .sale {
   overflow: hidden;
 }
@@ -456,6 +435,36 @@ li.my-dropdown:hover > span::after {
   background-color: #f48549;
 }
 
+.product {
+  font-weight: 500;
+  position: relative;
+  padding: 0 5px;
+  margin-bottom: 10px;
+  height: 350px;
+}
+
+.product > .card {
+  height: 100%;
+}
+
+.product__image {
+  width: 100%;
+  height: 50%;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.product__image > img {
+  width: 150px;
+  height: 150px;
+}
+
+.product__info {
+  padding: 20px 20px 0;
+  height: 50%;
+}
+
 .product__name,
 .product__price {
   font-size: 20px;
@@ -470,29 +479,9 @@ li.my-dropdown:hover > span::after {
   color: #f48549;
 }
 
-.product__button {
-  top: 60%;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.4s;
-}
-
-.product__button > a {
-  color: rgba(0, 0, 0, 0.8);
-  transition: all 0.4s;
-  font-size: 30px;
-}
-
-.product:hover > .card > .product__info > .product__button {
-  opacity: 1;
-  visibility: visible;
-}
-
-.product__button > a:hover {
-  color: #3ab54a;
+.slider__item {
+  padding: 5px;
+  padding-left: 20px;
 }
 
 .load-more > .btn {
@@ -581,6 +570,8 @@ li.my-dropdown:hover > span::after {
 
 #news {
   margin-bottom: 20px;
+  padding: 0;
+  padding-right: 20px;
 }
 
 .news {
@@ -588,7 +579,6 @@ li.my-dropdown:hover > span::after {
   cursor: pointer;
   width: 100%;
   height: 300px;
-  margin-right: 10px;
 }
 
 .news__body {

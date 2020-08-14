@@ -1,7 +1,7 @@
 /* STICKY HEADER */
 $(window).scroll(function () {
   const sticky = $("#header"),
-  scroll = $(window).scrollTop();
+    scroll = $(window).scrollTop();
 
   if (scroll >= 100) {
     sticky.addClass("mySticky");
@@ -14,9 +14,14 @@ $(window).scroll(function () {
   }
 });
 
-
-if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
- document.querySelectorAll('.navbar-nav > .nav-item:nth-child(3)')[0].classList.remove('my-dropdown')
+if (
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  )
+) {
+  document
+    .querySelectorAll(".navbar-nav > .nav-item:nth-child(3)")[0]
+    .classList.remove("my-dropdown");
 }
 
 /* HIDE NAV SUBMENU WHEN CLICK */
@@ -44,10 +49,8 @@ function success(pos) {
     "pk.eyJ1IjoiYmx1cmsiLCJhIjoiY2tkY2xwNmJ1MXI4aDJybHZ6bWgwODF1eSJ9.K6hjHyS6EA01LL1wDZrHvg";
 
   L.tileLayer(
-    `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${accessToken}`,
+    `http://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${accessToken}`,
     {
-      attribution:
-        'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       maxZoom: 20,
       id: "mapbox/streets-v11",
       tileSize: 512,
@@ -90,5 +93,9 @@ $(function () {
 /*FORMAT CURRENCY*/
 
 function formatCurrency(amount) {
-  return new Intl.NumberFormat('vn-VN', { style: 'currency', currency: 'VND' }).format(amount).slice(1) + '₫';
+  return (
+    new Intl.NumberFormat("vn-VN", { style: "currency", currency: "VND" })
+      .format(amount)
+      .slice(1) + "₫"
+  );
 }
