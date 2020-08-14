@@ -2488,14 +2488,16 @@
         },
       });
       /* LOAD MORE ITEM */
+      let count = 1;
+      if (count === 10) count = 1;
       $("#btnLoadMore").click(() => {
         $(".load-more").append("<div class='loader mx-auto'></div>");
         $("#btnLoadMore").hide();
         axios
-          .get("https://picsum.photos/v2/list?page=1&limit=8")
+          .get(`https://picsum.photos/v2/list?page=${count++}&limit=8`)
           .then(({ data }) => {
             $(".loader").remove();
-            render("product", "products", 8);
+            render("product", "products", 8, data);
             $("#btnLoadMore").show();
           });
       });
