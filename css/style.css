@@ -248,7 +248,6 @@ nav {
 }
 
 #products {
-  background-color: #f4f4f4;
   padding-top: 40px;
 }
 
@@ -439,7 +438,7 @@ li.my-dropdown:hover > span::after {
   font-weight: 500;
   position: relative;
   padding: 0 5px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   height: 350px;
 }
 
